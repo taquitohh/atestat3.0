@@ -7,29 +7,98 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/logo.m.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&display=swap" rel="stylesheet">
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<title>Rainbow six siege</title>
 	</head>
 	<body>
-		<slot />
+	   <header> 
+		<img class="logoM" src="logo.M.webp" alt="logo">
+		   <nav>
+             <ul class="nav___links">
+				<li><a href="/">Home</a></li>
+				<li><a href="/operators">Operators</a></li>
+				<li><a href="#">Maps</a></li>
+				<li><a href="#">Boosting</a></li>
+			 </ul>
+		  </nav>
+		  <a class="login" href="#"><button>Login</button></a>
+	   </header>
 	</body>
 </html>
+
 <style is:global>
 	:root {
 		--accent: 124, 58, 237;
-		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, #ffffff 60%);
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background-color: #F6F6F6;
+		font-family: 'Inconsolata', sans-serif;
+		background-color: #1f1e22;
 	}
 	code {
-		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
+		font-family: 'Inconsolata', sans-serif;
 	}
+	* {  
+       box-sizing: border-box;
+       margin: 0;
+	   padding: 0;
+	   height: auto;
+       background-color: #24252A;
+    }
+
+  li, a, button {
+	   font-family: 'Inconsolata', monospace;
+       font-weight: 500;
+       font size: 30px;
+       color: #edf0f1;
+       text-decoration: none;
+  }
+
+  header {
+      display: flex;
+      justify-content: space-between;
+	  align-items: center;
+	  padding: 5px 10%;
+  }
+
+  .logo {
+      cursor: pointer;
+  }
+
+  .nav___links {
+      list-style: none;
+  }
+
+  .nav___links li{   
+	  display: inline-block;
+      padding: 0px 20px;
+  }
+
+  .nav___links li a {
+      transition: all 0.3s ease 0;
+  }
+
+  .nav___links li a:hover {
+      color: #9ba9e9;
+  }
+
+  button {
+      padding: 10px 25px;
+      background-color: rgb(61, 66, 99);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease 0;
+  }
+  button:hover{ 
+      background-color:rgb(133, 136, 165);
+  }
 </style>
