@@ -1,10 +1,3 @@
----
-export interface Props {
-	title: string;
-}
-
-const { title } = Astro.props;
----
 
 <!DOCTYPE html>
 <html>
@@ -19,18 +12,18 @@ const { title } = Astro.props;
 		<title>Rainbow six siege</title>
 	</head>
 	<body>
-	   <header> 
-		<img class="logoM" src="logo.M.webp" alt="logo">
-		   <nav>
-             <ul class="nav___links">
-				<li><a href="/">Home</a></li>
+		<nav>
+            <img class="logoM" src="logo.M.webp" alt="logo">
+            <ul class="nav___links">
+			    <li><a href="/">Home</a></li>
 				<li><a href="/operators">Operators</a></li>
 				<li><a href="#">Maps</a></li>
 				<li><a href="#">Boosting</a></li>
-			 </ul>
-		  </nav>
-		  <a class="login" href="#"><button>Login</button></a>
-	   </header>
+			</ul>
+            <a class="login" href="#"><button>Login</button></a>
+		</nav>
+        <slot>
+        </slot>
 	</body>
 </html>
 
@@ -51,7 +44,6 @@ const { title } = Astro.props;
        margin: 0;
 	   padding: 0;
 	   height: auto;
-       background-color: #24252A;
     }
 
   li, a, button {
@@ -62,11 +54,12 @@ const { title } = Astro.props;
        text-decoration: none;
   }
 
-  header {
+  nav {
       display: flex;
       justify-content: space-between;
 	  align-items: center;
 	  padding: 5px 10%;
+      background-color: #24252A;
   }
 
   .logo {
@@ -99,6 +92,8 @@ const { title } = Astro.props;
       transition: all 0.3s ease 0;
   }
   button:hover{ 
-      background-color:rgb(133, 136, 165);
+      background-color:rgb(126, 129, 158);
+      transition: all 0.3s ease 0;
   }
+
 </style>
