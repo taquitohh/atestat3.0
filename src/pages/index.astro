@@ -2,51 +2,57 @@
 import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 
-
 ---
 
 <Layout>
 	<main>
-		<h1><span class="text-gradient">Rainbow six siege</span></h1>
+		<!-- <h1><span class="text-gradient">Rainbow six siege</span></h1> -->
 		<ul role="list" class="link-card-grid">
 			<Card
-				href=""
+				href="#"
+				title="SLEDGE"
+				name="r6-sledge"
+			/>
+			<Card
+				href="#"
+				title="THACHER"
+				name="r6-thatcher"
+			/>
+			<Card
+				href="#"
 				title="ASH"
-				body="r6-ash.png"
+				name="r6-ash"
 			/>
 			<Card
-				href=""
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
+				href="#"
+				title="THERMITE"
+				name="r6-thermite"
 			/>
 			<Card
-				href=""
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
+				href="#"
+				title="MONTAGNE"
+				name="r6-montagne"
 			/>
 			<Card
-				href=""
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
+				href="#"
+				title="TWITCH"
+				name="r6-twitch"
 			/>
 		</ul>
 	</main>
 </Layout>
 
 <style>
+
 	main {
 		display: flex;
 		flex-direction: column;
 		margin: auto;
 		align-items: center;
 		padding: 1.5rem;
-		max-width: 60ch;
+		max-width: auto;
 	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
+
 	.text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -54,6 +60,7 @@ import Card from '../components/Card.astro';
 		background-size: 400%;
 		background-position: 0%;
 	}
+
 	.instructions {
 		line-height: 1.6;
 		margin: 1rem 0;
@@ -62,6 +69,7 @@ import Card from '../components/Card.astro';
 		padding: 1rem;
 		border-radius: 0.4rem;
 	}
+
 	.instructions code {
 		font-size: 0.875em;
 		font-weight: bold;
@@ -70,9 +78,11 @@ import Card from '../components/Card.astro';
 		border-radius: 4px;
 		padding: 0.3em 0.45em;
 	}
+
 	.instructions strong {
 		color: rgb(var(--accent));
 	}
+
 	.link-card-grid {
 		display: flex;
 		gap: 1rem;
