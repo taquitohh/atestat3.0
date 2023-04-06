@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+    const pages = [
+        {
+            operator: "Ash",
+            title: "Ash",
+            text: "Attacker with R4C",
+        },
+        {
+            operator: "Sledge",
+            title: "Ciocanul",
+            text: "Apoi iei un ciocan si dai in cub",
+        },
+        {
+            operator: "Thatcher",
+            title: "Thatcher",
+            text: "Focking laser sights",
+            weapons: [
+                {
+                    name: "R4C",
+                    icon: "/weapon-icons/r4c.png"
+                }
+            ]
+        },
+    ];
+    return pages.map(({ operator, title, text, weapons }) => {
+        return {
+            params: { operator: operator },
+            props: { title, text, weapons },
+        };
+    });
+}
+
+const { title, text, weapons } = Astro.props;    
+---
+
+<Layout>
+    <h1>{weapons}</h1>
+    <p>{text}</p>
+</Layout>

@@ -13,7 +13,7 @@
 	</head>
 	<body>
 		<nav>
-            <img class="logoM" src="siege logo/logo.M.webp" alt="logo">
+            <img class="logoM" src="/siege logo/logo.M.webp" alt="logo">
             <ul class="nav___links">
 			    <li><a href="/">Home</a></li>
 				<li><a href="/operators">Operators</a></li>
@@ -31,17 +31,22 @@
 
     @font-face {
     font-family: Scout;
-    src: url(fonts/ScoutCond-BoldItalic.ttf);
+    src: url(/fonts/ScoutCond-BoldItalic.otf);
     }
 
 	:root {
 		--accent: 126, 129, 158;
-		--accent-gradient: linear-gradient(15deg, rgb(var(--accent)), #ffffffb4 30%, #54527469 60%);
+		--accent-gradient: linear-gradient(15deg, rgb(var(--accent)), #53d6d6b4 30%, #45697e69 60%);
 	}
 	html {
 		font-family: Scout, sans-serif;
 		background-color: #1f1e22;
 	}
+    body {
+        background-image: url(/background.jpg);
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
 	code {
 		font-family: Scout, sans-serif;
 	}
@@ -53,7 +58,7 @@
     }
 
   li, a, button {
-	   font-family: 'Inconsolata', monospace;
+	   font-family: Scout, monospace;
        font-weight: 500;
        font-size: 30px;
        color: #edf0f1;
