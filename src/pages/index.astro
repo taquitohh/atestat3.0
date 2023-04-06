@@ -10,22 +10,22 @@ import Card from '../components/Card.astro';
 		<h1><span class="text-gradient">Rainbow six siege</span></h1>
 		<ul role="list" class="link-card-grid">
 			<Card
-				href="https://docs.astro.build/"
-				title="SMOKE"
+				href=""
+				title="ASH"
 				body="r6-ash.png"
 			/>
 			<Card
-				href="https://astro.build/integrations/"
+				href=""
 				title="Integrations"
 				body="Supercharge your project with new frameworks and libraries."
 			/>
 			<Card
-				href="https://astro.build/themes/"
+				href=""
 				title="Themes"
 				body="Explore a galaxy of community-built starter themes."
 			/>
 			<Card
-				href="https://astro.build/chat/"
+				href=""
 				title="Community"
 				body="Come say hi to our amazing Discord community. ❤️"
 			/>
@@ -74,8 +74,7 @@ import Card from '../components/Card.astro';
 		color: rgb(var(--accent));
 	}
 	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		display: flex;
 		gap: 1rem;
 		padding: 0;
 	}
