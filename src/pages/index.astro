@@ -1,62 +1,86 @@
 ---
+import Disc from '../components/Disc.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 <!DOCTYPE html>
 <Layout>
 	<main>
-		<body>
-		  <div>
-			<img class="1" src="home.discover/discover1.png">
-			<div class="text1">"ONE OF THE BEST FIRST-PERSON SHOOTERS EVER MADE. 10/10"</div>
-		</div>
+		<Disc bg="home.discover/discover1.png">
+			<div class="content">
+				<div class="text">"ONE OF THE BEST FIRST-PERSON SHOOTERS EVER MADE. 10/10"</div>
+			</div>
+			
+		</Disc>
+		<Disc bg="home.discover/discover2.png">
+			<div class="content2">
+				<div class="text2">OUTPLAN TO OUTPLAY</div>
+			</div>
+			<div class="iconitze">
 
-		  <div>
-			<img class="2" src="home.discover/discover2.png">
-			<div class="text2">"OUTPLAN TO OUTPLAY"</div>
-		 </div>
-
-		 <div>
-			<img class="3" src="home.discover/discover3.png">
-			<div class="text3">"ATTACK VS. DEFENSE"</div>
-		 </div>
-
-		 <div>
-			<img class="4" src="home.discover/discover4.png">
-			<div class="text4">"RAINBOW SIX ESPORTS"</div>
-		 </div>
-
-		 <div>
-			<img class="5" src="home.discover/discover5.png">
-			<div class="text5">"JOIN MORE THAN 85 MILLION PLAYERS"</div>
-		 </div>
-        </body>
+			</div>
+		</Disc>
+		<Disc bg="home.discover/discover3.png">
+			<div class="content">
+				<div class="text">"ATTACK VS. DEFENSE"</div>
+			</div>
+			
+		</Disc>
+		<Disc bg="home.discover/discover4.png">
+			<div class="content">
+				<div class="text">"RAINBOW SIX ESPORTS"</div>
+			</div>
+			
+		</Disc>
+		<Disc bg="home.discover/discover5.png">
+			<div class="content">
+				<div class="text">"JOIN MORE THAN 85 MILLION PLAYERS"</div>
+			</div>
+			
+		</Disc>
 	</main>
 </Layout>
 
 <style>
-     .main {
-		display:flex;
-		padding: 10%;
-		align-items: center;
-		position: relative;
-        background-repeat: no-repeat;
-		background-size: contain;
-		-webkit-box-shadow: inset 0 0 150px 100px #151d30, inset 0 0 50px 20px #000;
-		box-shadow: inset 0 0 150px 100px #151d30, inset 0 0 50px 20px #000;
-		min-height: 52vw;
-	 }
-	
-	 .text1 ,.text2 , .text3 , .text4 , .text5{
-		position: absolute;
-		bottom: 0;
-		display:flex;
+    main {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 100%;
+		position: relative;
+	}
+	
+	.text {
 		color: #00ffe5;
 		font-size: 50px;
         line-height: 100px;
 		text-shadow: 0 0 2px #151d30, 0 0 2px #151d30, 0 0 2px #151d30;
+		margin-top: 10em;
 	}
 	
+	.text2 {
+		color: #00ffe5;
+		font-size: 50px;
+        line-height: 100px;
+		text-shadow: 0 0 2px #151d30, 0 0 2px #151d30, 0 0 2px #151d30;
+		margin-top: 25px;
+	}
+
+	.content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		width: 100%;
+		height: 100%;
+    }
+
+	.content2 {
+        display: flex;
+		justify-content: center;
+		width: 100%;
+		height: 100%;
+    }
+	.iconitze {
+		display: flex;
+		gap: 10px;
+		justify-content: center;
+	}
 </style>
