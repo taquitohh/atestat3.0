@@ -1,0 +1,19 @@
+---
+export interface Props {
+
+gap: number;
+}
+
+const { gap } = Astro.props;
+---
+<div class="iconitze" style={{gap: `${gap}px`}}>
+    <slot></slot>
+</div>
+<style>
+.iconitze {
+	display: flex;
+	gap: 200px;
+	justify-content: center;
+	align-items: center;
+}
+</style>
