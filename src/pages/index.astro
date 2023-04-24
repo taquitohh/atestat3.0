@@ -21,15 +21,15 @@ import Layout from '../layouts/Layout.astro';
 			    <div class="mini-text3">5V5 ATTACK VS. DEFENSE <br>INTENSE CLOSE-QUARTER COMBAT<br> DESTRUCTIBLE ENVIRONMENTS​</div>
 			    <div class="iconitze">
 
-				    <div class="align"> <img class="ico1" src="/home.discover/discover-ico-op.png">
+				    <div class="align"> <img class="ico" src="/home.discover/discover-ico-op.png">
                      	<div class="info-nr">65+ OPERATORS</div>
 					</div>
                  
-					<div class="align" > <img class="ico2" src="/home.discover/discover-ico-map.png">
+					<div class="align" > <img class="ico" src="/home.discover/discover-ico-map.png">
 					 	<div class="info-nr">20+ MAPS</div>
 				    </div>
 
-					<div class="align" > <img class="ico3" src="/home.discover/discover-ico-weapon.png">
+					<div class="align" > <img class="ico" src="/home.discover/discover-ico-weapon.png">
 						<div class="info-nr">20+ MAPS</div>
 				   </div>
 
@@ -39,20 +39,50 @@ import Layout from '../layouts/Layout.astro';
 		<Disc bg="home.discover/discover3.png">
 			<div class="content3">
 				<div class="text3">ATTACK VS. DEFENSE</div>
+				<div class="mini-text4">Choose from over 65 operators, each with unique gadgets and customizable weapon loadouts.​</div>
+				<h1><a class="button" href="/operators">VIEW ALL OPERATORS</a></h1>
 			</div>
 			
 		</Disc>
 		<Disc bg="home.discover/discover4.png">
 			<div class="content4">
 				<div class="text4">RAINBOW SIX ESPORTS</div>
+				<div class="mini-text5">Gathering the best professional players, our esports program hosts regional leagues and international competitions throughout the year.​</div>
+				<h1><a class="button" href="https://www.ubisoft.com/en-eu/esports/rainbow-six/siege">LEARN MORE</a></h1>
 			</div>
 			
 		</Disc>
 		<Disc bg="home.discover/discover5.png">
 			<div class="content5">
 				<div class="text5">JOIN MORE THAN 85 MILLION PLAYERS</div>
+				<div class="mini-text6">BUY RAINBOW SIX SIEGE ON:​</div>
+				<h1>
+				  <div class="iconitze2">
+
+					<div class="align2" >
+						<div class="name">
+						   <a class="button" href="https://store.ubisoft.com/ie/tom-clancy-s-rainbow-six-siege-deluxe-edition/5e15a2665cdf9a1ec45ad82b.html?lang=en-ZW&ucid=UWB-ID_151373&addinfo=Gamesite_Rainbow%20Six%20Siege_game%20info_discover_main_promotion_buy_order_pc_">
+								<img src="/home.discover/discover-ico-pc.png">PC</a>
+					   </div>
+				   </div>
+                 
+					<div class="align2" >
+					 	<div class="name">
+							<a class="button" href="https://store.playstation.com/en-ro/product/EP0001-PPSA01397_00-RB6SIEGEDELUXE08/">
+								 <img src="/home.discover/discover-ico-ps.png">PLAYSTATION</a>
+						</div>
+				    </div>
+
+					<div class="align2" > 
+						<div class="name">
+							<a class="button" href="https://www.xbox.com/ro-RO/games/store/tom-clancys-rainbow-six-siege-deluxe-edition/9pg9g25lskf7">
+								 <img  src="/home.discover/discover-ico-xbox.png">XBOX</a>
+						</div>
+				    </div>
+
+			      </div>
+			    </h1>
 			</div>
-			
 		</Disc>
 	</main>
 </Layout>
@@ -74,7 +104,8 @@ import Layout from '../layouts/Layout.astro';
 	.logo{
 		width: 700px;
 	}
-    
+
+
 	.info-nr{
 		color: #eeeeee;
 		font-size: 35px;
@@ -82,14 +113,43 @@ import Layout from '../layouts/Layout.astro';
         line-height: 35px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
 		margin-top: 0px; 
+		letter-spacing: 0.5px;
 	}
     
 	.align {
 		flex-direction: column;
 		display: flex;
 		align-items: center;
-		width: 170px;
+		width: 180px;
 	}
+
+	.align2 {
+		flex-direction: column;
+		display: flex;
+		align-items: center;
+		width: 120px;
+	}
+	h1{
+		padding: 18px 0px;
+        background-color: #127bd1d2;
+		background-size: 80px;
+		text-align: center;
+		line-height: 35px;
+		border-radius: 2px;
+	}
+	
+	h1:hover{ 
+      background-color: #00ffe5da;
+      transition: all 0.3s ease 0;
+    }
+
+	.button{
+		color: #000000;
+		font-size: 28px;
+		padding: 18px 32px;
+		letter-spacing: 0.5px;
+	}
+
 	.text {
 		color: #00ffe5;
 		font-size: 50px;
@@ -102,35 +162,40 @@ import Layout from '../layouts/Layout.astro';
 	.text2 {
 		color: #00ffe5;
 		font-size: 90px;
+        line-height: 20px;
+		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
+		margin-top: 50px;
+		margin-bottom: 0px; 
+	}
+
+	.text3 {
+		color: #00ffe5;
+		font-size: 90px;
         line-height: 50px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
 		margin-top: 0px;
 		margin-bottom: 0px; 
 	}
 
-	.text3 {
-		color: #00ffe5;
-		font-size: 85px;
-        line-height: 320px;
-		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-top: 25px;
-	}
-
 	.text4 {
 		color: #00ffe5;
 		font-size: 90px;
-        line-height: 320px;
+        line-height: 50px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-top: 25px;
+		margin-top: 0px;
+		margin-bottom: 0px; 
 	}
 
 	.text5 {
 		color: #00ffe5;
 		font-size: 90px;
-        line-height: 320px;
+        line-height: 150px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-top: 25px;
+		margin-top: 0px;
+		margin-bottom: 100px;
+ 
 	}
+
 	.mini-text {
 		color: #eeeeee;
 		font-size: 35px;
@@ -145,36 +210,49 @@ import Layout from '../layouts/Layout.astro';
 		font-size: 35px;
         line-height: 200px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-bottom: 130px; 
+		margin-bottom: 150px; 
+		letter-spacing: 0.5px;
 	}
     
 	.mini-text3 {
 		color: #eeeeee;
 		font-size: 35px;
 		text-align: center;
-        line-height: 35px;
+        line-height: 30px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-bottom: 100px;  
+		margin-bottom: 100px;
+		letter-spacing: 0.5px;  
 	}
 
 	.mini-text4 {
 		color: #eeeeee;
 		font-size: 35px;
-		text-align: center;
-        line-height: 35px;
+        line-height: 110px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-bottom: 100px;  
+		letter-spacing: 0.5px; 
+		height: 540px;
+		padding: 0px 60px;
 	}
 
 	.mini-text5 {
 		color: #eeeeee;
 		font-size: 35px;
-		text-align: center;
-        line-height: 35px;
+        line-height: 110px;
 		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
-		margin-bottom: 100px;  
+		letter-spacing: 0.5px; 
+		height: 540px;
 	}
 
+	.mini-text6 {
+		color: #eeeeee;
+		font-size: 25px;
+        line-height: 110px;
+		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
+		margin-bottom: 60px; 
+		padding-top:300px;
+		letter-spacing: 0.7px; 
+		height: 120px;
+	}
 	.content {
         display:flex;
 		flex-direction: column;
@@ -194,28 +272,42 @@ import Layout from '../layouts/Layout.astro';
     }
 
 	.content3 {
-        display: flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
     }
 
 	.content4 {
-        display: flex;
+       	display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
     }
 
 	.content5 {
-        display: flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: center;
 		width: 100%;
 		height: 100%;
     }
+
 	.iconitze {
 		display: flex;
 		gap: 200px;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.iconitze2 {
+		display: flex;
+		gap: 0px;
 		justify-content: center;
 		align-items: center;
 	}
