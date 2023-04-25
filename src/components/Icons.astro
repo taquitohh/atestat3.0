@@ -2,11 +2,12 @@
 export interface Props {
 
 gap: number;
+size: number;
 }
 
-const { gap } = Astro.props;
+const { gap, size } = Astro.props;
 ---
-<div class="iconitze" style={{gap: `${gap}px`}}>
+<div class="iconitze" style={{gap: `${gap}px`, size:`${size}px`}}>
     <slot></slot>
 </div>
 <style>
