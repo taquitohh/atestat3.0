@@ -42,7 +42,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="content">
 				<div class="title big text3">ATTACK VS. DEFENSE</div>
 				<div class="subtitle mini-text4">Choose from over 65 operators, each with unique gadgets and customizable weapon loadouts.​</div>
-				<Button href="/operators">VIEW ALL OPERATORS</Button>
+				<a><Button href="/operators">VIEW ALL OPERATORS</Button></a>
 			</div>
 			
 		</Disc>
@@ -50,7 +50,7 @@ import Layout from '../layouts/Layout.astro';
 			<div class="content">
 				<div class="title big text4">RAINBOW SIX ESPORTS</div>
 				<div class="subtitle mini-text5">Gathering the best professional players, our esports program hosts regional leagues and international competitions throughout the year.​</div>
-				<Button href="https://www.ubisoft.com/en-eu/esports/rainbow-six/siege">LEARN MORE</Button>
+				<a><Button href="https://www.ubisoft.com/en-eu/esports/rainbow-six/siege">LEARN MORE</Button></a>
 			</div>
 			
 		</Disc>
@@ -59,15 +59,17 @@ import Layout from '../layouts/Layout.astro';
 				<div class="title big text5">JOIN MORE THAN 85 MILLION PLAYERS</div>
 				<div class="subtitle mini-text6">BUY RAINBOW SIX SIEGE ON:​</div>
 				<Icons gap={50} width={100}>
-					<Button href="https://store.ubisoft.com/ie/tom-clancy-s-rainbow-six-siege-deluxe-edition/5e15a2665cdf9a1ec45ad82b.html?lang=en-ZW&ucid=UWB-ID_151373&addinfo=Gamesite_Rainbow%20Six%20Siege_game%20info_discover_main_promotion_buy_order_pc_">
+					<a>
+						<Button href="https://store.ubisoft.com/ie/tom-clancy-s-rainbow-six-siege-deluxe-edition/5e15a2665cdf9a1ec45ad82b.html?lang=en-ZW&ucid=UWB-ID_151373&addinfo=Gamesite_Rainbow%20Six%20Siege_game%20info_discover_main_promotion_buy_order_pc_">
 						<img class="icon" src="/home.discover/discover-ico-pc.png">PC
-					</Button>
-					<Button href="https://store.playstation.com/en-ro/product/EP0001-PPSA01397_00-RB6SIEGEDELUXE08/">
-						<img class="icon" src="/home.discover/discover-ico-ps.png">PLAYSTATION
-					</Button>
-					<Button  href="https://www.xbox.com/ro-RO/games/store/tom-clancys-rainbow-six-siege-deluxe-edition/9pg9g25lskf7">
-						<img class="icon" src="/home.discover/discover-ico-xbox.png">XBOX
-					</Button>
+						</Button>
+						<Button href="https://store.playstation.com/en-ro/product/EP0001-PPSA01397_00-RB6SIEGEDELUXE08/">
+							<img class="icon" src="/home.discover/discover-ico-ps.png">PLAYSTATION
+						</Button>
+						<Button  href="https://www.xbox.com/ro-RO/games/store/tom-clancys-rainbow-six-siege-deluxe-edition/9pg9g25lskf7">
+							<img class="icon" src="/home.discover/discover-ico-xbox.png">XBOX
+						</Button>
+				</a>
 				</Icons>
 			</div>
 		</Disc>
@@ -81,7 +83,9 @@ import Layout from '../layouts/Layout.astro';
 		align-items: center;
 		position: relative;
 	}
-	
+	a{
+		margin-bottom: 100px;
+	}
     .logogo{
 		line-height: 360px;
 		z-index: 1;
@@ -173,12 +177,12 @@ import Layout from '../layouts/Layout.astro';
 	}
 
 	.mini-text4 {
-		height: 640px;
+		height: 250px;
 		padding: 20px 60px;
 	}
 
 	.mini-text5 {
-		height: 500px;
+		height: 250px;
 		padding: 20px 60px;
 	}
 

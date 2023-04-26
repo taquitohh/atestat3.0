@@ -1,20 +1,21 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Card from "../../components/Card.astro";
 
 export async function getStaticPaths() {
     const pages = [
         {
-            operator: "Ash",
+            operator: "ASH",
             title: "Ash",
             text: "Attacker with R4C",
         },
         {
-            operator: "Sledge",
+            operator: "SLEDGE",
             title: "Ciocanul",
             text: "Apoi iei un ciocan si dai in cub",
         },
         {
-            operator: "Thatcher",
+            operator: "THACHER",
             title: "Thatcher",
             text: "Focking laser sights",
             weapons: [
@@ -24,6 +25,267 @@ export async function getStaticPaths() {
                 }
             ]
         },
+		    {operator:"THERMITE",
+			    title:"THERMITE",
+			    text:"r6-thermite",
+		    },
+		    {operator:"TWITCH",
+				title:"TWITCH",
+				text:"r6-twitch",
+            },
+			{operator:"MONTAGNE",
+				title:"MONTAGNE",
+				text:"r6-montagne",
+			},
+			{operator:"GLAZ",
+				title:"GLAZ",
+				text:"r6-glaz",
+			},
+			{operator:"FUZE",
+				title:"FUZE",
+				text:"r6-fuze",
+			},
+			{operator:"BLITZ",
+				title:"BLITZ",
+				text:"r6-blitz",
+			},
+			{operator:"IQ",
+				title:"IQ",
+				text:"r6-iq",
+			},
+			{operator:"BUCK",
+				title:"BUCK",
+				text:"r6-buck",
+			},
+			{operator:"BLACKBEARD",
+				title:"BLACKBEARD",
+				text:"r6-blackbeard",
+			},
+			{operator:"CAPITAO",
+				title:"CAPITAO",
+				text:"r6-capitao",
+			},
+			{operator:"HIBANA",
+				title:"HIBANA",
+				text:"r6-hibana",
+			},
+			{operator:"JACKAL",
+				title:"JACKAL",
+				text:"r6-jackal",
+			},
+			{operator:"YING",
+				title:"YING",
+				text:"r6-ying",
+			},
+			{operator:"ZOFIA",
+				title:"ZOFIA",
+				text:"r6-zofia",
+			},
+			{operator:"DOKKAEBI",
+				title:"DOKKAEBI",
+				text:"r6-dokkaebi",
+			},
+			{operator:"LION",
+				title:"LION",
+				text:"r6-lion",
+			},
+			{operator:"FINKA",
+				title:"FINKA",
+				text:"r6-finka",
+			},
+			{operator:"MAVERICK",
+				title:"MAVERICK",
+				text:"r6-maverick",
+			},
+			{operator:"NOMAD",
+				title:"NOMAD",
+				text:"r6-nomad",
+			},
+			{operator:"GRIDLOCK",
+				title:"GRIDLOCK",
+				text:"r6-gridlock",
+			},
+			{operator:"NOKK",
+				title:"NOKK",
+				text:"r6-nokk",
+		    },
+			{operator:"AMARU",
+				title:"AMARU",
+				text:"r6-amaru",
+			},
+			{operator:"KALI",
+				title:"KALI",
+				text:"r6-kali",
+			},
+			{operator:"IANA",
+				title:"IANA",
+				text:"r6-iana",
+			},
+			{operator:"ACE",
+				title:"ACE",
+				text:"r6-ace",
+			},
+			{operator:"ZERO",
+				title:"ZERO",
+				text:"r6-zero",
+			},
+			{operator:"FLORES",
+				title:"FLORES",
+				text:"r6-flores",
+			},
+			{operator:"OSA",
+				title:"OSA",
+				text:"r6-osa",
+			},
+			{operator:"SENS",
+				title:"SENS",
+				text:"r6-sens",
+		    },
+			{operator:"GRIM",
+				title:"GRIM",
+				text:"r6-grim",
+			},
+			{operator:"BRAVA",
+				title:"BRAVA",
+				text:"r6-brava",
+			},
+
+
+
+
+
+			{operator:"SMOKE",
+				title:"SMOKE",
+				text:"r6-smoke",
+		    },
+		    {operator:"MUTE",
+				title:"MUTE",
+				text:"r6-mute",
+            },
+			{operator:"CASTLE",
+				title:"CASTLE",
+				text:"r6-castle",
+			},
+			{operator:"PULSE",
+				title:"PULSE",
+				text:"r6-pulse",
+			},
+			{operator:"DOC",
+				title:"DOC",
+				text:"r6-doc",
+			},
+			{operator:"ROOK",
+				title:"ROOK",
+				text:"r6-rook",
+			},
+			{operator:"KAPKAN",
+				title:"KAPKAN",
+				text:"r6-kapkan",
+			},
+			{operator:"TACHANKA",
+				title:"TACHANKA",
+				text:"r6-tachanka",
+			},
+			{operator:"JAGER",
+				title:"JAGER",
+				text:"r6-jager",
+			},
+			{operator:"BANDIT",
+				title:"BANDIT",
+				text:"r6-bandit",
+			},
+			{operator:"FROST",
+				title:"FROST",
+				text:"r6-frost",
+			},
+			{operator:"VALKYRIE",
+				title:"VALKYRIE",
+				text:"r6-valkyrie",
+			},
+			{operator:"CAVEIRA",
+				title:"CAVEIRA",
+				text:"r6-caveira",
+			},
+			{operator:"ECHO",
+				title:"ECHO",
+				text:"r6-echo",
+			},
+			{operator:"MIRA",
+				title:"MIRA",
+				text:"r6-mira",
+			},
+			{operator:"LESION",
+				title:"LESION",
+				text:"r6-lesion",
+			},
+			{operator:"ELA",
+				title:"ELA",
+				text:"r6-ela",
+			},
+			{operator:"VIGIL",
+				title:"VIGIL",
+				text:"r6-vigil",
+			},
+			{operator:"MAESTRO",
+				title:"MAESTRO",
+				text:"r6-maestro",
+			},
+			{operator:"ALIBI",
+				title:"ALIBI",
+				text:"r6-alibi",
+			},
+			{operator:"CLASH",
+				title:"CLASH",
+				text:"r6-clash",
+		    },
+			{operator:"KAID",
+				title:"KAID",
+				text:"r6-kaid",
+			},
+			{operator:"MOZZIE",
+				title:"MOZZIE",
+				text:"r6-mozzie",
+			},
+			{operator:"WARDEN",
+				title:"WARDEN",
+				text:"r6-warden",
+			},
+			{operator:"GOYO",
+				title:"GOYO",
+				text:"r6-goyo",
+			},
+			{operator:"WAMAI",
+				title:"WAMAI",
+				text:"r6-wamai",
+			},
+			{operator:"ORYX",
+				title:"ORYX",
+				text:"r6-oryx",
+			},
+			{operator:"MELUSI",
+				title:"MELUSI",
+				text:"r6-melusi",
+			},
+			{operator:"ARUNI",
+				title:"ARUNI",
+				text:"r6-aruni",
+		    },
+			{operator:"THUNDERBIRD",
+				title:"THUNDERBIRD",
+				text:"r6-tunderbird",
+			},
+			{operator:"THORN",
+				title:"THORN",
+				text:"r6-thorn",
+			},
+			{operator:"AZAMI",
+				title:"AZAMI",
+				text:"r6-azami",
+			},
+			{operator:"SOLIS",
+				title:"SOLIS",
+				text:"r6-solis",
+			},
     ];
     return pages.map(({ operator, title, text, weapons }) => {
         return {
@@ -33,10 +295,133 @@ export async function getStaticPaths() {
     });
 }
 
-const { title, text, weapons } = Astro.props;    
+const { title, text, weapons } = Astro.props;
 ---
 
 <Layout>
+	<div>{title}</div>
     <h1>{weapons}</h1>
     <p>{text}</p>
+		<main>
+			
+		</main>
 </Layout>
+
+<style>
+    
+	.op_title {
+		
+		color: #EDF0F1;
+		opacity: 90%;
+        padding:30px;
+		font-size:50px;
+	}
+
+	div {
+		margin-top: 100px;
+		margin-bottom:60px;
+	}
+
+	body {
+        background-image: url(background/background.jpg);
+        background-repeat: repeat-y;
+        background-size: contain;
+    }
+
+	ul1 {
+		display:table-row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-self: center;
+		padding:50px;
+		gap: 1em;
+	}
+ 
+	ul2 {
+		display:table-row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-self: center;
+		padding:50px;
+		gap: 1em;
+		margin-bottom:100px;
+	}
+
+	main {
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		padding: 1.5rem;
+		max-width: auto;
+		margin-top:100px;
+        margin-bottom:200px;
+        margin-left:200px;
+        margin-right:200px;
+	}
+   
+	h1 {
+		font-size: 5rem;
+		font-weight: 800;
+		margin:20px;
+		margin-bottom: 0px;
+		margin-top: 50px;
+		align-self: center;
+		max-width: auto;
+	}
+
+	h2 {
+		display:flex ;
+		gap: 8px;
+		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
+	    
+	}
+	p{
+		color: #EDF0F1;
+		font-size:65px;
+		padding-bottom: 5px;
+	}
+
+	.iconitza {
+        width: 48px;
+		filter: invert(100%) drop-shadow(2px 2px 2px #151d30);
+	}
+
+	.text-gradient {
+
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+		filter: drop-shadow(2px 2px 2px #151d30);
+
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: rgb(255, 255, 255);
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+
+	.link-card-grid {
+		display: flex;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+	
+</style>
