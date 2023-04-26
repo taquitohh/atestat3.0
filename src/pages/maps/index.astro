@@ -1,0 +1,246 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Map from '../../components/Map.astro';
+
+
+---
+<Layout>
+	<main>
+        <h1 class="text-gradient">KNOW YOUR MAPS</h1>
+        <div>
+		    <h1 class="text1">New to the game, or still struggling to learn the maps and where to focus your attention? Check out these map guides to help you take your first steps in Rainbow Six Siege!</h1>
+	        <h1 class="text2">OPERATION COMMANDING FORCE - PLAYLISTS FILTERS</h1>
+        </div>
+        <ul1 role="list" class="link-card-grid">
+        <Map
+         href="#"
+         title="BANK"
+         name="bank"
+         />
+        <Map
+        href="#"
+        title="BORDER"
+        name="border"
+        />
+        <Map
+        href="#"
+        title="CHALET"
+        name="chalet"
+        />
+        <Map
+        href="#"
+        title="CLOSE QUARTERS"
+        name="close-quarters"
+        />
+        <Map
+        href="#"
+        title="CLUBHOUSE"
+        name="clubhouse"
+        />
+        <Map
+        href="#"
+        title="COASTLINE"
+        name="coastline"
+        />
+        <Map
+        href="#"
+        title="CONSULATE"
+        name="consulate"
+        />
+        <Map
+        href="#"
+        title="EMERALD PLAINS"
+        name="emerald-plains"
+        />
+        <Map
+        href="#"
+        title="FAVELA"
+        name="favela"
+        />
+        <Map
+        href="#"
+        title="FORTRESS"
+        name="fortress"
+        />
+        <Map
+        href="#"
+        title="HEREFORD"
+        name="hereford"
+        />
+        <Map
+        href="#"
+        title="HOUSE"
+        name="house"
+        />
+        <Map
+        href="#"
+        title="KAFE"
+        name="kafe"
+        />
+        <Map
+        href="#"
+        title="KANAL"
+        name="kanal"
+        />
+        <Map
+        href="#"
+        title="NIGHTHEAVEN LABS"
+        name="nighthaven-labs"
+        />
+        <Map
+        href="#"
+        title="OREGON"
+        name="oregon"
+        />
+        <Map
+        href="#"
+        title="OUTBACK"
+        name="outback"
+        />
+        <Map
+        href="#"
+        title="PLANE"
+        name="plane"
+        />
+        <Map
+        href="#"
+        title="SKYSCRAPER"
+        name="skyscraper"
+        />
+        <Map
+        href="#"
+        title="STADIUM"
+        name="stadium"
+        />
+        <Map
+        href="#"
+        title="THEMEPARK"
+        name="themepark"
+        />
+        <Map
+        href="#"
+        title="TOWER"
+        name="tower"
+        />
+        <Map
+        href="#"
+        title="VILLA"
+        name="villa"
+        />
+        <Map
+        href="#"
+        title="YACHT"
+        name="yacht"
+        />
+    </ul1>
+	</main>
+</Layout>
+
+<style>
+	.op_title {
+		
+		color: #EDF0F1;
+		opacity: 90%;
+        padding:30px;
+		font-size:50px;
+	}
+
+	div {
+        display:flex;
+        flex-direction: column;
+	}
+
+	body {
+        background-image: url(background/background.jpg);
+        background-repeat: repeat-y;
+        background-size: contain;
+        margin-bottom: 500px;
+    }
+    
+    .text1{
+        color: #EDF0F1;
+		font-size:25px;
+        letter-spacing: 0.5px;
+    }
+
+    .text2{
+        color: #EDF0F1;
+		font-size:38px;
+        padding-bottom: 100px;
+        letter-spacing: 0.5px;
+        height: 50px;
+        filter: drop-shadow(2px 2px 2px #151d30);
+    }
+
+	ul1 {
+		display:table-row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-self: center;
+		padding:50px;
+		gap: 1em;
+	}
+ 
+	main {
+		display: flex;
+		flex-direction:column;
+		align-items: center;
+		padding: 1.5rem;
+		max-width: auto;
+        margin-top:100px;
+        margin-bottom:200px;
+        margin-left:200px;
+        margin-right:200px;
+	}
+   
+	h1 {
+        display:flex;
+		font-size: 5rem;
+		font-weight: 800;
+        padding: 15px;
+		align-self: center;
+		max-width: auto;
+	}
+
+	.iconitza {
+        width: 48px;
+		filter: invert(100%) drop-shadow(2px 2px 2px #151d30);
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+        filter: drop-shadow(2px 2px 2px #151d30);
+
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: rgb(255, 255, 255);
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+
+	.link-card-grid {
+		display: flex;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 10px;
+		padding: 0;
+	}
+</style>

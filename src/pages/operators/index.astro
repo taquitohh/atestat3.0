@@ -8,7 +8,7 @@ import Card from '../../components/Card.astro';
 	<main>
 		<h1><span class="text-gradient">OPERATORS</span></h1>
 		<div>
-		    <h2><span class="op_title">ATTACKERS</span></h2>
+		    <h2><img class="iconitza" src="/siege logo/attacker.svg"> <p>ATTACKER</p></h2>
 	    </div>
 		<ul1 role="list" class="link-card-grid">
 			<Card
@@ -183,7 +183,7 @@ import Card from '../../components/Card.astro';
 			/>
 		</ul1>
 		<div>
-			<h3><span class="op_title">DEFENDER</span></h3>
+			<h2> <img class="iconitza" src="/siege logo/defender.svg"> <p>DEFENDER</p></h2>
 		</div>
 		<ul2 role="list" class="link-card-grid">
 			<Card
@@ -208,6 +208,17 @@ import Card from '../../components/Card.astro';
 			/>
 			<Card
 				href="#"
+				title="DOC"
+				name="r6-doc"
+			/>
+			<Card
+				href="#"
+				title="ROOK"
+				name="r6-rook"
+			/>
+		
+			<Card
+				href="#"
 				title="KAPKAN"
 				name="r6-kapkan"
 			/>
@@ -228,129 +239,120 @@ import Card from '../../components/Card.astro';
 			/>
 			<Card
 				href="#"
-				title="IQ"
-				name="r6-iq"
+				title="FROST"
+				name="r6-frost"
 			/>
 			<Card
 				href="#"
-				title="BUCK"
-				name="r6-buck"
+				title="VARKYRIE"
+				name="r6-valkyrie"
 			/>
 			<Card
 				href="#"
-				title="BLACKBEARD"
-				name="r6-blackbeard"
+				title="CAVEIRA"
+				name="r6-caveira"
 			/>
 			<Card
 				href="#"
-				title="CAPITAO"
-				name="r6-capitao"
+				title="ECHO"
+				name="r6-echo"
 			/>
 			<Card
 				href="#"
-				title="HIBANA"
-				name="r6-hibana"
+				title="MIRA"
+				name="r6-mira"
 			/>
 			<Card
 				href="#"
-				title="JACKAL"
-				name="r6-jackal"
+				title="LESION"
+				name="r6-lesion"
 			/>
 			<Card
 				href="#"
-				title="YING"
-				name="r6-ying"
+				title="ELA"
+				name="r6-ela"
 			/>
 			<Card
 				href="#"
-				title="ZOFIA"
-				name="r6-zofia"
+				title="VIGIL"
+				name="r6-vigil"
 			/>
 			<Card
 				href="#"
-				title="DOKKAEBI"
-				name="r6-dokkaebi"
+				title="MAESTRO"
+				name="r6-maestro"
 			/>
 			<Card
 				href="#"
-				title="LION"
-				name="r6-lion"
+				title="ALIBI"
+				name="r6-alibi"
 			/>
 			<Card
 				href="#"
-				title="FINKA"
-				name="r6-finka"
+				title="CLASH"
+				name="r6-clash"
 			/>
 			<Card
 				href="#"
-				title="MAVERICK"
-				name="r6-maverick"
+				title="KAID"
+				name="r6-kaid"
 			/>
 			<Card
 				href="#"
-				title="NOMAD"
-				name="r6-nomad"
+				title="MOZZIE"
+				name="r6-mozzie"
 			/>
 			<Card
 				href="#"
-				title="GRIDLOCK"
-				name="r6-gridlock"
+				title="WARDEN"
+				name="r6-warden"
 			/>
 			<Card
 				href="#"
-				title="NOKK"
-				name="r6-nokk"
+				title="GOYO"
+				name="r6-goyo"
 			/>
 			<Card
 				href="#"
-				title="AMARU"
-				name="r6-amaru"
+				title="WAMAI"
+				name="r6-wamai"
 			/>
 			<Card
 				href="#"
-				title="KALI"
-				name="r6-kali"
+				title="ORYX"
+				name="r6-oryx"
 			/>
 			<Card
 				href="#"
-				title="IANA"
-				name="r6-iana"
+				title="MELUSI"
+				name="r6-melusi"
 			/>
 			<Card
 				href="#"
-				title="ACE"
-				name="r6-ace"
+				title="ARUNI"
+				name="r6-aruni"
 			/>
 			<Card
 				href="#"
-				title="ZERO"
-				name="r6-zero"
+				title="THUNDERBIRD"
+				name="r6-thunderbird"
 			/>
 			<Card
 				href="#"
-				title="FLORES"
-				name="r6-flores"
+				title="THORN"
+				name="r6-thorn"
 			/>
 			<Card
 				href="#"
-				title="OSA"
-				name="r6-osa"
+				title="AZAMI"
+				name="r6-azami"
 			/>
 			<Card
 				href="#"
-				title="SENS"
-				name="r6-sens"
+				title="SOLIS"
+				name="r6-solis"
 			/>
-			<Card
-				href="#"
-				title="GRIM"
-				name="r6-grim"
-			/>
-			<Card
-				href="#"
-				title="BRAVA"
-				name="r6-brava"
-			/>
+		
 		</ul2>
 	</main>
 </Layout>
@@ -401,22 +403,47 @@ import Card from '../../components/Card.astro';
 		align-items: center;
 		padding: 1.5rem;
 		max-width: auto;
+		margin-top:100px;
+        margin-bottom:200px;
+        margin-left:200px;
+        margin-right:200px;
 	}
-
+   
 	h1 {
 		font-size: 5rem;
 		font-weight: 800;
 		margin:20px;
-		margin-bottom: 60px;
+		margin-bottom: 0px;
+		margin-top: 50px;
 		align-self: center;
 		max-width: auto;
 	}
+
+	h2 {
+		display:flex ;
+		gap: 8px;
+		text-shadow: 0 0 3px #151d30, 0 0 3px #151d30, 0 0 3px #151d30;
+	    
+	}
+	p{
+		color: #EDF0F1;
+		font-size:65px;
+		padding-bottom: 5px;
+	}
+
+	.iconitza {
+        width: 48px;
+		filter: invert(100%) drop-shadow(2px 2px 2px #151d30);
+	}
+
 	.text-gradient {
+
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
+		filter: drop-shadow(2px 2px 2px #151d30);
 
 	}
 	.instructions {

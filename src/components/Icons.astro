@@ -2,12 +2,12 @@
 export interface Props {
 
 gap: number;
-size: number;
+width: number;
 }
 
-const { gap, size } = Astro.props;
+const { gap, width } = Astro.props;
 ---
-<div class="iconitze" style={{gap: `${gap}px`, size:`${size}px`}}>
+<div class="iconitze" style={{gap: `${gap}px`, width:`${width}px`}}>
     <slot></slot>
 </div>
 <style>
@@ -16,5 +16,6 @@ const { gap, size } = Astro.props;
 	gap: 200px;
 	justify-content: center;
 	align-items: center;
+	filter:  drop-shadow(3px 3px 3px #151d30);
 }
 </style>
