@@ -5,13 +5,57 @@ export async function getStaticPaths() {
 	const pages = [
 		{
 			operator: "ASH",
-			title: "Ash",
-			text: "Attacker with R4C",
+			title: {
+				text: "ASH",
+				icon: "operator icon photo/r6-ash-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-ash-big.png",
+			},
+			video: {
+				img: "video-img/r6-ash-v-img.png",
+				video: "videos/r6-ash-v.mp4",
+				info: "Ash is a fast-paced front liner; capable of breaching, flanking and dividing the Defender's attention in seconds. Ash is capable of ranged soft breaching thanks to her modified M120 CREM Breaching Rounds.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
 		},
 		{
 			operator: "SLEDGE",
-			title: "Ciocanul",
-			text: "Apoi iei un ciocan si dai in cub",
+			title: {
+				text: "SLEDGE",
+				icon: "operator icon photo/r6-sledge-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-sledge-big.png",
+			},
+			video: {
+				img: "video-img/r6-sledge-v-img.png",
+				video: "videos/r6-sledge-v.mp4",
+				info: "Sledge is a soft breacher and flanker, he excels at creating new lines of fire and entry points, harassing the defenders. Sledge is capable of breaching non-reinforced surfaces thanks to his tactical breaching hammer: The Caber.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
 		},
 		{
 			operator: "THACHER",
@@ -24,14 +68,14 @@ export async function getStaticPaths() {
 				side_icon: "siege logo/attacker.svg",
 				side_a_d: "ATTACKER",
 				squad: "SQUAD",
-				squad_icon: "squad-logo/viperstrike.png",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
 				squad_name: "VIPERSTRIKE",
 				photo: "operator big photo/r6-thatcher-big.png",
-				video: "videos/r6-thatcher-v.mp4",
 			},
 			video: {
 				img: "video-img/r6-thatcher-v-img.png",
 				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
 			},
 			loadout: [
 				{
@@ -40,75 +84,1739 @@ export async function getStaticPaths() {
 				},
 			],
 		},
-		{ operator: "THERMITE", title: "THERMITE", text: "r6-thermite" },
-		{ operator: "TWITCH", title: "TWITCH", text: "r6-twitch" },
-		{ operator: "MONTAGNE", title: "MONTAGNE", text: "r6-montagne" },
-		{ operator: "GLAZ", title: "GLAZ", text: "r6-glaz" },
-		{ operator: "FUZE", title: "FUZE", text: "r6-fuze" },
-		{ operator: "BLITZ", title: "BLITZ", text: "r6-blitz" },
-		{ operator: "IQ", title: "IQ", text: "r6-iq" },
-		{ operator: "BUCK", title: "BUCK", text: "r6-buck" },
-		{ operator: "BLACKBEARD", title: "BLACKBEARD", text: "r6-blackbeard" },
-		{ operator: "CAPITAO", title: "CAPITAO", text: "r6-capitao" },
-		{ operator: "HIBANA", title: "HIBANA", text: "r6-hibana" },
-		{ operator: "JACKAL", title: "JACKAL", text: "r6-jackal" },
-		{ operator: "YING", title: "YING", text: "r6-ying" },
-		{ operator: "ZOFIA", title: "ZOFIA", text: "r6-zofia" },
-		{ operator: "DOKKAEBI", title: "DOKKAEBI", text: "r6-dokkaebi" },
-		{ operator: "LION", title: "LION", text: "r6-lion" },
-		{ operator: "FINKA", title: "FINKA", text: "r6-finka" },
-		{ operator: "MAVERICK", title: "MAVERICK", text: "r6-maverick" },
-		{ operator: "NOMAD", title: "NOMAD", text: "r6-nomad" },
-		{ operator: "GRIDLOCK", title: "GRIDLOCK", text: "r6-gridlock" },
-		{ operator: "NOKK", title: "NOKK", text: "r6-nokk" },
-		{ operator: "AMARU", title: "AMARU", text: "r6-amaru" },
-		{ operator: "KALI", title: "KALI", text: "r6-kali" },
-		{ operator: "IANA", title: "IANA", text: "r6-iana" },
-		{ operator: "ACE", title: "ACE", text: "r6-ace" },
-		{ operator: "ZERO", title: "ZERO", text: "r6-zero" },
-		{ operator: "FLORES", title: "FLORES", text: "r6-flores" },
-		{ operator: "OSA", title: "OSA", text: "r6-osa" },
-		{ operator: "SENS", title: "SENS", text: "r6-sens" },
-		{ operator: "GRIM", title: "GRIM", text: "r6-grim" },
-		{ operator: "BRAVA", title: "BRAVA", text: "r6-brava" },
-
-		{ operator: "SMOKE", title: "SMOKE", text: "r6-smoke" },
-		{ operator: "MUTE", title: "MUTE", text: "r6-mute" },
-		{ operator: "CASTLE", title: "CASTLE", text: "r6-castle" },
-		{ operator: "PULSE", title: "PULSE", text: "r6-pulse" },
-		{ operator: "DOC", title: "DOC", text: "r6-doc" },
-		{ operator: "ROOK", title: "ROOK", text: "r6-rook" },
-		{ operator: "KAPKAN", title: "KAPKAN", text: "r6-kapkan" },
-		{ operator: "TACHANKA", title: "TACHANKA", text: "r6-tachanka" },
-		{ operator: "JAGER", title: "JAGER", text: "r6-jager" },
-		{ operator: "BANDIT", title: "BANDIT", text: "r6-bandit" },
-		{ operator: "FROST", title: "FROST", text: "r6-frost" },
-		{ operator: "VALKYRIE", title: "VALKYRIE", text: "r6-valkyrie" },
-		{ operator: "CAVEIRA", title: "CAVEIRA", text: "r6-caveira" },
-		{ operator: "ECHO", title: "ECHO", text: "r6-echo" },
-		{ operator: "MIRA", title: "MIRA", text: "r6-mira" },
-		{ operator: "LESION", title: "LESION", text: "r6-lesion" },
-		{ operator: "ELA", title: "ELA", text: "r6-ela" },
-		{ operator: "VIGIL", title: "VIGIL", text: "r6-vigil" },
-		{ operator: "MAESTRO", title: "MAESTRO", text: "r6-maestro" },
-		{ operator: "ALIBI", title: "ALIBI", text: "r6-alibi" },
-		{ operator: "CLASH", title: "CLASH", text: "r6-clash" },
-		{ operator: "KAID", title: "KAID", text: "r6-kaid" },
-		{ operator: "MOZZIE", title: "MOZZIE", text: "r6-mozzie" },
-		{ operator: "WARDEN", title: "WARDEN", text: "r6-warden" },
-		{ operator: "GOYO", title: "GOYO", text: "r6-goyo" },
-		{ operator: "WAMAI", title: "WAMAI", text: "r6-wamai" },
-		{ operator: "ORYX", title: "ORYX", text: "r6-oryx" },
-		{ operator: "MELUSI", title: "MELUSI", text: "r6-melusi" },
-		{ operator: "ARUNI", title: "ARUNI", text: "r6-aruni" },
+		{
+			operator: "THERMITE",
+			title: {
+				text: "THERMITE",
+				icon: "operator icon photo/r6-thermite-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thermite-big.png",
+			},
+			video: {
+				img: "video-img/r6-thermite-v-img.png",
+				video: "videos/r6-thermite-v.mp4",
+				info: "Thermite is an important backline support for an attacking team. As one of the only hard-breachers in the game, losing Thermite early in the round will hinder your team significantly. Playing Thermite requires patience, leadership and strong communication with your team.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "TWITCH",
+			title: {
+				text: "TWITCH",
+				icon: "operator icon photo/r6-twitch-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-twitch-big.png",
+			},
+			video: {
+				img: "video-img/r6-twitch-v-img.png",
+				video: "videos/r6-twitch-v.mp4",
+				info: "Twitch is a disabler and intel Operator. She can utilize these skills as either a remote back-line support or as an aggressive entry fragger.Twitch is capable of remote disabling through her unique ability: RSD MODEL 1 SHOCK DRONE",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MONTAGNE",
+			title: {
+				text: "MONTAGNE",
+				icon: "operator icon photo/r6-montagne-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-montagne-big.png",
+			},
+			video: {
+				img: "video-img/r6-montagne-v-img.png",
+				video: "videos/r6-montagne-v.mp4",
+				info: "Collapses into half its size, providing increased mobility to its wielder. Composite of reinforced alloys and Kevlar. Provides protection against small-arms fire and close combat attacks",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "GLAZ",
+			title: {
+				text: "GLAZ",
+				icon: "operator icon photo/r6-glaz-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-glaz-big.png",
+			},
+			video: {
+				img: "video-img/r6-glaz-v-img.png",
+				video: "videos/r6-glaz-v.mp4",
+				info: "Glaz is a back-line marksman, capable of soft breaching and providing covering fire from a distance. Glaz is capable of ranged shooting through his unique scope ability: HDS Flipsight.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "FUZE",
+			title: {
+				text: "FUZE",
+				icon: "operator icon photo/r6-fuze-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-fuze-big.png",
+			},
+			video: {
+				img: "video-img/r6-fuze-v-img.png",
+				video: "videos/r6-fuze-v.mp4",
+				info: "Fuze is best played as an aggressive flanker and area denial Operator. His strengths allow him to dispatch defensive capabilities and harass enemies anchored in defensive positions. Fuze's APM-6 cluster charge propels a group of explosive cluster grenades through any soft breach surface.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "BLITZ",
+			title: {
+				text: "BLITZ",
+				icon: "operator icon photo/r6-blitz-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-blitz-big.png",
+			},
+			video: {
+				img: "video-img/r6-blitz-v-img.png",
+				video: "videos/r6-blitz-v.mp4",
+				info: "Ballistic shield. Three rows of eight flash-bang grenades provide a high intensity light source",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "IQ",
+			title: {
+				text: "IQ",
+				icon: "operator icon photo/r6-iq-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-iq-big.png",
+			},
+			video: {
+				img: "video-img/r6-iq-v-img.png",
+				video: "videos/r6-iq-v.mp4",
+				info: "Wrist-mounted. Mobile phone-sized sensor.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "BUCK",
+			title: {
+				text: "BUCK",
+				icon: "operator icon photo/r6-buck-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-buck-big.png",
+			},
+			video: {
+				img: "video-img/r6-buck-v-img.png",
+				video: "videos/r6-buck-v.mp4",
+				info: "Under-barrel mounted 12 gauge shotgun with four round capacity, used in tandem with an assault rifle. The Skeleton Key allows the operator to alternate between their standard issue assault rifle and a breaching shotgun with ease and efficiency.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "BLACKBEARD",
+			title: {
+				text: "BLACKBEARD",
+				icon: "operator icon photo/r6-blackbeard-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-blackbeard-big.png",
+			},
+			video: {
+				img: "video-img/r6-blackbeard-v-img.png",
+				video: "videos/r6-blackbeard-v.mp4",
+				info: "Multiple layers of transparent polycarbonate and thermoplastic armor, coated with a spall shield and backed with ultra-light weight laminated glass. Protects the user against blunt impact and artillery fire.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "CAPITAO",
+			title: {
+				text: "CAPITAO",
+				icon: "operator icon photo/r6-capitao-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-capitao-big.png",
+			},
+			video: {
+				img: "video-img/r6-capitao-v-img.png",
+				video: "videos/r6-capitao-v.mp4",
+				info: "Use a glass bolt to deliver a swift and silent assault against hostiles without alerting them to your position. The glass cartridge breaks on impact releasing a gas that ignites the oxygen in the surrounding area. Deliver swift and agile assaults without alerting your opponents of your position.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "HIBANA",
+			title: {
+				text: "HIBANA",
+				icon: "operator icon photo/r6-hibana-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-hibana-big.png",
+			},
+			video: {
+				img: "video-img/r6-hibana-v-img.png",
+				video: "videos/r6-hibana-v.mp4",
+				info: "The X-KAIROS - a 40 mm caliber launcher - fires explosive pellets that can be detonated simultaneously from a distance. Deliver innovative assaults by creating lines of sights, or new pathways!",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "JACKAL",
+			title: {
+				text: "JACKAL",
+				icon: "operator icon photo/r6-jackal-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-jackal-big.png",
+			},
+			video: {
+				img: "video-img/r6-jackal-v-img.png",
+				video: "videos/r6-jackal-v.mp4",
+				info: "Eyenox Model III was created to offer a mobile tracking device able to both identify and trail a person’s footprints in real-time. Equipped with advanced computer vision, the Eyenox detects invisible details relating to footfall and weight distribution so that you can identify and stalk your target.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "YING",
+			title: {
+				text: "YING",
+				icon: "operator icon photo/r6-ying-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-ying-big.png",
+			},
+			video: {
+				img: "video-img/r6-ying-v-img.png",
+				video: "videos/r6-ying-v.mp4",
+				info: "Inspired by the new breed of stun grenades showcased by the S.A.S., this mercury and magnesium based explosive creates a multitude of blinding flashes. The Candela device releases a cluster of flash charges that can either be anchored on surfaces or thrown out as a grenade.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ZOFIA",
+			title: {
+				text: "ZOFIA",
+				icon: "operator icon photo/r6-zofia-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-zofia-big.png",
+			},
+			video: {
+				img: "video-img/r6-zofia-v-img.png",
+				video: "videos/r6-zofia-v.mp4",
+				info: "KS79 LIFELINE makes use of electronically triggered projectile technology that can fire both concussion and impact ammunition. The concussion ammunition delivers a 170-decibel shockwave that impairs hearing and causes a dizzying effect.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "DOKKAEBI",
+			title: {
+				text: "DOKKAEBI",
+				icon: "operator icon photo/r6-dokkaebi-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-dokkaebi-big.png",
+			},
+			video: {
+				img: "video-img/r6-dokkaebi-v-img.png",
+				video: "videos/r6-dokkaebi-v.mp4",
+				info: "Grace utilizes the Ballistic Armor Military Laptop, codenamed Logic Bomb, which she uses to hack enemy PDA tactical devices. The program downloads a virus of her making that can bypass firewalls, turning surrounding devices on and emitting a loud noise to compromise an enemy’s position.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "LION",
+			title: {
+				text: "LION",
+				icon: "operator icon photo/r6-lion-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-lion-big.png",
+			},
+			video: {
+				img: "video-img/r6-lion-v-img.png",
+				video: "videos/r6-lion-v.mp4",
+				info: "Twitch provided him with an aerial drone while he served with GIGN. The EE-ONE-D helps Lion maintain quarantine by detecting movement in an area, giving an overview of hot zones or of the battlefield. His drone can stay airborne indefinitely, but he must choose the right moment to perform his scans.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "FINKA",
+			title: {
+				text: "FINKA",
+				icon: "operator icon photo/r6-finka-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-finka-big.png",
+			},
+			video: {
+				img: "video-img/r6-finka-v-img.png",
+				video: "videos/r6-finka-v.mp4",
+				info: "Finka's Adrenal Surge activates pre-injected nanobots made of zinc in operators, releasing a pharmacological cocktail into their system where the zinc is absorbed as a nutrient. These nanites give her team a short boost in HP, they help allies out of DBNO, and they steady the team’s aim. She’s the only one capable of tailoring the nanites to specific operators.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MAVERICK",
+			title: {
+				text: "MAVERICK",
+				icon: "operator icon photo/r6-maverick-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-maverick-big.png",
+			},
+			video: {
+				img: "video-img/r6-maverick-v-img.png",
+				video: "videos/r6-maverick-v.mp4",
+				info: "Maverick’s D.I.Y. blowtorch can breach any surface, including reinforced walls and hatches. It requires a steady hand and knowledge of the environment to create small holes and lines of sight. Maverick must be in close range to use his gadget on the chosen surface. This torch makes almost no sound but it runs out of fuel quickly. Nevertheless, the high precision of this gadget makes it a very creative tool to use hands-on without relying on digital technology.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "NOMAD",
+			title: {
+				text: "NOMAD",
+				icon: "operator icon photo/r6-nomad-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-nomad-big.png",
+			},
+			video: {
+				img: "video-img/r6-nomad-v-img.png",
+				video: "videos/r6-nomad-v.mp4",
+				info: "Nomad’s custom rifle attachment allows her to launch Airjab repulsion grenades. They can stick to a surface and will detonate when an enemy is within range. Nomad enters the field with three Airjab grenades. These pushback devices are non-lethal but they disorient those affected.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "GRIDLOCK",
+			title: {
+				text: "GRIDLOCK",
+				icon: "operator icon photo/r6-gridlock-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-gridlock-big.png",
+			},
+			video: {
+				img: "video-img/r6-gridlock-v-img.png",
+				video: "videos/r6-gridlock-v.mp4",
+				info: "Trax Stingers' design is a portable version that when activated, deploys a hexagonal cluster of spikes, covering uneven ground better than a straight mat. Once deployed they can replicate and spread out over a large area. This feature, unique for an Attacker, enables them to use the Trax as an obstacle to reshape the map and control an area. Effects on the enemy include slowing them down and causing damage when stepped on. Trax Stingers will be destroyed when shot or dealt impact or thermal damage.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "NOKK",
+			title: {
+				text: "NOKK",
+				icon: "operator icon photo/r6-nokk-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-nokk-big.png",
+			},
+			video: {
+				img: "video-img/r6-nokk-v-img.png",
+				video: "videos/r6-nokk-v.mp4",
+				info: "The HEL is a glove attachment, which, when activated, reduces her ambient noise output and hides her image from the opponents’ observation tools. Drones, Bulletproof Cameras, Evil Eyes and more will thus be unable to register Nøkk’s presence as she roams through the map, unseen. Her footsteps will be silenced as she stalks opposing operators, unheard. Roaming will be more risky than ever for Defenders, as Nøkk could be hiding behind every corner or worse, sneaking up right behind them.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "AMARU",
+			title: {
+				text: "AMARU",
+				icon: "operator icon photo/r6-amaru-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-amaru-big.png",
+			},
+			video: {
+				img: "video-img/r6-amaru-v-img.png",
+				video: "videos/r6-amaru-v.mp4",
+				info: "With the Garra Hook, Amaru can grapple onto ledges and windows and hoist herself up in record times. Her opponents now not only have to worry about attacks from above, but also attacks from below. With the Garra, Amaru is the only operator that can go up an open hatch, instead of down. When timed right, hooking the Garra onto a window can result in Amaru’s infamous Garra Kick, which instantly takes out an opponent standing behind the window.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "KALI",
+			title: {
+				text: "KALI",
+				icon: "operator icon photo/r6-kali-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-kali-big.png",
+			},
+			video: {
+				img: "video-img/r6-kali-v-img.png",
+				video: "videos/r6-kali-v.mp4",
+				info: "To talk about the LV Explosive Lance, we need to mention Kali’s CSRX 300. It’s a dangerous weapon that can breach barricades and hatches in a single shot, and create big holes in breakable walls. The LV is its under-barrel, and it can be used at the same time as the CSRX 300’s scopes. Its role is to destroy gadgets with a light explosion within a set radius. When used on a breakable wall, it will create a hole slightly smaller than what the sniper rifle would do. When shot at a reinforced wall, however, it simply lodges in surface.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "IANA",
+			title: {
+				text: "IANA",
+				icon: "operator icon photo/r6-iana-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-iana-big.png",
+			},
+			video: {
+				img: "video-img/r6-iana-v-img.png",
+				video: "videos/r6-iana-v.mp4",
+				info: "The Gemini Replicator is a remotely-controlled holographic copy of Iana. It can move and produces sound like she would, but it cannot shoot, melee or use secondary gadgets. It has a time limit, or it can be exited at any time. There is always a cooldown between two uses, which is longer if it’s destroyed. The Replicator is all about fooling Iana’s opponents and collecting information. During its deployment, she can find her opponents and cause confusion to her heart’s content. If the Gemini is spotted and destroyed, it can help Iana deduce the threat’s location, but it will buy her opponents a few precious seconds to reposition.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ACE",
+			title: {
+				text: "ACE",
+				icon: "operator icon photo/r6-ace-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-ace-big.png",
+			},
+			video: {
+				img: "video-img/r6-ace-v-img.png",
+				video: "videos/r6-ace-v.mp4",
+				info: "With the S.E.L.M.A. Aqua Breacher, water is the name of the game. It makes use of hydraulic pressure to burst through breakable and reinforced surfaces. The cylinder is thrown on whatever Ace is trying to breach, and then it opens to fully deploy. It explodes one time on floors, ceilings and hatches, but on walls the cylinder rolls down to deploy up to two times, if space allows. Each of these deployments leaves a clean rectangle breach, combining to create a hole big enough for an Operator to go through easily.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ZERO",
+			title: {
+				text: "ZERO",
+				icon: "operator icon photo/r6-zero-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-zero-big.png",
+			},
+			video: {
+				img: "video-img/r6-zero-v-img.png",
+				video: "videos/r6-zero-v.mp4",
+				info: "Intel is crucial to a good attack strategy, and Zero is well aware of that. His Argus Launcher is equipped with very special cameras that can lodge themselves into breakable and reinforced surface to surveil either side. Yes, these cameras can cover two angles and effectively allow you to spy on the opposing team. Argus Cameras do have one more quirk though: a single laser shot, perfect for destroying key elements in the Defenders’ setup or drawing attention away from choke points.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "FLORES",
+			title: {
+				text: "FLORES",
+				icon: "operator icon photo/r6-flores-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/GHOSTEYES.png",
+				squad_name: "GHOSTEYES",
+				photo: "operator big photo/r6-flores-big.png",
+			},
+			video: {
+				img: "video-img/r6-flores-v-img.png",
+				video: "videos/r6-flores-v.mp4",
+				info: "Controlled from a distance, the RCE-Ratero Charge races forward while Flores scouts a location for its blast. Once triggered, the Ratero clutches onto the nearest surface, armors itself with a bulletproof shell, and explodes, destroying nearby gadgets and soft surfaces.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "OSA",
+			title: {
+				text: "OSA",
+				icon: "operator icon photo/r6-osa-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-osa-big.png",
+			},
+			video: {
+				img: "video-img/r6-osa-v-img.png",
+				video: "videos/r6-osa-v.mp4",
+				info: "The transparent and bulletproof Talon-8 Shield can be carried by Osa or deployed on floors or window frames, giving her a protective line of sight while she formulates an attack strategy.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "SENS",
+			title: {
+				text: "SENS",
+				icon: "operator icon photo/r6-sens-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-sens-big.png",
+			},
+			video: {
+				img: "video-img/r6-sens-v-img.png",
+				video: "videos/r6-sens-v.mp4",
+				info: "R.O.U. Projector System rolls after it's thrown by Sens and drops small projectors to create a screen along its path. Although physical objects can still pass through the screen, it's highly flexible—cutting off multiple lines of sight at once.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "GRIM",
+			title: {
+				text: "GRIM",
+				icon: "operator icon photo/r6-grim-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-grim-big.png",
+			},
+			video: {
+				img: "video-img/r6-grim-v-img.png",
+				video: "videos/r6-grim-v.mp4",
+				info: "You've heard the buzz, and the Kawan Hive Launcher is here! Firing off a projectile releases a swarm of bots that track the location of opponents who walk through it. Just don't get them in your eyes.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "BRAVA",
+			title: {
+				text: "BRAVA",
+				icon: "operator icon photo/r6-brava-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-brava-big.png",
+			},
+			video: {
+				img: "video-img/r6-brava-v-img.png",
+				video: "videos/r6-brava-v.mp4",
+				info: "Brava's Kludge Drone is a sabotage tool capable of taking over opponents' devices. If the device can't be controlled, it's destroyed instead.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+// kogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+// ikogrjhweansjgiorkMAkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWvkogrjhweansjgiorkMA)RW
+		{
+			operator: "SMOKE",
+			title: {
+				text: "SMOKE",
+				icon: "operator icon photo/r6-smoke-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-smoke-big.png",
+			},
+			video: {
+				img: "video-img/r6-smoke-v-img.png",
+				video: "videos/r6-smoke-v.mp4",
+				info: "Detonator Remote receiver Double-sided tape allows vertical or horizontal mounting",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MUTE",
+			title: {
+				text: "MUTE",
+				icon: "operator icon photo/r6-mute-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-mute-big.png",
+			},
+			video: {
+				img: "video-img/r6-mute-v-img.png",
+				video: "videos/r6-mute-v.mp4",
+				info: "Collapsible antennas. Device can be planted on floors. Digital display. Activation levers.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "CASTLE",
+			title: {
+				text: "CASTLE",
+				icon: "operator icon photo/r6-castle-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-castle-big.png",
+			},
+			video: {
+				img: "video-img/r6-castle-v-img.png",
+				video: "videos/r6-castle-v.mp4",
+				info: "Castle is an anchor and secure Operator, capable of creating defensive strongholds around the objective, controlling the flow of the attackers and slowing down their assault. Castle's unique ability is to create reinforced barricades using the: UTP1-Universal Tactical Panel.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "PULSE",
+			title: {
+				text: "PULSE",
+				icon: "operator icon photo/r6-pulse-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/NIGHTHAVEN.png",
+				squad_name: "NIGHTHAVEN",
+				photo: "operator big photo/r6-pulse-big.png",
+			},
+			video: {
+				img: "video-img/r6-pulse-v-img.png",
+				video: "videos/r6-pulse-v.mp4",
+				info: "Pulse is a roamer and intel Operator for a defending team. Thanks to his HB-5 Cardiac Sensor, Pulse can track attackers through surfaces, gathering valuable intel on their position.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "DOC",
+			title: {
+				text: "DOC",
+				icon: "operator icon photo/r6-doc-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD ",
+				photo: "operator big photo/r6-doc-big.png",
+			},
+			video: {
+				img: "video-img/r6-doc-v-img.png",
+				video: "videos/r6-doc-v.mp4",
+				info: "Handheld, trigger-operated pistol 1mg dose of epinephrine, in a saline solution. The pistol is powered by a pressurized CO2 canister",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ROOK",
+			title: {
+				text: "ROOK",
+				icon: "operator icon photo/r6-rook-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-rook-big.png",
+			},
+			video: {
+				img: "video-img/r6-rook-v-img.png",
+				video: "videos/r6-rook-v.mp4",
+				info: "Rook is an anchor and buff Operator, capable of providing a boost to the Defenders, giving them a valuable advantage in a firefight. Rook is capable of protecting himself and his team mates through his unique ability: R1N 'RHINO' Armor.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "KAPKAN",
+			title: {
+				text: "KAPKAN",
+				icon: "operator icon photo/r6-kapkan-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-kapkan-big.png",
+			},
+			video: {
+				img: "video-img/r6-kapkan-v-img.png",
+				video: "videos/r6-kapkan-v.mp4",
+				info: "Kapkan is a trap Operator and a deadly addition to a Defending team. Kapkan is equipped with a Entry Denial Device (EDD-MK II). This trap is a packed C4 charge activated when motion is detected. It can be placed on door and window frames -- denying key entry points for attackers.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "TACHANKA",
+			title: {
+				text: "TACHANKA",
+				icon: "operator icon photo/r6-tachanka-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/REDHAMMER.png",
+				squad_name: "REDHAMMER",
+				photo: "operator big photo/r6-tachanka-big.png",
+			},
+			video: {
+				img: "video-img/r6-tachanka-v-img.png",
+				video: "videos/r6-tachanka-v.mp4",
+				info: "Tachanka’s new gadget, the Shumikha Launcher, is perfect for area denial and for covering unfavorable angles. Its heavy incendiary grenades can bounce multiple times, and their fuse timer only starts after the first bounce, giving them a lot of versatility. Tachanka is equipped with 10 grenades at the beginning of a match and the Launcher can hold up to 7. For maximum effectiveness, use several grenades together to cover a wider area and prevent your opponents from avoiding them. Once launched, you’ll only be able to reload one at a time.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "JAGER",
+			title: {
+				text: "JAGER",
+				icon: "operator icon photo/r6-jager-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/VIPERSTRIKE.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-jager-big.png",
+			},
+			video: {
+				img: "video-img/r6-jager-v-img.png",
+				video: "videos/r6-jager-v.mp4",
+				info: "Jager can help his team create a defensive stronghold before roaming the map to intercept flanking attackers. He is capable of destroying incoming projectiles due to his unique deployable gadget : the Active Defense System or ADS.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "BANDIT",
+			title: {
+				text: "BANDIT",
+				icon: "operator icon photo/r6-bandit-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-bandit-big.png",
+			},
+			video: {
+				img: "video-img/r6-bandit-v-img.png",
+				video: "videos/r6-bandit-v.mp4",
+				info: "Bandit is a secure, anti-hard breacher and roamer, capable of denying key entry points for the attackers and defending the objective while on the move. Bandit is capable of electrifying a variety of surfaces thanks to his special ability: Crude Electrical Device or CED-1 Shock Wire.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "FROST",
+			title: {
+				text: "FROST",
+				icon: "operator icon photo/r6-frost-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/WOLFGUARD.png",
+				squad_name: "WOLFGUARD",
+				photo: "operator big photo/r6-frost-big.png",
+			},
+			video: {
+				img: "video-img/r6-frost-v-img.png",
+				video: "videos/r6-frost-v.mp4",
+				info: "The rubber mat and concealed metal jaws are bolted in place. When the pressure plate is engaged, two sets of jaws at ankle and shin height deploy, locking the person in place. Requires two people to release the jaws and reset the trap.",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "VALKYRIE",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "CAVEIRA",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ECHO",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MIRA",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "LESION",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ELA",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "VIGIL",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MAESTRO",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ALIBI",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "CLASH",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "KAID",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MOZZIE",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "WARDEN",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "GOYO",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "WAMAI",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ORYX",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "MELUSI",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "ARUNI",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
 		{
 			operator: "THUNDERBIRD",
-			title: "THUNDERBIRD",
-			text: "r6-tunderbird",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
 		},
-		{ operator: "THORN", title: "THORN", text: "r6-thorn" },
-		{ operator: "AZAMI", title: "AZAMI", text: "r6-azami" },
-		{ operator: "SOLIS", title: "SOLIS", text: "r6-solis" },
+		{
+			operator: "THORN",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "AZAMI",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
+		{
+			operator: "SOLIS",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/defender.svg",
+				side_a_d: "DEFENDER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
+			},
+			loadout: [
+				{
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
+				},
+			],
+		},
 	];
 	return pages.map(({ operator, title, text, video, loadout }) => {
 		return {
@@ -134,15 +1842,15 @@ const { title, text, video, loadout } = Astro.props;
 	<main>
 		<h1>
 			<div class="main-title">
-				<div>
+				<div class="title">
 					<img class="iconitza" src={"../" + title.icon} />
 					<div class="content-title">{title.text}</div>
 				</div>
 				<div class="properties">
 					<p>{text.side}</p>
 					<img class="icon" src={"../" + text.side_icon} />
-					<p>{text.squad}</p>
 					<p>{text.side_a_d}</p>
+					<p>{text.squad}</p>
 					<img class="icon-squad" src={"../" + text.squad_icon} />
 					<p>{text.squad_name}</p>
 				</div>
@@ -155,13 +1863,17 @@ const { title, text, video, loadout } = Astro.props;
 					<img
 						id="play-button"
 						class="play-btn"
-						src="../video-img/play.svg"
+						src="../video-img/play.png"
 					/>
 					<video
 						id="video"
 						width="400"
 						controls
-						src={"../" + text.video}></video>
+						src={"../" + video.video}></video>
+				</div>
+				<div class="info">
+					<p class="title-info">UNIQUE ABILITIES AND PLAYSTYLE</p>
+					<p class="text-info">{video.info}</p>
 				</div>
 			</div>
 		</h1>
@@ -171,20 +1883,48 @@ const { title, text, video, loadout } = Astro.props;
 </Layout>
 
 <style>
+	.title-info {
+		font-size: 22px;
+		color: #151d30;
+	}
+
+	.text-info {
+		padding-left: 10px;
+		font-size: 14px;
+		color: #151d30;
+	}
+
+	.info {
+		width: 38%;
+		padding: 25px;
+		gap: 18px;
+		font-family: Roboto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.title {
+		display: flex;
+		flex-direction: row;
+	}
+
 	.main-title {
 		display: flex;
 		flex-direction: column;
 		z-index: 4;
-		margin-right: 250px;
+		margin-right: 650px;
 		padding: 25px;
 	}
 	.band {
+		height: 254px;
 		width: 100%;
-		background-color: aqua;
+		background-color: rgba(209, 205, 230, 0.603);
 		padding: 10px;
 		z-index: 5;
 		display: flex;
 		justify-content: center;
+		box-shadow: 0px 6px #00ffe58e;
+		backdrop-filter: blur(4px);
 	}
 	.play-btn {
 		width: 60px;
@@ -192,26 +1932,32 @@ const { title, text, video, loadout } = Astro.props;
 		left: 50%;
 		top: 50%;
 		transform: translate(-50%, -50%);
+		cursor: pointer;
+		filter: invert(100%);
 	}
-
 	video {
 		position: absolute;
 		top: 0;
 		left: 0;
 		display: none;
-		
+		margin-right: 650px;
 	}
 
 	.properties {
 		display: flex;
 		align-items: center;
-		gap: 0.5em;
+		gap: 10px;
 	}
 
 	.image {
 		position: relative;
 		width: 400px;
-		margin-right: 200px;
+		margin-right: 30px;
+	}
+
+	.play-btn:hover {
+		filter: invert(100%) sepia(82%) saturate(780%) hue-rotate(97deg)
+			brightness(104%) contrast(105%);
 	}
 
 	body {
@@ -223,8 +1969,8 @@ const { title, text, video, loadout } = Astro.props;
 	.big {
 		position: absolute;
 		width: 640px;
-		margin-left: 600px;
-		margin-top: -125px;
+		margin-left: 700px;
+		margin-top: -120px;
 		z-index: 2;
 	}
 	main {
@@ -233,6 +1979,8 @@ const { title, text, video, loadout } = Astro.props;
 		align-items: left;
 		max-width: auto;
 		width: 100%;
+		margin-top: 100px;
+		margin-bottom: 200px;
 	}
 
 	.content-title {
@@ -249,7 +1997,17 @@ const { title, text, video, loadout } = Astro.props;
 		justify-content: center;
 		width: 100%;
 		height: 800px;
-		gap: 10px;
+		gap: 0.5em;
+	}
+
+	h3 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 800px;
+		gap: 0.5em;
 	}
 
 	p {
