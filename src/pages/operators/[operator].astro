@@ -29,6 +29,12 @@ export async function getStaticPaths() {
 					squad_icon: "squad-logo/viperstrike.png",
 					squad_name:"VIPERSTRIKE",
                     photo:"operator big photo/r6-thatcher-big.png",
+					video:"videos/r6-thatcher-v.mp4",
+				},
+			video:
+				{
+					img:"video-img/r6-thatcher-v-img.png",
+                    video:"videos/r6-thatcher-v.mp4",
 				},
             loadout: [
                 {
@@ -299,21 +305,20 @@ export async function getStaticPaths() {
 				text:"r6-solis",
 			},
     ];
-    return pages.map(({ operator, title, text, loadout }) => {
+    return pages.map(({ operator, title, text, video, loadout }) => {
         return {
             params: { operator: operator },
-            props: { title, text, loadout },
+            props: { title, text, video, loadout },
         };
     });
 }
 
-const { title, text, loadout } = Astro.props;
+const { title, text, video, loadout } = Astro.props;
 ---
 
 <Layout>
 	<main>
-	<h1>
-	  <h2>
+	<h1>  
 	  <div> <img class="iconitza" src={"../"+title.icon}> <div class="content-title"> {title.text}</div> </div> 
        <div> <p>{text.side}</p> 
 		  <img class="icon" src={"../"+text.side_icon}>
@@ -322,21 +327,40 @@ const { title, text, loadout } = Astro.props;
 		  <img class="icon-squad" src={"../"+text.squad_icon}>
 		  <p>{text.squad_name}</p>
 	   </div>
-	  </h2>
 	  <div><img class="big" src={"../"+text.photo}></div>
+	  <div class="image">
+		<img width="400" src={"../"+video.img}>
+        <img class="play-btn" src="../video-img/play.svg">
+		<!-- <video width="400" controls src={"../"+text.video}></video> -->
+	  </div>
     </h1>
+
 	<h3>{loadout[0].name}</h3>
 	</main>
 	
 </Layout>
 
 <style>
-    
-	
+    .play-btn{
+		width: 60px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	video{
+		display: flex;
+	}
+
 	div {
 		display: flex;
 		align-items: center;
 		gap: 0.5em;
+	}
+
+    .image{
+		position: relative;
 	}
 
 	body {
@@ -344,10 +368,11 @@ const { title, text, loadout } = Astro.props;
         background-repeat: repeat-y;
         background-size: contain;
     }
+
     .big {
 		position: absolute;
 		width: 640px;
-		margin-left: 500px;
+		margin-left: 400px;
 	}
 	main {
 		display: flex;
@@ -357,8 +382,8 @@ const { title, text, loadout } = Astro.props;
 		max-width: auto;
 		margin-top:300px;
         margin-bottom:200px;
-        margin-left:500px;
-        margin-right:500px;
+        margin-left:450px;
+        margin-right:450px;
 	}
     
 	.content-title {
@@ -370,11 +395,6 @@ const { title, text, loadout } = Astro.props;
 
     h1{
         display: flex;
-		flex-direction: row;
-	}
-
-	h2 {
-		display: flex;
 		flex-direction: column;
 	}
 
