@@ -2,419 +2,272 @@
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-    const pages = [
-        {
-            operator: "ASH",
-            title: "Ash",
-            text: "Attacker with R4C",
-        },
-        {
-            operator: "SLEDGE",
-            title: "Ciocanul",
-            text: "Apoi iei un ciocan si dai in cub",
-        },
-        {
-            operator: "THACHER",
-            title:
+	const pages = [
+		{
+			operator: "ASH",
+			title: "Ash",
+			text: "Attacker with R4C",
+		},
+		{
+			operator: "SLEDGE",
+			title: "Ciocanul",
+			text: "Apoi iei un ciocan si dai in cub",
+		},
+		{
+			operator: "THACHER",
+			title: {
+				text: "THACHER",
+				icon: "operator icon photo/r6-thatcher-icon.png",
+			},
+			text: {
+				side: "SIDE",
+				side_icon: "siege logo/attacker.svg",
+				side_a_d: "ATTACKER",
+				squad: "SQUAD",
+				squad_icon: "squad-logo/viperstrike.png",
+				squad_name: "VIPERSTRIKE",
+				photo: "operator big photo/r6-thatcher-big.png",
+				video: "videos/r6-thatcher-v.mp4",
+			},
+			video: {
+				img: "video-img/r6-thatcher-v-img.png",
+				video: "videos/r6-thatcher-v.mp4",
+			},
+			loadout: [
 				{
-					text: "THACHER",
-					icon:"operator icon photo/r6-thatcher-icon.png",
+					name: "R4C",
+					icon: "/weapon-icons/r4c.png",
 				},
-            text:
-				{
-                    side: "SIDE",
-					side_icon: "siege logo/attacker.svg",
-					side_a_d:"ATTACKER",
-					squad: "SQUAD",
-					squad_icon: "squad-logo/viperstrike.png",
-					squad_name:"VIPERSTRIKE",
-                    photo:"operator big photo/r6-thatcher-big.png",
-					video:"videos/r6-thatcher-v.mp4",
-				},
-			video:
-				{
-					img:"video-img/r6-thatcher-v-img.png",
-                    video:"videos/r6-thatcher-v.mp4",
-				},
-            loadout: [
-                {
-                    name: "R4C",
-                    icon: "/weapon-icons/r4c.png"
-                }
-            ]
-        },
-		    {operator:"THERMITE",
-			    title:"THERMITE",
-			    text:"r6-thermite",
-		    },
-		    {operator:"TWITCH",
-				title:"TWITCH",
-				text:"r6-twitch",
-            },
-			{operator:"MONTAGNE",
-				title:"MONTAGNE",
-				text:"r6-montagne",
-			},
-			{operator:"GLAZ",
-				title:"GLAZ",
-				text:"r6-glaz",
-			},
-			{operator:"FUZE",
-				title:"FUZE",
-				text:"r6-fuze",
-			},
-			{operator:"BLITZ",
-				title:"BLITZ",
-				text:"r6-blitz",
-			},
-			{operator:"IQ",
-				title:"IQ",
-				text:"r6-iq",
-			},
-			{operator:"BUCK",
-				title:"BUCK",
-				text:"r6-buck",
-			},
-			{operator:"BLACKBEARD",
-				title:"BLACKBEARD",
-				text:"r6-blackbeard",
-			},
-			{operator:"CAPITAO",
-				title:"CAPITAO",
-				text:"r6-capitao",
-			},
-			{operator:"HIBANA",
-				title:"HIBANA",
-				text:"r6-hibana",
-			},
-			{operator:"JACKAL",
-				title:"JACKAL",
-				text:"r6-jackal",
-			},
-			{operator:"YING",
-				title:"YING",
-				text:"r6-ying",
-			},
-			{operator:"ZOFIA",
-				title:"ZOFIA",
-				text:"r6-zofia",
-			},
-			{operator:"DOKKAEBI",
-				title:"DOKKAEBI",
-				text:"r6-dokkaebi",
-			},
-			{operator:"LION",
-				title:"LION",
-				text:"r6-lion",
-			},
-			{operator:"FINKA",
-				title:"FINKA",
-				text:"r6-finka",
-			},
-			{operator:"MAVERICK",
-				title:"MAVERICK",
-				text:"r6-maverick",
-			},
-			{operator:"NOMAD",
-				title:"NOMAD",
-				text:"r6-nomad",
-			},
-			{operator:"GRIDLOCK",
-				title:"GRIDLOCK",
-				text:"r6-gridlock",
-			},
-			{operator:"NOKK",
-				title:"NOKK",
-				text:"r6-nokk",
-		    },
-			{operator:"AMARU",
-				title:"AMARU",
-				text:"r6-amaru",
-			},
-			{operator:"KALI",
-				title:"KALI",
-				text:"r6-kali",
-			},
-			{operator:"IANA",
-				title:"IANA",
-				text:"r6-iana",
-			},
-			{operator:"ACE",
-				title:"ACE",
-				text:"r6-ace",
-			},
-			{operator:"ZERO",
-				title:"ZERO",
-				text:"r6-zero",
-			},
-			{operator:"FLORES",
-				title:"FLORES",
-				text:"r6-flores",
-			},
-			{operator:"OSA",
-				title:"OSA",
-				text:"r6-osa",
-			},
-			{operator:"SENS",
-				title:"SENS",
-				text:"r6-sens",
-		    },
-			{operator:"GRIM",
-				title:"GRIM",
-				text:"r6-grim",
-			},
-			{operator:"BRAVA",
-				title:"BRAVA",
-				text:"r6-brava",
-			},
+			],
+		},
+		{ operator: "THERMITE", title: "THERMITE", text: "r6-thermite" },
+		{ operator: "TWITCH", title: "TWITCH", text: "r6-twitch" },
+		{ operator: "MONTAGNE", title: "MONTAGNE", text: "r6-montagne" },
+		{ operator: "GLAZ", title: "GLAZ", text: "r6-glaz" },
+		{ operator: "FUZE", title: "FUZE", text: "r6-fuze" },
+		{ operator: "BLITZ", title: "BLITZ", text: "r6-blitz" },
+		{ operator: "IQ", title: "IQ", text: "r6-iq" },
+		{ operator: "BUCK", title: "BUCK", text: "r6-buck" },
+		{ operator: "BLACKBEARD", title: "BLACKBEARD", text: "r6-blackbeard" },
+		{ operator: "CAPITAO", title: "CAPITAO", text: "r6-capitao" },
+		{ operator: "HIBANA", title: "HIBANA", text: "r6-hibana" },
+		{ operator: "JACKAL", title: "JACKAL", text: "r6-jackal" },
+		{ operator: "YING", title: "YING", text: "r6-ying" },
+		{ operator: "ZOFIA", title: "ZOFIA", text: "r6-zofia" },
+		{ operator: "DOKKAEBI", title: "DOKKAEBI", text: "r6-dokkaebi" },
+		{ operator: "LION", title: "LION", text: "r6-lion" },
+		{ operator: "FINKA", title: "FINKA", text: "r6-finka" },
+		{ operator: "MAVERICK", title: "MAVERICK", text: "r6-maverick" },
+		{ operator: "NOMAD", title: "NOMAD", text: "r6-nomad" },
+		{ operator: "GRIDLOCK", title: "GRIDLOCK", text: "r6-gridlock" },
+		{ operator: "NOKK", title: "NOKK", text: "r6-nokk" },
+		{ operator: "AMARU", title: "AMARU", text: "r6-amaru" },
+		{ operator: "KALI", title: "KALI", text: "r6-kali" },
+		{ operator: "IANA", title: "IANA", text: "r6-iana" },
+		{ operator: "ACE", title: "ACE", text: "r6-ace" },
+		{ operator: "ZERO", title: "ZERO", text: "r6-zero" },
+		{ operator: "FLORES", title: "FLORES", text: "r6-flores" },
+		{ operator: "OSA", title: "OSA", text: "r6-osa" },
+		{ operator: "SENS", title: "SENS", text: "r6-sens" },
+		{ operator: "GRIM", title: "GRIM", text: "r6-grim" },
+		{ operator: "BRAVA", title: "BRAVA", text: "r6-brava" },
 
-
-
-
-
-			{operator:"SMOKE",
-				title:"SMOKE",
-				text:"r6-smoke",
-		    },
-		    {operator:"MUTE",
-				title:"MUTE",
-				text:"r6-mute",
-            },
-			{operator:"CASTLE",
-				title:"CASTLE",
-				text:"r6-castle",
-			},
-			{operator:"PULSE",
-				title:"PULSE",
-				text:"r6-pulse",
-			},
-			{operator:"DOC",
-				title:"DOC",
-				text:"r6-doc",
-			},
-			{operator:"ROOK",
-				title:"ROOK",
-				text:"r6-rook",
-			},
-			{operator:"KAPKAN",
-				title:"KAPKAN",
-				text:"r6-kapkan",
-			},
-			{operator:"TACHANKA",
-				title:"TACHANKA",
-				text:"r6-tachanka",
-			},
-			{operator:"JAGER",
-				title:"JAGER",
-				text:"r6-jager",
-			},
-			{operator:"BANDIT",
-				title:"BANDIT",
-				text:"r6-bandit",
-			},
-			{operator:"FROST",
-				title:"FROST",
-				text:"r6-frost",
-			},
-			{operator:"VALKYRIE",
-				title:"VALKYRIE",
-				text:"r6-valkyrie",
-			},
-			{operator:"CAVEIRA",
-				title:"CAVEIRA",
-				text:"r6-caveira",
-			},
-			{operator:"ECHO",
-				title:"ECHO",
-				text:"r6-echo",
-			},
-			{operator:"MIRA",
-				title:"MIRA",
-				text:"r6-mira",
-			},
-			{operator:"LESION",
-				title:"LESION",
-				text:"r6-lesion",
-			},
-			{operator:"ELA",
-				title:"ELA",
-				text:"r6-ela",
-			},
-			{operator:"VIGIL",
-				title:"VIGIL",
-				text:"r6-vigil",
-			},
-			{operator:"MAESTRO",
-				title:"MAESTRO",
-				text:"r6-maestro",
-			},
-			{operator:"ALIBI",
-				title:"ALIBI",
-				text:"r6-alibi",
-			},
-			{operator:"CLASH",
-				title:"CLASH",
-				text:"r6-clash",
-		    },
-			{operator:"KAID",
-				title:"KAID",
-				text:"r6-kaid",
-			},
-			{operator:"MOZZIE",
-				title:"MOZZIE",
-				text:"r6-mozzie",
-			},
-			{operator:"WARDEN",
-				title:"WARDEN",
-				text:"r6-warden",
-			},
-			{operator:"GOYO",
-				title:"GOYO",
-				text:"r6-goyo",
-			},
-			{operator:"WAMAI",
-				title:"WAMAI",
-				text:"r6-wamai",
-			},
-			{operator:"ORYX",
-				title:"ORYX",
-				text:"r6-oryx",
-			},
-			{operator:"MELUSI",
-				title:"MELUSI",
-				text:"r6-melusi",
-			},
-			{operator:"ARUNI",
-				title:"ARUNI",
-				text:"r6-aruni",
-		    },
-			{operator:"THUNDERBIRD",
-				title:"THUNDERBIRD",
-				text:"r6-tunderbird",
-			},
-			{operator:"THORN",
-				title:"THORN",
-				text:"r6-thorn",
-			},
-			{operator:"AZAMI",
-				title:"AZAMI",
-				text:"r6-azami",
-			},
-			{operator:"SOLIS",
-				title:"SOLIS",
-				text:"r6-solis",
-			},
-    ];
-    return pages.map(({ operator, title, text, video, loadout }) => {
-        return {
-            params: { operator: operator },
-            props: { title, text, video, loadout },
-        };
-    });
+		{ operator: "SMOKE", title: "SMOKE", text: "r6-smoke" },
+		{ operator: "MUTE", title: "MUTE", text: "r6-mute" },
+		{ operator: "CASTLE", title: "CASTLE", text: "r6-castle" },
+		{ operator: "PULSE", title: "PULSE", text: "r6-pulse" },
+		{ operator: "DOC", title: "DOC", text: "r6-doc" },
+		{ operator: "ROOK", title: "ROOK", text: "r6-rook" },
+		{ operator: "KAPKAN", title: "KAPKAN", text: "r6-kapkan" },
+		{ operator: "TACHANKA", title: "TACHANKA", text: "r6-tachanka" },
+		{ operator: "JAGER", title: "JAGER", text: "r6-jager" },
+		{ operator: "BANDIT", title: "BANDIT", text: "r6-bandit" },
+		{ operator: "FROST", title: "FROST", text: "r6-frost" },
+		{ operator: "VALKYRIE", title: "VALKYRIE", text: "r6-valkyrie" },
+		{ operator: "CAVEIRA", title: "CAVEIRA", text: "r6-caveira" },
+		{ operator: "ECHO", title: "ECHO", text: "r6-echo" },
+		{ operator: "MIRA", title: "MIRA", text: "r6-mira" },
+		{ operator: "LESION", title: "LESION", text: "r6-lesion" },
+		{ operator: "ELA", title: "ELA", text: "r6-ela" },
+		{ operator: "VIGIL", title: "VIGIL", text: "r6-vigil" },
+		{ operator: "MAESTRO", title: "MAESTRO", text: "r6-maestro" },
+		{ operator: "ALIBI", title: "ALIBI", text: "r6-alibi" },
+		{ operator: "CLASH", title: "CLASH", text: "r6-clash" },
+		{ operator: "KAID", title: "KAID", text: "r6-kaid" },
+		{ operator: "MOZZIE", title: "MOZZIE", text: "r6-mozzie" },
+		{ operator: "WARDEN", title: "WARDEN", text: "r6-warden" },
+		{ operator: "GOYO", title: "GOYO", text: "r6-goyo" },
+		{ operator: "WAMAI", title: "WAMAI", text: "r6-wamai" },
+		{ operator: "ORYX", title: "ORYX", text: "r6-oryx" },
+		{ operator: "MELUSI", title: "MELUSI", text: "r6-melusi" },
+		{ operator: "ARUNI", title: "ARUNI", text: "r6-aruni" },
+		{
+			operator: "THUNDERBIRD",
+			title: "THUNDERBIRD",
+			text: "r6-tunderbird",
+		},
+		{ operator: "THORN", title: "THORN", text: "r6-thorn" },
+		{ operator: "AZAMI", title: "AZAMI", text: "r6-azami" },
+		{ operator: "SOLIS", title: "SOLIS", text: "r6-solis" },
+	];
+	return pages.map(({ operator, title, text, video, loadout }) => {
+		return {
+			params: { operator: operator },
+			props: { title, text, video, loadout },
+		};
+	});
 }
 
 const { title, text, video, loadout } = Astro.props;
 ---
 
+<script>
+	document.getElementById("play-button")?.addEventListener("click", () => {
+		let video = document.querySelector("video");
+		if (!video) return;
+		video.style.display = "block";
+		video.play();
+	});
+</script>
+
 <Layout>
 	<main>
-	<h1>  
-	  <div> <img class="iconitza" src={"../"+title.icon}> <div class="content-title"> {title.text}</div> </div> 
-       <div> <p>{text.side}</p> 
-		  <img class="icon" src={"../"+text.side_icon}>
-		  <p>{text.squad}</p>
-		  <p>{text.side_a_d}</p>
-		  <img class="icon-squad" src={"../"+text.squad_icon}>
-		  <p>{text.squad_name}</p>
-	   </div>
-	  <div><img class="big" src={"../"+text.photo}></div>
-	  <div class="image">
-		<img width="400" src={"../"+video.img}>
-        <img class="play-btn" src="../video-img/play.svg">
-		<!-- <video width="400" controls src={"../"+text.video}></video> -->
-	  </div>
-    </h1>
+		<h1>
+			<div class="main-title">
+				<div>
+					<img class="iconitza" src={"../" + title.icon} />
+					<div class="content-title">{title.text}</div>
+				</div>
+				<div class="properties">
+					<p>{text.side}</p>
+					<img class="icon" src={"../" + text.side_icon} />
+					<p>{text.squad}</p>
+					<p>{text.side_a_d}</p>
+					<img class="icon-squad" src={"../" + text.squad_icon} />
+					<p>{text.squad_name}</p>
+				</div>
+			</div>
 
-	<h3>{loadout[0].name}</h3>
+			<img class="big" src={"../" + text.photo} />
+			<div class="band">
+				<div class="image">
+					<img width="400" src={"../" + video.img} />
+					<img
+						id="play-button"
+						class="play-btn"
+						src="../video-img/play.svg"
+					/>
+					<video
+						id="video"
+						width="400"
+						controls
+						src={"../" + text.video}></video>
+				</div>
+			</div>
+		</h1>
+
+		<h3>{loadout[0].name}</h3>
 	</main>
-	
 </Layout>
 
 <style>
-    .play-btn{
+	.main-title {
+		display: flex;
+		flex-direction: column;
+		z-index: 4;
+		margin-right: 250px;
+		padding: 25px;
+	}
+	.band {
+		width: 100%;
+		background-color: aqua;
+		padding: 10px;
+		z-index: 5;
+		display: flex;
+		justify-content: center;
+	}
+	.play-btn {
 		width: 60px;
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: translate(-50%,-50%);
+		transform: translate(-50%, -50%);
 	}
 
-	video{
-		display: flex;
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		
 	}
 
-	div {
+	.properties {
 		display: flex;
 		align-items: center;
 		gap: 0.5em;
 	}
 
-    .image{
+	.image {
 		position: relative;
+		width: 400px;
+		margin-right: 200px;
 	}
 
 	body {
-        background-image: url(background/background.jpg);
-        background-repeat: repeat-y;
-        background-size: contain;
-    }
+		background-image: url(../background/background.jpg);
+		background-repeat: repeat-y;
+		background-size: contain;
+	}
 
-    .big {
+	.big {
 		position: absolute;
 		width: 640px;
-		margin-left: 400px;
+		margin-left: 600px;
+		margin-top: -125px;
+		z-index: 2;
 	}
 	main {
 		display: flex;
-		flex-direction:column;
-		align-items: left;
-		padding: 1.5rem;
-		max-width: auto;
-		margin-top:300px;
-        margin-bottom:200px;
-        margin-left:450px;
-        margin-right:450px;
-	}
-    
-	.content-title {
-		color: #EDF0F1;
-		font-size:55px;
-		padding-bottom: 5px;
-		letter-spacing: 0.5px;
-	}
-
-    h1{
-        display: flex;
 		flex-direction: column;
+		align-items: left;
+		max-width: auto;
+		width: 100%;
 	}
 
-	p{
-		color: #EDF0F1;
-		font-size:20px;
+	.content-title {
+		color: #edf0f1;
+		font-size: 55px;
 		padding-bottom: 5px;
 		letter-spacing: 0.5px;
 	}
-    .icon {
+
+	h1 {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: 800px;
+		gap: 10px;
+	}
+
+	p {
+		color: #edf0f1;
+		font-size: 20px;
+		padding-bottom: 5px;
+		letter-spacing: 0.5px;
+	}
+	.icon {
 		width: 25px;
-		filter:  invert(100%) drop-shadow(2px 2px 2px #151d30);
+		filter: invert(100%) drop-shadow(2px 2px 2px #151d30);
 	}
 	.icon-squad {
 		width: 32px;
-		filter:  drop-shadow(2px 2px 2px #151d30);
+		filter: drop-shadow(2px 2px 2px #151d30);
 	}
 	.iconitza {
-        width: 75px;
-		filter:  drop-shadow(2px 2px 2px #151d30);
+		width: 75px;
+		filter: drop-shadow(2px 2px 2px #151d30);
 	}
-	
 </style>
