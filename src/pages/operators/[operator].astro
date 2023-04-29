@@ -1,5 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import Gadget from "../../components/Gadget.astro"
+import Column from "../../components/Column.astro";
 
 export async function getStaticPaths() {
 	const pages = [
@@ -1812,30 +1814,10 @@ export async function getStaticPaths() {
 			},
 			loadout:
 				{
-					primary:[
-						{
-							primary_name:"P90",
-							primary_icon: "/weapon-icons/r4c.png",
-						},
-					] ,
-					secondary:[
-						{
-							secondary_name:"",
-					        secondary_icon:"",
-						},
-					],
-					gadget:[
-						{
-							gadget_name:"",
-					        gadget_icon:"",
-						},
-					],
-					ability:[
-						{
-							ability_name:"",
-					        ability_icon:"",
-						},
-					],
+					primary:["P90","ITA12L"],
+					secondary:["SMG-11"],
+					gadget:["IMPACT_GRENADE","BULLETPROOF_CAMERA"],
+					ability:["SPEC-IO_ELECTRO-SENSOR"],
 					
 				},
 
@@ -1903,26 +1885,27 @@ const { title, text, video, loadout } = Astro.props;
 		<div class="loadout">
 			<p class="loadout-title">LOADOUT</p>
 			<div class="weapons">
-			    <div class="type">PRIMARY WEAPON
-                     <div>
+				<Column title="PRIMARY WEAPON">
+					{loadout.primary.map((item: string) => (
+						<Gadget gadget={item}/>
+				  	))}
+				</Column>
+				<Column title="SECONDARY WEAPON">
+					{loadout.secondary.map((item: string) => (
+						<Gadget gadget={item}/>
+				  	))}
+				</Column>
+				<Column title="GADGET">
+					{loadout.gadget.map((item: string) => (
+						<Gadget gadget={item}/>
+				  	))}
+				</Column>
+				<Column title="UNIQUE ABILITY">
+					{loadout.ability.map((item: string) => (
+						<Gadget gadget={item} invert/>
+				  	))}
+				</Column>	
 
-					 </div>
-				</div>
-				<div class="type">SECONDARY WEAPON
-					<div>
-						
-					</div>
-				</div>
-				<div class="type">GADGET
-					<div>
-						
-					</div>
-				</div>
-				<div class="type">UNIQUE ABILITY
-					<div>
-						
-					</div>
-				</div>
 			</div>
 		</div>
 	</main>
@@ -1933,7 +1916,7 @@ const { title, text, video, loadout } = Astro.props;
 	.weapons{
 		display: flex;
 		flex-direction: row;
-		gap:200px;
+		gap:100px;
 	}
 
     .type{
