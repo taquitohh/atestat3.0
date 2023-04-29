@@ -1,32 +1,37 @@
 ---
 export interface Props {
 	gadget: string;
+    width?: number;
     invert?: boolean;
 }
 
-const { gadget, invert } = Astro.props;
+const { gadget, invert, width } = Astro.props;
 let test = gadget.toString().replaceAll("_"," ");
 ---
 
 <div>
     <p>{test}</p>
-    <img src={`../weapon_icons/${gadget}.png`} style={{ filter: invert ? "invert(100%);" : "none" }}>
+    <img src={`../weapon_icons/${gadget}.png`} style={{ width:`${width}px`, filter: invert ? "invert(100%);" : "none" }}>
 </div>
 
 <style>
     div {
-        width: 350px;
-        background-color: #666;
+        height: 160px;
+        width: 420px;
+        background-color: rgba(209, 205, 230, 0.726);
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     img {
-        width: 320px;
+        padding: 10px;
+        width: 280px;
     }   
 
     P {
-        font-size: 1.6em;
+        padding: 4px;
+        font-family: Roboto;
+        font-size: 1em;
     }
 </style>

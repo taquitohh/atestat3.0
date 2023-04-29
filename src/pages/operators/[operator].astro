@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Gadget from "../../components/Gadget.astro"
+import Gadget from "../../components/Gadget.astro";
 import Column from "../../components/Column.astro";
-
 export async function getStaticPaths() {
 	const pages = [
 		{
@@ -25,12 +24,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-ash-v.mp4",
 				info: "Ash is a fast-paced front liner; capable of breaching, flanking and dividing the Defender's attention in seconds. Ash is capable of ranged soft breaching thanks to her modified M120 CREM Breaching Rounds.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["G36C", "R4-C"],
+				secondary: ["5.7_USG","M45_MEUSOC"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["BREACHING_ROUNDS"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "SLEDGE",
@@ -52,12 +55,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-sledge-v.mp4",
 				info: "Sledge is a soft breacher and flanker, he excels at creating new lines of fire and entry points, harassing the defenders. Sledge is capable of breaching non-reinforced surfaces thanks to his tactical breaching hammer: The Caber.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["L85A2", "M590A1"],
+				secondary: ["P226_MK_25","SMG-11"],
+				gadget: ["FRAG_GRENADE", "STUN_GRENADE"],
+				ability: ["TACTICAL_BREACHING_HAMMER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "THACHER",
@@ -79,12 +86,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-thatcher-v.mp4",
 				info: "The copper spool builds up the EMP by spinning. LED gauge. Twist top 45 degrees to activate the device",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AR33", "L85A2","M590A1"],
+				secondary: ["P226_MK_25"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["EMP_GRENADE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "THERMITE",
@@ -106,12 +117,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-thermite-v.mp4",
 				info: "Thermite is an important backline support for an attacking team. As one of the only hard-breachers in the game, losing Thermite early in the round will hinder your team significantly. Playing Thermite requires patience, leadership and strong communication with your team.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["M1014", "556XI"],
+				secondary: ["5.7_USG","M45_MEUSOC"],
+				gadget: ["SMOKE_GRENADE", "STUN_GRENADE"],
+				ability: ["EXOTHERMIC_CHARGE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "TWITCH",
@@ -133,12 +148,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-twitch-v.mp4",
 				info: "Twitch is a disabler and intel Operator. She can utilize these skills as either a remote back-line support or as an aggressive entry fragger.Twitch is capable of remote disabling through her unique ability: RSD MODEL 1 SHOCK DRONE",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["F2", "417","SG-CQB"],
+				secondary: ["P9","LFP586"],
+				gadget: ["SMOKE_GRENADE", "CLAYMORE"],
+				ability: ["SHOCK_DRONES"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "MONTAGNE",
@@ -160,12 +179,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-montagne-v.mp4",
 				info: "Collapses into half its size, providing increased mobility to its wielder. Composite of reinforced alloys and Kevlar. Provides protection against small-arms fire and close combat attacks",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["LE_ROC_SHIELD"],
+				secondary: ["P9","LFP586"],
+				gadget: ["HARD_BREACH_CHARGE", "SMOKE_GRENADE"],
+				ability: ["LE_ROC_SHIELD"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "GLAZ",
@@ -187,12 +210,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-glaz-v.mp4",
 				info: "Glaz is a back-line marksman, capable of soft breaching and providing covering fire from a distance. Glaz is capable of ranged shooting through his unique scope ability: HDS Flipsight.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["OTS-03"],
+				secondary: ["PMM","GONNE-6"],
+				gadget: ["SMOKE_GRENADE", "FRAG_GRENADE"],
+				ability: ["FLIP_SIGHT"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "FUZE",
@@ -214,12 +241,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-fuze-v.mp4",
 				info: "Fuze is best played as an aggressive flanker and area denial Operator. His strengths allow him to dispatch defensive capabilities and harass enemies anchored in defensive positions. Fuze's APM-6 cluster charge propels a group of explosive cluster grenades through any soft breach surface.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AK-12", "6P41","BALLISTIC_SHIELD"],
+				secondary: ["PMM","GSH-18"],
+				gadget: ["BREACH_CHARGE", "HARD_BREACH_CHARGE"],
+				ability: ["CLUSTER_CHARGE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "BLITZ",
@@ -241,12 +272,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-blitz-v.mp4",
 				info: "Ballistic shield. Three rows of eight flash-bang grenades provide a high intensity light source",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["G52-TACTICAL_SHIELD"],
+				secondary: ["P12"],
+				gadget: ["SMOKE_GRENADE", "BREACH_CHARGE"],
+				ability: ["FLASH_SHIELD"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "IQ",
@@ -268,12 +303,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-iq-v.mp4",
 				info: "Wrist-mounted. Mobile phone-sized sensor.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AUG_A2", "552_COMMANDO","G8A1"],
+				secondary: ["P12"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["ELECTRONICS_DETECTOR"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "BUCK",
@@ -295,12 +334,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-buck-v.mp4",
 				info: "Under-barrel mounted 12 gauge shotgun with four round capacity, used in tandem with an assault rifle. The Skeleton Key allows the operator to alternate between their standard issue assault rifle and a breaching shotgun with ease and efficiency.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["C8-SFW", "CAMRS"],
+				secondary: ["MK1_9MM"],
+				gadget: ["HARD_BREACH_CHARGE", "STUN_GRENADE"],
+				ability: ["SKELETON_KEY"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "BLACKBEARD",
@@ -322,12 +365,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-blackbeard-v.mp4",
 				info: "Multiple layers of transparent polycarbonate and thermoplastic armor, coated with a spall shield and backed with ultra-light weight laminated glass. Protects the user against blunt impact and artillery fire.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MK17_CQB", "SR-25"],
+				secondary: ["D-50"],
+				gadget: ["BREACH_CHARGE", "STUN_GRENADE"],
+				ability: ["RIFLE_SHIELD"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "CAPITAO",
@@ -349,12 +396,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-capitao-v.mp4",
 				info: "Use a glass bolt to deliver a swift and silent assault against hostiles without alerting them to your position. The glass cartridge breaks on impact releasing a gas that ignites the oxygen in the surrounding area. Deliver swift and agile assaults without alerting your opponents of your position.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["PARA-308", "M249"],
+				secondary: ["PRB92"],
+				gadget: ["CLAYMORE", "HARD_BREACH_CHARGE"],
+				ability: ["TACTICAL_CROSSBOW"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "HIBANA",
@@ -376,12 +427,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-hibana-v.mp4",
 				info: "The X-KAIROS - a 40 mm caliber launcher - fires explosive pellets that can be detonated simultaneously from a distance. Deliver innovative assaults by creating lines of sights, or new pathways!",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["TYPE-89", "SUPERNOVA"],
+				secondary: ["P229","BEARING_9"],
+				gadget: ["STUN_GRENADE", "BREACH_CHARGE"],
+				ability: ["X-KAIROS"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "JACKAL",
@@ -403,12 +458,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-jackal-v.mp4",
 				info: "Eyenox Model III was created to offer a mobile tracking device able to both identify and trail a person’s footprints in real-time. Equipped with advanced computer vision, the Eyenox detects invisible details relating to footfall and weight distribution so that you can identify and stalk your target.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["C7E", "PDW9","ITA12L"],
+				secondary: ["USP40","ITA12S"],
+				gadget: ["CLAYMORE", "SMOKE_GRENADE"],
+				ability: ["EYENOX_MODEL_III"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "YING",
@@ -430,12 +489,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-ying-v.mp4",
 				info: "Inspired by the new breed of stun grenades showcased by the S.A.S., this mercury and magnesium based explosive creates a multitude of blinding flashes. The Candela device releases a cluster of flash charges that can either be anchored on surfaces or thrown out as a grenade.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["T-95_LSW", "SIX12"],
+				secondary: ["Q-929"],
+				gadget: ["HARD_BREACH_CHARGE", "SMOKE_GRENADE"],
+				ability: ["CANDELA"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "ZOFIA",
@@ -457,12 +520,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-zofia-v.mp4",
 				info: "KS79 LIFELINE makes use of electronically triggered projectile technology that can fire both concussion and impact ammunition. The concussion ammunition delivers a 170-decibel shockwave that impairs hearing and causes a dizzying effect.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["LMG-E", "M762"],
+				secondary: ["RG15"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["KS79_LIFELINE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "DOKKAEBI",
@@ -484,12 +551,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-dokkaebi-v.mp4",
 				info: "Grace utilizes the Ballistic Armor Military Laptop, codenamed Logic Bomb, which she uses to hack enemy PDA tactical devices. The program downloads a virus of her making that can bypass firewalls, turning surrounding devices on and emitting a loud noise to compromise an enemy’s position.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MK_14_EBR", "BOSG.12.2"],
+				secondary: ["GONNE-6","SMG-12"],
+				gadget: ["SMOKE_GRENADE", "STUN_GRENADE"],
+				ability: ["LOGIC_BOMB"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "LION",
@@ -511,12 +582,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-lion-v.mp4",
 				info: "Twitch provided him with an aerial drone while he served with GIGN. The EE-ONE-D helps Lion maintain quarantine by detecting movement in an area, giving an overview of hot zones or of the battlefield. His drone can stay airborne indefinitely, but he must choose the right moment to perform his scans.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["V308", "417","SG-CQB"],
+				secondary: ["GONNE-6","LFP586"],
+				gadget: ["STUN_GRENADE", "CLAYMORE"],
+				ability: ["EE-ONE-D"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "FINKA",
@@ -538,12 +613,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-finka-v.mp4",
 				info: "Finka's Adrenal Surge activates pre-injected nanobots made of zinc in operators, releasing a pharmacological cocktail into their system where the zinc is absorbed as a nutrient. These nanites give her team a short boost in HP, they help allies out of DBNO, and they steady the team’s aim. She’s the only one capable of tailoring the nanites to specific operators.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SPEAR_.308", "6P41","SASG-12"],
+				secondary: ["PMM","GONNE-6"],
+				gadget: ["HARD_BREACH_CHARGE", "STUN_GRENADE"],
+				ability: ["ADRENAL_SURGE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "MAVERICK",
@@ -565,12 +644,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-maverick-v.mp4",
 				info: "Maverick’s D.I.Y. blowtorch can breach any surface, including reinforced walls and hatches. It requires a steady hand and knowledge of the environment to create small holes and lines of sight. Maverick must be in close range to use his gadget on the chosen surface. This torch makes almost no sound but it runs out of fuel quickly. Nevertheless, the high precision of this gadget makes it a very creative tool to use hands-on without relying on digital technology.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AR-15.50", "M4_GS"],
+				secondary: ["1911_TACOPS"],
+				gadget: ["FRAG_GRENADE", "CLAYMORE"],
+				ability: ["BREACHING_TORCH"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "NOMAD",
@@ -592,12 +675,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-nomad-v.mp4",
 				info: "Nomad’s custom rifle attachment allows her to launch Airjab repulsion grenades. They can stick to a surface and will detonate when an enemy is within range. Nomad enters the field with three Airjab grenades. These pushback devices are non-lethal but they disorient those affected.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AK-74M", "ARX200"],
+				secondary: ["PRB92",".44_MAG_SEMI-AUTO"],
+				gadget: ["BREACH_CHARGE", "STUN_GRENADE"],
+				ability: ["AIRJAB_LAUNCHER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "GRIDLOCK",
@@ -619,12 +706,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-gridlock-v.mp4",
 				info: "Trax Stingers' design is a portable version that when activated, deploys a hexagonal cluster of spikes, covering uneven ground better than a straight mat. Once deployed they can replicate and spread out over a large area. This feature, unique for an Attacker, enables them to use the Trax as an obstacle to reshape the map and control an area. Effects on the enemy include slowing them down and causing damage when stepped on. Trax Stingers will be destroyed when shot or dealt impact or thermal damage.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["F90", "M249_SAW"],
+				secondary: ["SUPER_SHORTY","SDP_9MM","GONNE-6"],
+				gadget: ["SMOKE_GRENADE", "BREACH_CHARGE"],
+				ability: ["TRAX_STINGERS"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "NOKK",
@@ -646,12 +737,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-nokk-v.mp4",
 				info: "The HEL is a glove attachment, which, when activated, reduces her ambient noise output and hides her image from the opponents’ observation tools. Drones, Bulletproof Cameras, Evil Eyes and more will thus be unable to register Nøkk’s presence as she roams through the map, unseen. Her footsteps will be silenced as she stalks opposing operators, unheard. Roaming will be more risky than ever for Defenders, as Nøkk could be hiding behind every corner or worse, sneaking up right behind them.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["FMG-9", "SIX12_SD"],
+				secondary: ["5.7_USG","D-50"],
+				gadget: ["HARD_BREACH_CHARGE", "FRAG_GRENADE"],
+				ability: ["HEL_PRESENCE_REDUCTION"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "AMARU",
@@ -673,12 +768,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-amaru-v.mp4",
 				info: "With the Garra Hook, Amaru can grapple onto ledges and windows and hoist herself up in record times. Her opponents now not only have to worry about attacks from above, but also attacks from below. With the Garra, Amaru is the only operator that can go up an open hatch, instead of down. When timed right, hooking the Garra onto a window can result in Amaru’s infamous Garra Kick, which instantly takes out an opponent standing behind the window.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["G8A1", "SUPERNOVA"],
+				secondary: ["GONNE-6","SMG-11"],
+				gadget: ["STUN_GRENADE", "HARD_BREACH_CHARGE"],
+				ability: ["GARRA_HOOK"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "KALI",
@@ -700,12 +799,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-kali-v.mp4",
 				info: "To talk about the LV Explosive Lance, we need to mention Kali’s CSRX 300. It’s a dangerous weapon that can breach barricades and hatches in a single shot, and create big holes in breakable walls. The LV is its under-barrel, and it can be used at the same time as the CSRX 300’s scopes. Its role is to destroy gadgets with a light explosion within a set radius. When used on a breakable wall, it will create a hole slightly smaller than what the sniper rifle would do. When shot at a reinforced wall, however, it simply lodges in surface.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["CSRX_300"],
+				secondary: ["SPSMG9","C75_AUTO"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["LV_EXPLOSIVE_LANCE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "IANA",
@@ -727,12 +830,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-iana-v.mp4",
 				info: "The Gemini Replicator is a remotely-controlled holographic copy of Iana. It can move and produces sound like she would, but it cannot shoot, melee or use secondary gadgets. It has a time limit, or it can be exited at any time. There is always a cooldown between two uses, which is longer if it’s destroyed. The Replicator is all about fooling Iana’s opponents and collecting information. During its deployment, she can find her opponents and cause confusion to her heart’s content. If the Gemini is spotted and destroyed, it can help Iana deduce the threat’s location, but it will buy her opponents a few precious seconds to reposition.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["ARX200", "G36C"],
+				secondary: ["MK1_9MM","GONNE-6"],
+				gadget: ["FRAG_GRENADE", "SMOKE_GRENADE"],
+				ability: ["GEMINI_REPLICATOR"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "ACE",
@@ -754,12 +861,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-ace-v.mp4",
 				info: "With the S.E.L.M.A. Aqua Breacher, water is the name of the game. It makes use of hydraulic pressure to burst through breakable and reinforced surfaces. The cylinder is thrown on whatever Ace is trying to breach, and then it opens to fully deploy. It explodes one time on floors, ceilings and hatches, but on walls the cylinder rolls down to deploy up to two times, if space allows. Each of these deployments leaves a clean rectangle breach, combining to create a hole big enough for an Operator to go through easily.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AK-12", "M1014"],
+				secondary: ["P9"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["S.E.L.M.A._AQUA_BREACHER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "ZERO",
@@ -781,12 +892,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-zero-v.mp4",
 				info: "Intel is crucial to a good attack strategy, and Zero is well aware of that. His Argus Launcher is equipped with very special cameras that can lodge themselves into breakable and reinforced surface to surveil either side. Yes, these cameras can cover two angles and effectively allow you to spy on the opposing team. Argus Cameras do have one more quirk though: a single laser shot, perfect for destroying key elements in the Defenders’ setup or drawing attention away from choke points.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SC3000K", "MP7"],
+				secondary: ["5.7_USG","GONNE-6"],
+				gadget: ["HARD_BREACH_CHARGE", "CLAYMORE"],
+				ability: ["ARGUS_LAUNCHER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "FLORES",
@@ -808,12 +923,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-flores-v.mp4",
 				info: "Controlled from a distance, the RCE-Ratero Charge races forward while Flores scouts a location for its blast. Once triggered, the Ratero clutches onto the nearest surface, armors itself with a bulletproof shell, and explodes, destroying nearby gadgets and soft surfaces.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AR33", "SR-25"],
+				secondary: ["GSH-18"],
+				gadget: ["STUN_GRENADE", "CLAYMORE"],
+				ability: ["RCE-RATERO_CHARGE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "OSA",
@@ -835,12 +954,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-osa-v.mp4",
 				info: "The transparent and bulletproof Talon-8 Shield can be carried by Osa or deployed on floors or window frames, giving her a protective line of sight while she formulates an attack strategy.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["556XI", "PDW9"],
+				secondary: ["PMM"],
+				gadget: ["SMOKE_GRENADE", "CLAYMORE"],
+				ability: ["TALON-8_CLEAR_SHIELD"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "SENS",
@@ -862,12 +985,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-sens-v.mp4",
 				info: "R.O.U. Projector System rolls after it's thrown by Sens and drops small projectors to create a screen along its path. Although physical objects can still pass through the screen, it's highly flexible—cutting off multiple lines of sight at once.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["POF9", "417"],
+				secondary: ["SDP_9MM","GONNE-6"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["R.O.U._PROJECTOR_SYSTEM"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "GRIM",
@@ -889,12 +1016,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-grim-v.mp4",
 				info: "You've heard the buzz, and the Kawan Hive Launcher is here! Firing off a projectile releases a swarm of bots that track the location of opponents who walk through it. Just don't get them in your eyes.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["552_COMMANDO", "SG-CQB"],
+				secondary: ["P229"],
+				gadget: ["BREACH_CHARGE", "CLAYMORE"],
+				ability: ["KAWAN_HIVE_LAUNCHER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "BRAVA",
@@ -916,18 +1047,22 @@ export async function getStaticPaths() {
 				video: "videos/r6-brava-v.mp4",
 				info: "Brava's Kludge Drone is a sabotage tool capable of taking over opponents' devices. If the device can't be controlled, it's destroyed instead.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["PARA-308", "CAMRS"],
+				secondary: ["USP40","SUPER_SHORTY"],
+				gadget: ["SMOKE_GRENADE", "CLAYMORE"],
+				ability: ["KLUDGE_DRONE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
-// kogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
-// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
-// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
-// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
-// ikogrjhweansjgiorkMAkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWvkogrjhweansjgiorkMA)RW
+		// kogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+		// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+		// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+		// ikogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RW
+		// ikogrjhweansjgiorkMAkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWkogrjhweansjgiorkMA)RWvkogrjhweansjgiorkMA)RW
 		{
 			operator: "SMOKE",
 			title: {
@@ -948,12 +1083,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-smoke-v.mp4",
 				info: "Detonator Remote receiver Double-sided tape allows vertical or horizontal mounting",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["M590A1", "FMG-9"],
+				secondary: ["P226_MK_25","SMG-11"],
+				gadget: ["DEPLOYABLE_SHIELD", "BARBED_WIRE"],
+				ability: ["REMOTE_GAS_GRENADE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "MUTE",
@@ -975,12 +1114,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-mute-v.mp4",
 				info: "Collapsible antennas. Device can be planted on floors. Digital display. Activation levers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MP5K", "M590A1"],
+				secondary: ["P226_MK_25","SMG-11"],
+				gadget: ["NITRO_CELL", "BULLETPROOF_CAMERA"],
+				ability: ["SIGNAL_DISRUPTOR"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "CASTLE",
@@ -1002,12 +1145,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-castle-v.mp4",
 				info: "Castle is an anchor and secure Operator, capable of creating defensive strongholds around the objective, controlling the flow of the attackers and slowing down their assault. Castle's unique ability is to create reinforced barricades using the: UTP1-Universal Tactical Panel.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary:  ["UMP45", "M1014"],
+				secondary: ["5.7_USG","SUPER_SHORTY"],
+				gadget: ["IMPACT_GRENADE", "PROXIMITY_ALARM"],
+				ability: ["ARMOR_PANEL"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "PULSE",
@@ -1029,12 +1176,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-pulse-v.mp4",
 				info: "Pulse is a roamer and intel Operator for a defending team. Thanks to his HB-5 Cardiac Sensor, Pulse can track attackers through surfaces, gathering valuable intel on their position.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["UMP45", "M1014"],
+				secondary: ["5.7_USG","M45_MEUSOC"],
+				gadget: ["BARBED_WIRE", "NITRO_CELL"],
+				ability: ["HEARTBEAT_SENSOR"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "DOC",
@@ -1056,12 +1207,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-doc-v.mp4",
 				info: "Handheld, trigger-operated pistol 1mg dose of epinephrine, in a saline solution. The pistol is powered by a pressurized CO2 canister",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary:  ["MP5", "P90","SG-CQB"],
+				secondary:  ["P9","LFP586"],
+				gadget: ["BARBED_WIRE", "BULLETPROOF_CAMERA"],
+				ability: ["STIM_PISTOL"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "ROOK",
@@ -1083,12 +1238,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-rook-v.mp4",
 				info: "Rook is an anchor and buff Operator, capable of providing a boost to the Defenders, giving them a valuable advantage in a firefight. Rook is capable of protecting himself and his team mates through his unique ability: R1N 'RHINO' Armor.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MP5", "P90","SG-CQB"],
+				secondary: ["P9","LFP586"],
+				gadget: ["IMPACT_GRENADE", "PROXIMITY_ALARM"],
+				ability: ["ARMOR_PACK"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "KAPKAN",
@@ -1110,12 +1269,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-kapkan-v.mp4",
 				info: "Kapkan is a trap Operator and a deadly addition to a Defending team. Kapkan is equipped with a Entry Denial Device (EDD-MK II). This trap is a packed C4 charge activated when motion is detected. It can be placed on door and window frames -- denying key entry points for attackers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["9X19VSN", "SASG-12"],
+				secondary: ["PMM","GSH-18"],
+				gadget: ["IMPACT_GRENADE", "NITRO_CELL"],
+				ability: ["ENTRY_DENIAL_DEVICE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "TACHANKA",
@@ -1137,12 +1300,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-tachanka-v.mp4",
 				info: "Tachanka’s new gadget, the Shumikha Launcher, is perfect for area denial and for covering unfavorable angles. Its heavy incendiary grenades can bounce multiple times, and their fuse timer only starts after the first bounce, giving them a lot of versatility. Tachanka is equipped with 10 grenades at the beginning of a match and the Launcher can hold up to 7. For maximum effectiveness, use several grenades together to cover a wider area and prevent your opponents from avoiding them. Once launched, you’ll only be able to reload one at a time.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["DP27", "9X19VSN"],
+				secondary: ["PMM","GSH-18"],
+				gadget: ["BARBED_WIRE", "PROXIMITY_ALARM"],
+				ability: ["SHUMIKHA_LAUNCHER"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "JAGER",
@@ -1164,12 +1331,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-jager-v.mp4",
 				info: "Jager can help his team create a defensive stronghold before roaming the map to intercept flanking attackers. He is capable of destroying incoming projectiles due to his unique deployable gadget : the Active Defense System or ADS.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["M870", "416-C_CARBINE"],
+				secondary: ["P12"],
+				gadget: ["BARBED_WIRE", "BULLETPROOF_CAMERA"],
+				ability: ["ACTIVE_DEFENSE_SYSTEM"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "BANDIT",
@@ -1191,12 +1362,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-bandit-v.mp4",
 				info: "Bandit is a secure, anti-hard breacher and roamer, capable of denying key entry points for the attackers and defending the objective while on the move. Bandit is capable of electrifying a variety of surfaces thanks to his special ability: Crude Electrical Device or CED-1 Shock Wire.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MP7", "M870"],
+				secondary: ["P12"],
+				gadget: ["BARBED_WIRE", "NITRO_CELL"],
+				ability: ["SHOCK_WIRE"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "FROST",
@@ -1218,12 +1393,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-frost-v.mp4",
 				info: "The rubber mat and concealed metal jaws are bolted in place. When the pressure plate is engaged, two sets of jaws at ankle and shin height deploy, locking the person in place. Requires two people to release the jaws and reset the trap.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SUPER_90", "9MM_C1"],
+				secondary: ["MK1_9MM","ITA12S"],
+				gadget: ["DEPLOYABLE_SHIELD", "BULLETPROOF_CAMERA"],
+				ability: ["WELCOME_MAT"],
+			},
+			biography: {
+				b: "",
+				p: "",
+			},
 		},
 		{
 			operator: "VALKYRIE",
@@ -1245,12 +1424,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-valkyrie-v.mp4",
 				info: "Encased in a tinted silicone ball, coated in micro-suction cups, the quick deploy camera maintains a clear view thanks to the internal gyroscope that dictates the angle of the lens. The suction cups allow the camera to adhere to any surface, while the gyroscope mounted lens stabilises the camera angle and focus. The live video feed is available to all operators.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MPX", "SPAS-12"],
+				secondary: ["D-50"],
+				gadget: ["IMPACT_GRENADE", "NITRO_CELL"],
+				ability: ["BLACK_EYE"],
+			},
+			biography: {
+				b: "“If you don’t constantly feel like you’re being watched, then you aren’t paying attention.” Castellano was born and raised in the quintessential surf community of Oceanside, California. Her father was a respected Colonel in the Marine Corps, her mother a researcher at a nearby biotech company. From an early age, she was known as a high achiever in math and science and as an athletic prodigy. An Olympic hopeful in swimming, Castellano broke her arm in a car accident when she was 16, putting an end to her career. She changed her focus and enlisted in the Navy, while also attending university. After graduating with a degree in Computer Science, specializing in Security and Cryptography, she transferred to the Information Dominance Corps. Castellano’s attention to detail and analytical skill made her one of their most sought-after specialists. She applied to become a SEAL when the position was opened to women and succeeded after several grueling years, acting as encouragement for others to follow.",
+				p: "",
+			},
 		},
 		{
 			operator: "CAVEIRA",
@@ -1272,12 +1455,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-caveira-v.mp4",
 				info: "The “Luison” is wrapped in a rock-based mineral fiber to both insulate and soundproof the silencer. This weapon allows Caveira to incapacitate her target discreetly and conduct an interrogation. The “Luison” is not only formidable to neutralize your opponent while remaining undetected; it also ensures that no one gets away.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["M12", "SPAS-15"],
+				secondary: ["LUISON"],
+				gadget: ["PROXIMITY_ALARM", "IMPACT_GRENADE"],
+				ability: ["SILENT STEP"],
+			},
+			biography: {
+				b: "“Not every child gets to choose who they grow up to be.” Pereira is seventh of ten kids, born to a widowed mother in a small town of the state of São Paulo. After moving to Rio de Janeiro at a young age, Pereira was arrested for robbery and offered a choice between juvenile reformatory and working with the Polícia Militar as an informant. Years of undercover operations within Brazil’s notorious gangs made her a master of interrogation techniques and surveillance, and Pereira is now frequently called upon to conduct training exercises within the force. Her skills in confined environment tactics, extraction, and extreme risk situations are exemplary. It was Pereira’s actions during the Rio de Janeiro Security Crisis that caught the attention of Rainbow, though multiple reports note that she is considered a dangerous, free-roaming operator. Outside of her professional record, little is known of Pereira’s life, except that she enjoys learning different languages and fighting in unofficial Jiu Jitsu tournaments.",
+				p: "It’s too obvious to describe Specialist Taina “Caveira” Pereira as fearless and intelligent when a slew of reports describe how daring she is on operations; how she isn’t one to ruminate before she reacts; that she’s about getting the job done. And while her successes haven’t gone unnoticed, she’s been denied commendations due to her rebellious nature. With all that, on our first meeting I was expecting – who was I expecting? […] Starting her military career as an informant tells me she’s a survivor. In that context, it made more sense to ask why she continued once her mandatory sentence had ended. She told me it went from being a way out to being a way of life. She’s still defiant, up against the system. But it’s also clear, even as she teases others about their “superhero sense of justice,” that she takes her role seriously. […] Pereira is often criticized for being blunt by those who don’t understand large family dynamics – particularly with so many brothers. Though very close with her siblings, Pereira had to fight to be heard or even noticed. It’s understandable that she treasures privacy, and exudes great satisfaction with having her own way. At the same time, her family dynamics made her comfortable with noise and spontaneity, and she understands the subtleties of group dynamics far better than others her age. It’s one of the reasons she’s so skilled with interrogation. I do hate to imagine how the streets may have sharpened that skill, though. […] Pereira has made it clear we won’t be discussing her private life. By the way she played with her necklace, I think she was protecting someone close rather than slighting me. […] So, who was I expecting when I met Specialist Pereira? She isn’t someone who can be anticipated or predicted. That’s not an ominous warning. Quite the opposite. I have utmost faith in her abilities, in her poise and inner focus. Where others see rebellion, I see resourcefulness. Pereira is full of surprises, but it’s my opinion we can trust her to do the right thing. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "ECHO",
@@ -1299,12 +1486,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-echo-v.mp4",
 				info: "Equipped with an acoustic hailing device, this signature drone can fire ultrasonic bursts that disorient all targets in a given perimeter. Yokai also transmits a video feed to Echo, who keeps his immediate perimeter secure. Embrace the power of technology and embody a turret Defender who can both hold up the siege and support roamers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MP5SD", "SUPERNOVA"],
+				secondary: ["P229", "BEARING_9"],
+				gadget: ["IMPACT_GRENADE", "DEPLOYABLE_SHIELD"],
+				ability: ["YOKAI"],
+			},
+			biography: {
+				b: "“Don’t ask me what I’m doing on my phone. You don’t want to know.” Enatsu grew up in Suginami, outside of Tokyo. Fascinated with robotics from an early age, he designed and programmed both terrestrial and flying drones and went on to win numerous competitions. After studying Electrical and Electronic Engineering at Tokyo Metropolitan University, Enatsu was encouraged to join the National Police Agency Security Bureau where he worked tirelessly in their research and development lab. Trained in counter-terrorism and intelligence gathering, Enatsu began designing specific tech that would better aid the Bureau. Joint training after the Nagoya hostage crisis prompted Enatsu to transfer to the Aichi Prefectural Police Department Special Unit where his tenacious focus enabled him to find creative solutions and alternate strategies. He eventually returned to Tokyo, where his exceptional intel gathering techniques as well as his quick and unpredictable methodology caught the attention of Rainbow.",
+				p: "To say that Specialist Masaru “Echo” Enatsu’s file has a few flags regarding his conduct is an understatement. Prior to our first session together I had met with every other member of Rainbow – some more than once. So when the conversation began with Enatsu admitting he’d been avoiding me, I knew we were going to get along. Often, I would rather not read a file first, to give someone a chance to tell me who they are in their own words. In this case it was important that I know what people think, because Enatsu was braced for my reaction. […] I gather he and his family aren’t close. He joked that a calculator has more emotional range than his parents. This upbringing has made him resistant to working in groups, because a friendly, mutually beneficial dynamic isn’t one he’s familiar with. It’s my hope his time with Rainbow will help, but his desire to explore the “AI” of his fellow operators by pushing their buttons is something that may need to be handled from within the group. […] Enatsu’s tactics have been described as tricky and unpredictable. This can work as a strong team strategy but it demands communication. […] I’d also encourage the team to think of how best to utilize Enatsu’s potential. Some operators assume there will be issues with him before they even begin, which leads to predictable results. […] Specialists Yumiko “Hibana” Imagawa and Grace “Dokkaebi” Nam work with Enatsu on R&D quite often, actually. I’ve also noticed that he’s developed a rapport with Specialist Taina “Caveira” Pereira. I suspect he appreciates Pereira’s candor, since it ties into his own assumption that people who are offended simply don’t “get the joke.” […] Enatsu frustrates easily. He has few outside interests, and consequently thinks only about improving his operational efficiency. It’s important that he recognize that everyone needs diversions – those in high-stress jobs even more so. It isn’t a sign of weakness to “switch off” every now and again, even if he has been conditioned to believe that a restful mind indicates a lack of intelligence. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "MIRA",
@@ -1326,12 +1517,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-mira-v.mp4",
 				info: "A specialized laminated glass, which when deployed with oxyacetylene can carve out a one-way mirror on any wall. If the air pressure is disrupted, however, the glass is ejected and creates a daring opening for both defenders and attackers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["VECTOR_.45_ACP", "ITA12L"],
+				secondary: ["USP40", "ITA12S"],
+				gadget: ["PROXIMITY_ALARM", "NITRO_CELL"],
+				ability: ["BLACK_MIRROR"],
+			},
+			biography: {
+				b: "“Think of me as your conscience. I see everything, and I’m just as ruthless.” Álvarez is a highly creative operator with the unmatched ability to dominate close-quarters urban environments. Working alongside her father in his auto repair shop helped form her intricate understanding of machinery and prompted her to study mechanical engineering and metallurgy at university. Instilled with a strong sense of justice and an obligation to serve, Álvarez joined the Cuerpo Nacional de Policía. She saw the need for better equipment and developed new bulletproof materials to protect her teammates while on operations. Encouraged to join the Grupo Especial de Operaciones, she beat more than 100 other recruits for the coveted position. The reinforced armor she wears is her design. Álvarez was hired as Rainbow’s Director of Research and Development before being added to the combat roster so that she could better test her developments and improvements under field conditions. She flies helicopters in her spare time.",
+				p: "Specialist Elena María “Mira” Álvarez thinks on her feet. Someone this adaptable and versatile is difficult to predict… as they should be. She takes risks, though, and I’m hoping they’re calculated ones. Álvarez is one of the operators who most strives to be a hero. Ferociously protective of teammates and those she considers friends, she can nonetheless dominate an operation, forcing others to blend their tactics with hers if they wish to succeed. […] Álvarez enjoys her time in the lab and I’m grateful she accepted my offer to become head of R&D. Working surrounded by machinery reminds her of her father and the strong bond they continue to share. […] As far back as she can recall it was only ever the two of them, though her father’s shared memories of her grandmother gave her a second role model to look up to. One story stands out in particular: While working late in his garage, her father was pinned under a car. Álvarez found him. She was seven years old. Refusing to leave him, she struggled with the heavy jack – despite his protests – and got him free. Only then did she run for help. […] This is the loyalty and stubbornness that I see in her, and that her team appreciates. It comes from a kind heart. […] When not working, Álvarez is restless, which she’s managed to channel into her art. Her metal sculptures are a source of great pride and she showed me photos of her portfolio. The way she incorporates used machine parts and ballistic glass is enchanting. […] Álvarez uses her artistic sensibilities to visualize scenarios with unique clarity. The team should be encouraged to make better use of his talent. […] Her ongoing rivalry with Specialist Eliza “Ash” Cohen is a clash of two strong-willed people. Both have solid leadership skills and both care about their teams. They simply approach challenges differently. We need to work through some scenarios where they can both apply their strengths to reach an acceptable outcome. Only through joint success will they see the value of each other’s approaches. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "LESION",
@@ -1353,12 +1548,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-lesion-v.mp4",
 				info: "Gu mines were inspired by the sharp punji sticks used during the Vietnam War. Rubbed with toxic plants or feces, the stakes served to slow down enemy troops by causing severe infections in their camp. Similarly, Gu mines inject a toxin that injure your opponent and limit their speed.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SIX12_SD", "T-5_SMG"],
+				secondary: ["Q-929"],
+				gadget: ["IMPACT_GRENADE", "BULLETPROOF_CAMERA"],
+				ability: ["GU_MINES"],
+			},
+			biography: {
+				b: "“Make no excuses for who you are. Only the weak-minded will demand you make yourself smaller.” Born and raised in Tseung Kwan O (Junk Bay), Liu’s early years were spent working alongside his father in the shipyards, stripping obsolete tankers for raw materials and parts. Growing up surrounded by hazardous materials and seeing their long-term effects on his fellow workers left Liu with an abiding respect for toxins and their effect on the human body. Initially seeking additional income, he volunteered for mine clearing duties in Yunnan and Guangxi provinces where his abilities and bravery caught the attention of key personnel within the Hong Kong Police Department. Liu then joined the Explosive Ordnance Disposal Bureau (EOD), giving him the opportunity to continue his chemistry and forensics-based education along with intense on-site training. Liu’s expertise with chemical, biological, radiological, and nuclear threats made him a clear first pick during the formation of Rainbow’s CBRN unit. Liu continues to volunteer for mine clearing duty in his spare time.",
+				p: "Specialist Liu “Lesion” Tze Long’s teammates have a great deal of respect for him, despite the fact that he can often drop off the radar due to his low-key style. Liu doesn’t mind that he’s overlooked; in fact, when I suggested this to him it prompted a smile. While on an operation, Liu is intense and focused, and thinks quickly on his feet. In his downtime he is soft-spoken with a wonderful dry wit. His family’s poverty encouraged him to be philosophical about his childhood. Even now he prefers to keep life simple by spending his money and time on things that have purpose. Liu told me he isn’t a person who rails against things beyond his control, and I know from observation that he isn’t someone who counts his scars. […] His childhood, frankly, sounds horrific. His health was at risk from toxic materials, not to mention the physical danger of ripping apart tonnes of steel. And yet Liu remembers his past fondly, regarding the bad moments as something he was lucky enough to survive. I wondered if his optimism was a survival mechanism to weather horrifying circumstances, but Liu was eager to put me at ease. It wasn’t all bad, he said. He described how he and his father would admire the sunrise dancing across the water and take long lunch breaks to go fishing. […] Liu continues to live close to where he grew up. His connection to the location is more than nostalgia. There’s a sense of satisfaction in knowing what it used to be and how time has affected it. Liu says both he and Junk Bay have changed for the better, and that the future can always be shaped into something good. As he did at the start of his career, Liu still volunteers in underprivileged areas. His expertise has contributed to the clearing of tens of thousands of mines and unexploded ordnance. In particular, he’s been consulting the tech experts within Rainbow as he and operators Olivier “Lion” Flament and Lera “Finka” Melnikova look to incorporate state-of-the-art solutions into their CBRN threat unit. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "ELA",
@@ -1380,12 +1579,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-ela-v.mp4",
 				info: "Inspired by the 1939 anti-tank Polish grenades used by the iconic Cichociemny during WWII, the sticky Grzmot mines can be anchored on surfaces, impairing hearing and causing a dizzying effect. These concussion mines are triggered upon proximity, affecting anyone within its radius.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SCORPION_EVO_3_A1", "FO-12"],
+				secondary: ["RG15"],
+				gadget: ["BARBED_WIRE", "DEPLOYABLE_SHIELD"],
+				ability: ["GRZMOT_MINE"],
+			},
+			biography: {
+				b: "“Together, we can shake the very stars from the sky.” Elżbieta Bosak is the youngest daughter of respected Jan Bosak, former commander of the Polish Special Operations Forces unit GROM. Like her sister, Zofia, Ela excelled in the grueling training imposed upon them by their father. She attended officers’ school but couldn’t reconcile military life with her need for independence and left to study Fine Arts in Berlin. Her reputation for using military paraphernalia in her art attracted the owner of a small private security company, who offered her a job. She was valued in the private sector for her expertise in survivalist tactics and unique adaptive style during protective detail and intelligence gathering, until her father’s death convinced her to return to Poland and join GROM. Ela is a reliable team player with leadership potential, even if her distrust of authority continues to be a point of contention. Her successful collaboration with SEAL prompted her invitation to join Rainbow.",
+				p: "We civilians can understand Specialist Elżbieta “Ela” Bosak’s independent nature more than some starch-collared military commander might. Of course, following orders is expected of those within the rank-and-file, and for someone so quick to buck against authority she also expresses a deep respect for the military and her role within it. It’s her autonomy that rubs traditionalists the wrong way, and perhaps her anger. Even at our first meeting, I detected her resolve. She is fighting against something, but it may not be authority – at least not entirely. […] I won’t dismiss the concerns of commanding officers who mention that Bosak can be impulsive, but I would urge them instead to appreciate her creative resilience. Anyone who has worked with artists can attest to this quality. It manifests in the field in the protection of her team and her high number of successful operations. Her impulsiveness – her adaptability – is the very quality that causes her to excel. […] Both Ela and her sister, Zofia, carry the deep impression of their father’s influence. Ela is more inclined to accept that her father, though exceptional, wasn’t perfect. In reviewing Commander Jan Bosak’s file, I saw a proud, insightful man. That’s the key. Ela is finely tuned to the patterns and behaviors around her and when she seems defiant it’s because she’s frustrated with those who lack this “vision.” Joining Rainbow, and working with other elite operators, has somewhat tempered this frustration as she no longer feels constrained by the attitudes of those around her. […] Ela’s defiance extends into her personal life. She isn’t interested in self-improvement, she told me. She was surprised when I said I know about her “volunteer work.” She roams the streets late at night, with food and blankets to hand out, or even just a cigarette. Then she listens. Her conversations with strangers offer fresh perspectives. She stockpiles them, to add to her insight and therefore her skills, but also as fuel for her work. The status quo isn’t what she wants it to be, but that won’t stop her from trying to kick it into shape. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "VIGIL",
@@ -1407,12 +1610,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-vigil-v.mp4",
 				info: "Chul Kyung’s quiet lethality in the field allows him to rely on his Electronic Rendering Cloak (ERC-7) to remain undetected. The ERC-7 uses Diminished Reality technology to remove perceivable stimuli from its direct environment. Vigil carries a prototype in his backpack, which scans surrounding electronic devices and wipes his image from any cameras in view.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["K1A", "BOSG.12.2"],
+				secondary: ["C75_AUTO", "SMG-12"],
+				gadget: ["IMPACT_GRENADE", "BULLETPROOF_CAMERA"],
+				ability: ["ERC-7"],
+			},
+			biography: {
+				b: "“Don’t worry about me. I was never here.” Much of Hwa’s early records are unclear. His birth parents remain unknown. What is known is that he suffered the loss of his older brother and father in their bid to reach the Republic of Korea. School records track him from late adolescence, when he was adopted into the Hwa family. Initial reports indicate signs of early trauma – reclusive, slow reader – however, his later grades show great improvement and focus. Hwa gravitated toward electronics and electrical engineering. Wanting to use his talents and demonstrate pride for his country, he chose to join the ROK Navy. He later earned a berth in the ROKN UDT/SEALs, with a knack for radar systems and stealth technology. Handpicked by the respected 707th Special Mission Battalion for unconventional warfare missions, he proved to be quick and lethal. Hwa served together with Specialist Grace “Dokkaebi” Nam until their recruitment into Rainbow.",
+				p: "Specialist Chul Kyung “Vigil” Hwa had a tumultuous childhood. Much of it is lost to him, and what he remembers is precious. I assured him that my role isn’t to pick apart his past or dredge up events that would unsettle him, though of course I’m always here should he or any of our operators need me. I explained that my role is to shape a cohesive team – everyone fits in some way, and it’s up to me to piece it all together. […] Preservation of anonymity drives everything Hwa does. He’s uncomfortable with me recording our conversations, and that a notification on my phone revealed our meeting time. He’s equally anxious in social situations. It’s difficult to tell if he has a strong self-concept or an utter lack of one. What is apparent is that Hwa can’t let anyone in, which means he’s often trapped alone with his own thoughts. […] I wanted him to have a clear picture of who he was, at that moment, in my office. To see himself not just as an elite operator or a small child who lost his family. So I suppose he may not have understood where I was going when I asked if he liked Saturday morning cartoons. We ran through a casual series of likes and dislikes ranging from quiet contemplation to free association. He was uncomfortable, but he humored me. As he relaxed, some of his own answers caught him off guard. From discussing breakfast cereals and the realization that he doesn’t know how to ride a bike, he was able to relate a memory to me. He described how the scent of hot soup triggered a vivid image – a woman, who he assumed was his mother, smiling and handing him a bowl. His face softened, and for a moment, he was home. […] I’ve encouraged Hwa to carry on these associative exercises throughout his day. I know various members of Rainbow have reached out to him and while there are indications he respects them, there are still barriers he may not yet be ready to take down. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "MAESTRO",
@@ -1434,12 +1641,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-maestro-v.mp4",
 				info: "Maestro uses a remote-controlled turret firing high-energy laser beams. Once affixed to the floor or wall, Maestro can remote-surveil and provide overwatch in a location through the swivel-mounted camera. When the camera device breaks open to fire a laser beam the core is exposed to damage. Otherwise, the turret is unaffected by bullets and melee. Lastly, Evil Eye can see through smoke.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["ALDA_5.56", "ACS12"],
+				secondary: ["KERATOS_.357", "BAILIFF_410"],
+				gadget: ["IMPACT_GRENADE", "BARBED_WIRE"],
+				ability: ["EVIL_EYE"],
+			},
+			biography: {
+				b: "“Did I ever tell you about the time we tree-jumped into a Congo swamp at night? No? Oh, it’s a good one.” Adriano 'Maestro' Martello, oldest in a family of eight children, grew up in Rome, but attended the Military Academy of Modena at 18. He joined the Carabinieri and earned a spot as an Explorer Paratrooper in the 1st Paratrooper Regiment known as Tuscania. After several distinguished tours where he earned Silver and Bronze Medals of Military Valor, Martello qualified for Gruppo di Intervento Speciale (Special Intervention Group or G.I.S.) and participated in joint operations in Iraq, earning a facial scar from a roadside IED. He engaged in multiple actions against homegrown threats in Italy and eventually became an instructor helping train Tier 3 units in the Italian military. After Martello’s tour was completed, he went into private consultation where his courses quickly became a top-rated operator bootcamp for teaching advanced techniques to Tier 3 and Tier 2 units, as well as private military companies. The Tuscania eventually convinced Martello to re-enlist to help upgrade one of their units to a Tier 2 Special Forces classification, and this enabled him to join Rainbow as a representative of the Italian Units.",
+				p: "I have no doubt that Specialist Adriano Martello (AKA: Maestro) is a natural leader. He had earned the nickname Maestro due to his willingness to sacrifice first place in order to help other soldiers during basic training, and while records indicate that some soldiers didn’t appreciate the handholding, I think it refined Specialist Martello’s teaching methodology. [...] I did review his school records in regards to the fights he got into, and I believe he was keeping his brothers and sisters out of trouble by fighting for them. [...] He initially entered the military to ease his parents’ financial burden in raising eight children and he carries that sense of responsibility into his units. He cares about the men and women he serves with and has an affinity for bringing out the best in others, even if it’s with a bit of good-natured bluster and perhaps more vulgarity than some of our more reserved operators are used to. I suspect Specialist Martello enjoys cussing for effect though there is no doubt that he teaches through anecdotes. He presents himself as genuine, however, and it’s an undeniable part of his charm because it comes off without any sort of duplicity. [...] Specialist Martello will make an excellent Tactical Control Commander one day, but his biggest liability is his own wanderlust. [...] He loves pursuing challenges to his own detriment. Once he’s conquered an objective, there’s little keeping him rooted. He has personal ties with Specialist Seamus 'Sledge' Cowden (Joint Operations in Iraq before Article 5 was instituted), enough that to my understanding he’s invited Specialist Cowden over to visit his family when the pair were cycled off duty rotation. Even then, I doubt it’s enough to keep him tied to Rainbow Operations. His ties to Specialist Aria 'Alibi' de Luca may be a different story, however. They worked closely together during Operation Spider Wasp, with Specialist Martello’s unit taking down organized crime targets based on Specialist de Luca’s intel. Whatever other history they share remains unknown to me… for now. [...] It is my estimation that Specialist Martello needs a carrot to remain invested, and that means presenting him with challenges that he’s likely to fail at. It’s why I recommend Specialist Martello step into the boxing ring with Specialist James 'Smoke' Porter, for example, and pit him against a boxer with more training and skill. From my records, Specialist Martello grew up in the lower income neighborhoods along Rome’s Lungotevere, where he befriended local Romany children. He boasts about boxing with the Romany, a strong tradition in that culture, and I believe that training him with Porter will encourage positive memories that will link his childhood with Rainbow. [...] Another option is to arrange for Specialist Mike 'Thatcher' Baker to take a personal interest in Martello’s development. Martello has nothing short of genuine respect for Specialist Baker, enough to leave him tongue-tied around the SAS veteran. That state of deference may forge a strong enough bond to keep Specialist Martello invested in the Rainbow program. -- Dr. Harishva “Harry” Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "ALIBI",
@@ -1461,12 +1672,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-alibi-v.mp4",
 				info: "Prisma projects holograms identical to Alibi in an idle position. If you shoot or touch the holograms, you’ll be marked and pinged for the next few seconds. If Prisma is deployed outside, a false “Defender Outside” warning is triggered for Attackers. To add an element of surprise, Prisma conceals the identity of any Defender who ventures outside. Any bullet, melee, or explosives damages Prisma, and will shoot through the hologram. Be careful not to stand too close.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MX4_STORM", "ACS12"],
+				secondary: ["KERATOS_.357", "BAILIFF_410"],
+				gadget: ["IMPACT_GRENADE", "DEPLOYABLE_SHIELD"],
+				ability: ["PRISMA"],
+			},
+			biography: {
+				b: "“Never reveal the cards you were dealt.” Aria 'Alibi' de Luca was born in Tripoli, Libya and immigrated with her family when she was three years old. Her father managed a small ordnance manufacturer, using his extensive North African contacts to open up exports to that region. De Luca earned her understanding and usage of Italian firearms through the family business and training on the shooting range. At 18, Aria entered the European Championships organized by the European Shooting Confederation, and won gold in both the 10-metre running target and 10-metre air pistol divisions. Following the event, a Carabinieri recruiter convinced her to join the police force. De Luca’s precision shooting skills and professionalism shot her up the ranks quickly, and she served for a time with the elite Raggruppamento Operativo Speciale in fighting organized crime. She eventually earned a spot in the prestigious Gruppo Intervento Speciale (G.I.S.), and following a successful operation in Afghanistan despite being separated from her unit, she was singled out for undercover work in organized crime. She infiltrated the Vinciguerra Crime Family as an arms dealer and spent several years among them before bringing them down from the inside. A newspaper leak of impending operations against the Vinciguerras then forced the G.I.S. to accelerate their initiative. Following her undercover work and the successful dismantling of the Vinciguerra Crime Family, Aria de Luca received the invitation to join Rainbow as a capable operator.",
+				p: "Specialist Aria de Luca (AKA: Alibi) presents a multi-layered façade, undoubtedly stemming from her years of undercover operations, but I suspect it’s a protective measure likelier rooted in her childhood. […] She carries a deep-seated hatred for crime families (that much is obvious--it’s the closest I’ve come to seeing her sophisticated veneer crack) and I think it may compromise her ability to operate rationally when it comes to organized crime. […] Thanks to my contact within the Carabinieri’s Chief of Staff office, I was able to gain access to Specialist de Luca’s psych evals following her application to join the G.I.S.. Cross analyzing that with old police records and her family’s hospital visits, I believe her father was the victim of pizzo or a protection racket… unless de Luca Sr. was singularly unlucky enough to repeatedly break fingers, fall down stairs, and break his own arm… twice. Specialist De Luca was never herself injured, and shows the same strong constitution and mental fortitude that we come to expect from all our operators. Psychologically, however, the wounds are deep and I suspect that her father’s brush with organized crime has set our “Alibi” on her path. […] Alibi as a codename is also rather telling, considering the circumstances that cut short her undercover operation against the Vinciguerra crime family. On paper, Specialist de Luca is a decorated hero of the G.I.S. with a Gold Medal for Civil Valor for her efforts, but if you dig a little, she has her detractors who believe she was the source of the leak that nearly sabotaged the G.I.S. investigation. […] Specialist de Luca was enjoying a meteoric rise within the Vinciguerra crime family as an arms dealer when she gained access to a compound outside of Genoa that was central to the Vinciguerra's human trafficking operations. As a naturalized immigrant herself, it would seem that when Specialist de Luca saw the dozens of refugees waiting to be sold into slave labor and prostitution at the hands of the Vinciguerras, it broke through her well-crafted defenses and compelled her to act. […] I know for a fact that she tried to convince her superiors to raid the Genoa compound and that they refused because they were still gathering intel. I know that the reporter who cited a confidential informant in his exposé on the Genoa compound received his intel in the days following Specialist de Luca’s meeting with her bosses.[…] I’ll state this for the record… if Specialist de Luca did leak the information to spur the G.I.S. into action and to save those lives in Genoa, then I am somewhat relieved. It proves that there are lines Specialist de Luca will not cross, and this may prove important. I suspect that Under-Secretary-General Barston used backchannels to put Specialist de Luca’s service jacket on my desk, and that he isn’t a supporter of the Rainbow Program. Whatever he hopes to gain with this maneuver, I can state with no modest degree of certainty that Specialist de Luca remains unaware of this political agenda. But she likely has a part to play in whatever Under-Secretary-General Barston may have planned. […] If we want to get her on our side of things then Specialist (Maestro) Martello’s inclusion in Rainbow serves us for both his skills and his ability to get past Specialist de Luca’s walls. They worked extensively together during the Vinciguerra operations. She provided the intel and his unit acted on it. I suspect their relationship may be closer than that, but there appears to be a level of volatility that bears closer watch. Are they close friends? Are they familial? Or something else? Time will tell. Fortunately, Specialist de Luca seems to fit in well, foregoing the hazing that both the S.A.S. and SEALS operators seem fond of inflicting […]. In conclusion, I believe Specialist de Luca is a valuable addition to the Rainbow Program and that her particular skills will keep the teams guessing during asymmetrical combat simulations. -- Dr. Harishva Pandey",
+			},
 		},
 		{
 			operator: "CLASH",
@@ -1488,12 +1703,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-clash-v.mp4",
 				info: "Clash is the first defender with a shield. The CCE Shield is her primary weapon; she can swap to her secondary at any time, but to do so, she needs to put her shield away first. Her bulletproof extendable shield has the ability to slow down opponents by using a high voltage Charged Field Generator (CFG) that emanates directly in front of the shield in a cylindrical shape. Opponents caught in the CFG also sustain low damage over time. Effective use of the shield allows Clash to block entry points, and to prevent or delay a push by the Attackers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["CCE SHIELD"],
+				secondary: ["P-10C", "SPSMG9"],
+				gadget: ["IMPACT_GRENADE", "BARBED_WIRE"],
+				ability: ["CCE_SHIELD"],
+			},
+			biography: {
+				b: "“Come closer. I dare you.” Morowa Evans led the fight in her community against racist groups in often-violent clashes. She was relentless until the day her friend and mentor, Tray Pearson, died trying to stop looters during a riot. Two months later, Evans offered her assistance to the Metropolitan Police Service (MPS) because she wanted to make a difference from within the system. The MPS offered her a clean slate if she helped stop protests from going violent. Evans made it her career, going from insider to eventually joining the MPS. During the 2011 London Riots, Police Constable Evans commanded the front line in the Territorial Support Group to stop the violence from spreading, and later acquired special permission to attend Gold Command meetings, devising new crowd-control strategies based on her years as riot leader. PC Evans made 274 arrests throughout her service and later made Detective Constable. She earned the Queen’s Police Medal for exceptional bravery and earned a spot in Rainbow due to her experience, service record, and tenacity.",
+				p: "When I recommended Specialist Morowa “Clash” Evans, I met considerable resistance. The Selection Board couldn’t see past her violent past but I saw a street-hardened veteran who knew how to fight dirty and was the leading expert in riot control. [...] Despite the mistrust from her fellow Constables, Specialist Evans proved herself during the 2011 London Riots when she confronted those she once led; from the CCTV footage and eyewitness reports, those rioters showed her no mercy, but she was exemplary. I initially wondered what allowed her to switch sides and remain sane. It’s because she was still protecting Londoners from racists and those rioters alike who were indiscriminately hurting locals. She didn’t want to quiet the storm. She wanted to redirect it. Regardless, it wasn’t easy going from riot leader to gaining Scotland Yard’s trust. I’d say it’s the very definition of an uphill battle and I know for a fact that every misstep was used against her. Her temper got the better of her early on, and some officers went out of their way to provoke her. In the end, many bets were lost when she graduated from Hendon, but she rightfully earned her division’s respect. Nobody was more qualified in understanding mob behavior or pioneering snatch squad tactics. Who knows what kind of life she’d have led without her mentor’s influence? They had the same goals, and while Pearson’s non-violent path was not hers, she still used his tragedy to channel her anger. […] She remains an enigma within Rainbow, but I’m glad to see she’s already made friends with Specialist Gilles “Montagne” Touré—I think she appreciates the competition, and they share experience working the protection detail at G8 and G20 Summits. […] She’s persistent and fearsome, however, and she’s bound to keep the operators on their toes with her tactics. I have no doubt she’ll earn the same level of respect here on Rainbow that she fought so hard for in the MPS. -- Dr. Harishva Pandey",
+			},
 		},
 		{
 			operator: "KAID",
@@ -1515,12 +1734,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-kaid-v.mp4",
 				info: "Kaid’s 'Rtila' Electroclaw can electrify reinforced walls and hatches, barbed wire, and deployable shields, making it tougher for the enemy to breach the Kasbah and any facility he’s tasked with protecting. He enters the field with two of these throwable gadgets. Once they’ve attached themselves to a surface, they each electrify metallic objects within a 0.75 meter radius.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AUG_A3", "TCSG12"],
+				secondary: [".44_MAG_SEMI-AUTO", "LFP586"],
+				gadget: ["BARBED_WIRE", "NITRO_CELL"],
+				ability: ["RTILA_ELECTROCLAW"],
+			},
+			biography: {
+				b: "“Lead by example and the mountain will move.” Jalal El Fassi was raised on stories of the Fortress, the legendary training facility in the Atlas Mountains. Its incomparable reputation, along with its famed “Kaids” (Commander) were seared into El Fassi. He joined the GIGR (Royal Moroccan Gendarmerie) at 18, demonstrating natural leadership skills under fire. His ability to effectively command specialized squadrons in joint Trans-Saharan Counterterrorism Initiative (TSCTP) operations led to his promotion as Captain. After years of service, the Fortress’ reigning Commander chose his successor: El Fassi, whose authoritative but ethical style made him a worthy “Kaid”. His imposing presence and strict values led to success with his graduates, and the Fortress quickly gained accolades. He further proved its excellence through the thousands of soldiers who trained or taught on its grounds. Over years of negotiating, he welcomed troops from across Africa and the Middle-East, fostering stronger ties between TSCTP members and African Standby Force countries.",
+				p: "Specialist Jalal “Kaid” El Fassi is an imposing Operator. His appearance alone inspires respect – it’s easy to see why his stature and demeanor strike fear in his students. Or how his body language warrants their respect and cooperation without him having to say a word. Frankly, it’s both daunting and fascinating at the same time. […] Specialist El Fassi descends from a long line of Commanders and their Fortress. The Fortress was in disrepute for quite some time, however – some business involving bribes from wealthy families – before El Fassi was at the helm. And it seems his administration not only eliminated these sordid dealings, but elevated the Fortress to heights unimagined by any of his predecessors. […] It’s been difficult separating Specialist El Fassi from his role. He’s sacrificed a personal life for the success of his Fortress, and his role makes it difficult to create interpersonal relationships. I suspect he prefers being alone—he certainly isn’t the type to open up and share, but I think I understand why. He’s taken it upon himself to guide and nurture the future of Moroccan Special Forces, and potentially all of North Africa. He is the rock that all others look up to, so Specialist El Fassi shoulders the brunt of that weight with equanimity because he believes nobody else can. […] Specialist El Fassi is particularly phlegmatic, and his dedication to his duty as Commander and to the Fortress is resolute. Rainbow spent years trying to persuade him to join, but he is not easily moved. The Fortress and its legacy were instilled in him as a child. It is his home, his castle, and I can see the time he spends there in solitude is invaluable. But we finally managed to cut a deal with him, one that not even the great Kaid could turn down… one to improve his school and propel it into international standing. This will be the first time El Fassi is among equals. Only time will tell how he reacts to not being in a position of authority. […] -- Dr. Harishva Pandey",
+			},
 		},
 		{
 			operator: "MOZZIE",
@@ -1542,12 +1765,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-mozzie-v.mp4",
 				info: "Mozzie’s launcher, Pests, are tiny 4-legged bots that can be used to target a single drone, or deployed into an area to prevent access by a drone. When launched, the Pest latches onto the nearest enemy drone and obscures its camera. It then initiates an override sequence to hack the drone and give control to Mozzie. Counter-intelligence is enabled with no risk of a counter hack. Single-use only, Pests self-destruct by dissolving into thin air once their target is in Mozzie’s control.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["COMMANDO_9", "P10_RONI"],
+				secondary: ["SDP_9MM"],
+				gadget: ["BARBED_WIRE", "NITRO_CELL"],
+				ability: ["PEST_LAUNCHER"],
+			},
+			biography: {
+				b: "“C’mon, I'm not here to fuck spiders.” Right after Year 10, Max Goose applied to enter the Australian Defence Force Academy, later working in Combat & Security. He joined an infantry regiment that incorporated dirt bikes and all-terrain vehicles in their reconnaissance operations. Goose excelled in land navigation and became the two-wheeler expert in raids, scouting, and convoy operations. Following Operation Catalyst, he was handpicked to join the Special Air Service Regiment (SASR), so long as he passed selection and refrained from talking back. His specialized off-road skillsets and quick thinking were highly prized, even though his driving style appeared reckless. He deployed to Operation Slipper and served until the operation’s conclusion. He later received the National Emergency Medal for saving firefighters during the Esperance bushfires. Goose is a calculated daredevil who loves testing upcoming military stealth bikes, but he says there’s no bigger honor than being asked to join Rainbow Six.",
+				p: "On their own, Specialist Max 'Mozzie' Goose and Specialist Tori “Gridlock” Tallyo Fairous perform exceedingly well, but together, they pull off some amazing, even hare-brained stunts sure to make the sternest of commanders crack a smile… when they succeed, of course. Just like their operation at the Esperance bushfires. […] These two specialists create this remarkable balance seldom seen between two operators. I’m curious to see if they would still help each other as opponents, or if duty will take precedence over their friendship. […] He’s a speed demon, not just on his bike, but how he processes information. By the time others are done parsing a problem, he has already considered the feasibility of a particular course of action, having weighed all the pros and cons, and he’s already kick-started his bike. Those seconds he’s saving are precious. All the while, he’s smirking beneath that moustache, and there’s this shine to his eyes that makes everyone uneasy. I believe he’s a troublemaker in spirit, but a real showman at heart. […] Goose grew up as the middle sibling in his family and I do believe he had to put extra effort to be heard or noticed, which explains the showman side of his personality. He jokes that his parents paid more attention to him the moment he engaged in extreme sports like freestyle mountain biking, dune buggy racing, and the occasional hang gliding. He told me that the moment he told his mum he did skydiving with dirt bikes, she completely lost it. […] I’ve had the… “pleasure” of hearing the extent of his profanity, though like many behavioural psychologists, I’ve seen enough evidence to support the theory that swearing is good for you… that it’s not maladaptive. […] I’ve even seen Specialist Goose use humour to cover pain, though I wonder if he uses vulgarity to make up for his physical stature, likely to appear more intimidating. So far, all my observations indicate that he becomes quite furious when his height is made all the more obvious. -- Dr. Harishva Pandey",
+			},
 		},
 		{
 			operator: "WARDEN",
@@ -1569,12 +1796,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-warden-v.mp4",
 				info: "The Glance serves a function that was almost non-existent on the Defending team. With it active, Warden can see through smoke and turn around what could be a low-intel situation. Activating his Smart Glasses can also prevent Warden from being blinded by flash effects, or cleanse an existing flash blindness, salvaging an otherwise dangerous few seconds. However, the Glance’s thermal vision only works as long as Warden stays immobile; otherwise, he is affected by smoke the same as everyone else. The Glance is a triggered effect, which must be restored through a cooldown after use.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["M590A1", "MPX"],
+				secondary: ["P-10C", "SMG-12"],
+				gadget: ["DEPLOYABLE_SHIELD", "NITRO_CELL"],
+				ability: ["GLANCE_SMART_GLASSES"],
+			},
+			biography: {
+				b: "'I'm never unprepared.' Collinn McKinley enrolled in the Marine Corps at 18 and earned several commendations in his service jacket for his aggressive quick-thinking, achieving Master Sergeant despite a few minor infractions on his record. After his third tour, he left the Marines and entered the Secret Service in close-protection detail. McKinley’s agility was instrumental in saving Secretary of State Baldwin’s life when insurgents attacked the U.S. diplomatic junket. Baldwin later went on to win the U.S. Presidential and requested McKinley be assigned to the Presidential Protective Division. McKinley has spent over a decade in Washington, protecting important political figures. He is the foremost expert in close protection detail, and with President Baldwin finishing his second term, McKinley has received high endorsements for his transition into Rainbow.",
+				p: "I’ve learned to read between the lines, and when it comes to Specialist Collinn 'Warden' McKinley, that’s where the real story lies. His role as protector came easily to him between butting heads with his strict, hardworking father and defending his brothers at school, but it became more deeply engrained during his three tours with the Marines. McKinley’s service with the Secret Service reads like a Washington gossip column/spy novel. During the attack on then Secretary-of-State Baldwin, the attackers used flashbangs, smoke grenades, and heavy suppressing fire to separate the protection detail. McKinley realized all their evacuation routes had been compromised and evacuated Baldwin alone. The incident clarified the reason behind McKinley’s special glasses, but it’s also become indicative of his modus operandi… his off-the-cuff attitude. He’s never been wrong and I fear he’ll rely on instinct until it finally fails him. His access to the inner circle through the Office of the President made him the go-to in handling delicate situations. He’s clever enough to lead people on the right track without implicating himself and I suspect he knows where a few bodies are buried. McKinley has amassed quite the war chest of political favors and a reputation as a lady’s man. President Baldwin once told me that McKinley’s dalliances eclipsed that of some Presidential administrations. The First Lady was displeased with that joke. He knows how to manipulate; he deepens his Kentucky drawl when dealing with Republican senators, and plays the Southern gentleman around women. I was amused, watching him try to play to my personality… but I play the game too. McKinley adores his teams and he works well with others, but his connection to the Oval Office has instilled him with a sense of invulnerability. McKinley has made many enemies among politicians, businessmen, and Lobbyists; he’s a walking encyclopedia of their sins, and President Baldwin won’t be around to protect him anymore. He is the sort of non-traditional approach we need to keep the military and law enforcement more agile and surgical, someone who understands coordination on a large scale. Unfortunately, that means I owe President Baldwin a 25-year old single malt Scotch for recommending McKinley; he’s insufferable when he’s right. -- Dr. Harishva Pandey",
+			},
 		},
 		{
 			operator: "GOYO",
@@ -1596,12 +1827,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-goyo-v.mp4",
 				info: "Like the ordinary Deployable Shield, the Volcán Shield provides cover and allows Defenders to block pathways, but Goyo turns up the heat with an attached incendiary bomb. From the front, however, there’s little indication of which it might be. Until someone shoots the bomb to make it explode, the shield continues to be an obstacle for the Attackers.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["VECTOR_.45_ACP", "TCSG12"],
+				secondary: ["P229"],
+				gadget: ["PROXIMITY_ALARM", "NITRO_CELL"],
+				ability: ["VOLCÁN_CANISTER"],
+			},
+			biography: {
+				b: "“A person is never more honest than when they think they’re alone.” César Ruiz Hernández was eleven years old when a bomb destroyed his home, killing his father and sister and severely injuring his mother. With the help of Specialist Azucena Rocío “Amaru” Quispe, César’s mother Sofia taught him to observe his surroundings, and to avoid the other boys his age who had been drawn into gang-related affairs. She encouraged him to enroll at the Heroic Naval Military School, where he graduated as a teniente de corbeta. He joined the Naval Infantry, then the Amphibious Commando Battalion, participating extensively in anti-smuggling operations and several high-profile arrests. Becoming a member of the Fuerzas Especiales introduced him to the reality that drugs were no longer the primary source of income for the cartels. He began working with UNESCO and INTERPOL to combat antiquities trafficking, where he gained the attention of Rainbow as a mind with a keen tactical sense and exceptional forward-thinking.",
+				p: "Specialist César 'Goyo' Ruiz Hernández is a rare find. His jacket reads like any normal military trajectory, until you notice the devil behind the details. To confirm my theory, during our first meeting I challenged him to a game of chess. I won’t mention how few moves it took him to beat me. César himself seemed to think nothing of it. […] This humble attitude is at the heart of his character. His mother, Sofia – who protected him from the brunt of the bomb’s blast – has cultivated an overtly optimistic worldview. Growing up where he did, when he did, she also instilled in him a cat-and-mouse mindset, to keep him clear of the negative influences that would have been especially tempting to a young fatherless boy with too much time on his hands. She was helped in this by Specialist Azucena Rocío “Amaru” Quispe, whose intermittent presence and strong familial values shored up a gap that Sofia alone couldn’t fill. […] It’s clear to me that Quispe, with her inherent attachment to her country and her family history, provided a stabilizing influence during Hernández’s undoubtedly troubled adolescence. […] Hernández is the kind to think carefully before speaking, a trait which can lead people to underestimate him. He is neither churlish nor aloof, but constantly considering the many angles of the problem set before him. […] His ability to track and guide his quarry, from determining their routine to understanding how they will react to threats, is uncanny. In a prosaic example, he brought Specialist Tina Lin “Frost” Tsang a bottle of apple-flavored soda on the first day of Fall, despite them only having met once before. She was unperturbed, but I could see that Hernández had braced himself for a far less positive outcome. […] Specialist Hernández has otherwise become a staple of our briefings, his incisive questions highlighting new tactical considerations or encouraging out-of-the-box thinking from the other members of the team. I must admit, it’s refreshing to see what changes a new perspective and an impeccable poker face can bring to an otherwise very self-assured group of individuals. -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "WAMAI",
@@ -1623,12 +1858,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-wamai-v.mp4",
 				info: "The Mag-NET System is a thrown, adhesive gadget. It sticks to surfaces and waits. Its function is to attract an opponent’s projectile to its position, and then self-destruct to detonate that projectile. This way, not only can Wamai make Attackers’ grenades and projectile gadgets useless, he can also use strategic placement to turn those projectiles against them.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["AUG_A2", "MP5K"],
+				secondary: ["D-40", "P12"],
+				gadget: ["IMPACT_GRENADE", "PROXIMITY_ALARM"],
+				ability: ["MAG-NET_SYSTEM"],
+			},
+			biography: {
+				b: "“The closer you are to death, the more vibrant life becomes.” Born to a fishing family on the coast of Kenya, Furaha spent his childhood hunting sharks and collecting lost treasures from the ocean floor of the Lamu Archipelago. It soon became apparent that he was able to stay underwater far longer than his peers, and medical exploration revealed an abnormal physiology that contributed to Furaha’s long-held belief that he was “not from here.” When the opportunity arose to join the Kenyan Navy, and later the Kenya Special Boat Unit, he put his skills to good use. He quickly drew the attention of generals within the navy as well as the worldwide scientific community for his prolific and frequent record-breaking freedives. He later transitioned to NIGHTHAVEN, drawn by the promise of more down-time and a private boat to take him to where his next dive site might be.",
+				p: "Talking to Specialist Ngũgĩ Muchoki “Wamai” Furaha is like talking underwater. Words are exchanged, but it’s not certain that meaning follows. […] Surprisingly, I find myself refreshed by our exchanges. There’s a purity that comes with free association, with being able to jump from one abstract concept to the next. Furaha senses, too, when other people are likely to get lost – at the moments where I find myself most without an anchor, his quick smile and change of topic reassures me that we have not gone beyond all human thought, never to return. […] It makes me question whether I should be more flexible in my thought processes, followed quickly by wondering, if I were, who I would become. […] The existential questions raised by someone who spends their free time anoxic are not those we ask ourselves often. And, perhaps deprived of Furaha’s particular sensitivity to these topics, I’m not certain I see value in them. His unaccustomed approach results in strategies that are completely alien. Furaha’s ability to conceptualize 3D space in not just the horizontal but the vertical is something I’ve only seen in the most obsessive of pilots. Yet his internal dimension is surprisingly absent. […] I once spoke with a renowned monk who had spent his life in pursuit of “complete zero.” In him, I saw the same depth of being I see now in Furaha, but where many people’s spirituality serves to shore up those parts of their personality that they most admire, theirs is the inverse. Furaha’s life is in service to his spirituality. Anoxia is part of his addiction. […] In all of my consultations, I strive for neutrality. Furaha is a talented operator, capable, intelligent, and unpredictable. His ability to put a room at ease is invaluable. Yet one never has the sense that they hold the whole picture of him in their mind. Like the nitrogen that must disperse back into the diver’s body before resurfacing, Furaha’s true nature is diffuse. To define him would be to limit him, and I have the distinct sense that there is nothing he would despise more. -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "ORYX",
@@ -1650,12 +1889,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-oryx-v.mp4",
 				info: "The Remah Dash speed allows him to roam efficiently and cover short distances with unprecedented swiftness. It can also be used to knock down opponents and dash through breakable walls, creating a wide opening. Be careful of the cost, though, as he loses health every time the Remah Dash is used for breaching. Additionally, Oryx has the unique ability to interact with broken hatches. He can climb straight through for a quick rotation, or he can hang on the edge to peek or wait for the perfect moment to go up. As long as he’s hanging, he can also opt to drop down if the climb seems too dangerous.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SPAS-12", "T-5_SMG"],
+				secondary: ["BAILIFF_410", "USP40"],
+				gadget: ["BARBED_WIRE", "PROXIMITY_ALARM"],
+				ability: ["REMAH_DASH"],
+			},
+			biography: {
+				b: "“Sometimes, the only way out is through.” Little is known about Al Hadid’s life. He grew up in a small town adjacent to an air force base, and by all accounts had a normal childhood up until he disappeared from international records for more than fifteen years. He eventually resurfaced in Jordan, but stayed only long enough to obtain a new passport. He learned wrestling in Istanbul, Muay Thai in Bangkok, tactical driving in Berlin, and precision marksmanship in Damascus, likely working for a paramilitary sponsor. Then he disappeared again. He next showed up as a cadet at Jalal “Kaid” El Fassi’s Fortress. As the years passed, his role evolved, from recruit to steward to instructor. Now the unofficial second-in-command, Al Hadid maintains the Fortress during Kaid’s absences and acts as a trusted advisor whenever the two of them are together. Rumors of Al Hadid’s ferocity abound, but remain uncorroborated by field reports and should be disregarded.",
+				p: "Saif “Oryx” Al Hadid has lived an exceptional life. Torn from his family as a teenager, he was outside of Jordan – he won’t say where – when he was incarcerated. For over fifteen years he struggled for his freedom, moving between solitary confinement and different facilities. The rage he bears as a result of this inhumane treatment is something I have witnessed once, and hope to never see again. […] My first meeting with Al Hadid took place not in my own office, but in the well-appointed private sanctuary of Jalal “Kaid” El Fassi. He had told me stories of the warrior forged from raw iron, of his outstanding strength and resilience, but also of the weeks during which the man had sat, unmoving, in the scorching desert heat, waiting for Kaid to open the Fortress’ doors. […] Though no outward mark remains of his transformation, it is clear Al Hadid is a man thoroughly changed. We spoke of the ubiquitous cats of Morocco, of his trek, on foot, from Syria to the Atlas Mountains, and of poetry, for which he has a special fondness. […] Despite his scars, Al Hadid does not dwell in the past. There is nothing for him there, he said. I wondered if his stoicism hid some deeper longing, but in our sessions since I have found no such indication. […] Al Hadid’s phenomenal self-control puts my own efforts at mastery to shame. Even Specialist Yumiko “Hibana” Imagawa has commented on the utter calm he exudes. The difference between them is that he allows his control to waver at selected moments, in service of his larger goals. He has turned a crippling affliction into overwhelming strength. This is an extraordinary skill that I have encouraged him to share, when and where he will. […] Other operators are making inroads with Al Hadid, but progress is slow. I suspect, like many subjected to the depths of human cruelty, trusting others will not come naturally. Disquieting though it is to admit, Rainbow may be the one place where he is amongst those who can best understand his past. -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "MELUSI",
@@ -1677,12 +1920,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-melusi-v.mp4",
 				info: "The Banshee Sonic Defence is deployable on surfaces, much like Maestro’s Evil Eyes, but they don’t require any manual control. As soon as an opponent walks close enough to it, it will release its scream and slow them. It can be destroyed, but since it’s bulletproof, Attackers will have to dispense some utility or strike it up close.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["MP5", "SUPER_90"],
+				secondary: ["RG15"],
+				gadget: ["IMPACT_GRENADE", "NITRO_CELL"],
+				ability: ["BANSHEE_SONIC_DEFENSE"],
+			},
+			biography: {
+				b: "“Understanding is the only tool that vanquishes ignorance.” Born in the small town of Louwsburg near the Ithala Game Reserve, Ndlovu spent many years exploring with her friend, Elna Gardiner. As they grew, so did their appreciation of and sense of responsibility for the animals on the reserve. The threat from poachers fueled their determination, and though haunted they focused on the lives they could save, rather than past casualties. Ndlovu signed up with the South African National Defence Force to broaden her skillset and fund her field ranger training. Her persistence and dedication brought her to the attention of the 1 Parachute Battalion, until an ambush in the Central African Republic left her badly wounded. When Gardiner, who had become an accomplished veterinarian, asked for help defending Hluhluwe–Imfolozi Park, Ndlovu resigned from the military and began training local women in tracking, interception, and surveillance. Together, they are the heart of the Inkaba Task Force Anti-Poaching Unit.",
+				p: "Specialist Thandiwe “Melusi” Ndlovu strikes me as someone uniquely suited to carrying out South Africa’s ongoing conservation efforts – she is efficient, precise, and accepts that greed remains one of humanity’s greatest challenges. When I asked if she thought we would ever be rid of it, she smiled and said, “It’s good to dream, Doctor.” […] Her relationship with Elna began the day they discovered that their names meant the same thing: “beloved”. It wasn’t always an easy friendship, but their shared adoration for the animals of the game reserve and propensity for exploring where they absolutely should not have been saw them through a lot of challenges. […] Ndlovu's stoic comparison between the wounded of the battlefield and the cries of poisoned elephants is in stark contrast to Elna’s compassion. It’s interesting that one focused on prevention, and the other on triage. In the end, their divergent paths create a complementary partnership. […] Ndlovu refuses to speak about the ambush that decimated her unit. From the reports it’s clear the operation was a harrowing ordeal from which she was lucky to escape. I tried approaching the topic from the angle of latent survivor’s guilt, but she brushed off my attempts. She seems more affected by the tragedies she witnessed on the reserve – comparing land mines to snares, and mentally turning the the reserve into a warzone. […] Her profile indicates that any negative feelings have been transmuted into action, in the forms of training the women of her anti-poaching unit and the web of drone-based surveillance she has organized to oversee their operations. On the topic of her work, she is effusive. Ndlovu believes strongly that there must be education and a shared responsibility within the community, that simply fighting poachers is not enough. She takes great pride in the accomplishments of the women under her command, and in their contribution to the well-being of the animals they protect. She cares, too, about improving the local economy, but this concern is secondary to providing what she calls “self-directed futures” – believing that these, above everything, will counter the lure of easy money. -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "ARUNI",
@@ -1704,12 +1951,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-aruni-v.mp4",
 				info: "Once in place, the gate projects a laser array capable of detecting anyone moving through it. When an intruder is detected, energy output to the laser increases, causing second- and third-degree burns. We spent nearly an hour tossing everything from wads of paper to pieces of fruit through until we found a setting that maximizes damage while limiting energy consumption.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["P10_RONI", "MK_14_EBR"],
+				secondary: ["PRB92"],
+				gadget: ["BARBED_WIRE", "BULLETPROOF_CAMERA"],
+				ability: ["SURYA_GATE"],
+			},
+			biography: {
+				b: "“In every conflict, it’s the children who are made to suffer, even after the fighting has stopped.” As a private detective, her discovery of a bomb plot in Bangkok brought Aruni to the attention of the Royal Thai Police (RTP). Her knack for connecting the dots between seemingly-unrelated incidents earned her grudging respect from Thailand’s male-dominated law enforcement agencies, as well as hostility from numerous criminal syndicates. The RTP offered Aruni a Detective position with the Crime Suppression Division, where she dismantled a human trafficking ring and foiled no fewer than four bomb plots. Her ability to track and connect diverse shipments of explosive materials was lauded by her superiors. Unfortunately, Aruni’s police career ended when she was nearly killed during an operation in Bangkok.Following her recovery, Aruni was approached by Jaimini “Kali” Shah. Kali’s access to cutting-edge prosthetics was likely a factor in Aruni’s decision to join Nighthaven.",
+				p: "Aruni is quick on her feet, both mentally and physically. She rarely hesitates, and her judgement is flawless under the most trying circumstances. Her reaction speed, combined with her expertise in firearms and martial arts, means that she is a versatile and deadly combatant. Her fitness regimen – taken up following years of physical and psychological recovery – is intense, but it enables her to maintain peak performance. [...] Aruni’s affiliation with Nighthaven appears to be one of convenience. Nighthaven pays well and provides her with access to cutting edge prosthetic technology. While she uses some of the money she earns to support herself, she’s also a quiet philanthropist with a very frugal lifestyle. She donates time and money to charities that focus on the disposal of unexploded ordnance along the Thailand-Cambodia border and medical treatment for victims. One of Aruni’s closest companions is Hero, a giant pouched rat trained in demolitions disposal. Though not stated outright, Hero appears to be her emotional support animal. [...] When time is in short supply, Aruni has a penchant to bend the rules in favor of expedience – an understandable impulse, especially in cases where lives are on the line, but it isn’t always acceptable to her superiors. Though she was a brilliant police detective, her tendency to prefer convenience over procedure led to a number of minor infractions. [...] While she’s done the majority of her professional work in Thailand, Aruni is an accomplished world traveler. Her wanderlust has taken her to other parts of Southeast Asia, as well as Central and South America. [...] She and other Specialists – namely Emmanuelle “Twitch” Pichon and Sanaa “Nomad” El Maktoub – have traveled together, providing both companionship and security when visiting destabilized regions. [...] She uses photography – a skill she developed as a private detective in Bangkok – as a way to raise global awareness of the vast minefields left over from prior wars. These personal photographs tend to focus on the victims of conflict, especially those maimed by unexploded ordnance. Ultimately, these images allow her to give herself what so few of us think we truly deserve – compassion. -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "THUNDERBIRD",
@@ -1731,12 +1982,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-thunderbird-v.mp4",
 				info: "When deployed on the ground, the Kóna Station acts as a point of safety for injured and downed Operators. All they have to do is approach the device, and the Kóna Station automatically boosts the Operator's HP or offers a revive.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["SPEAR_.308", "SPAS-15"],
+				secondary: ["BEARING_9", "Q-929"],
+				gadget: ["IMPACT_GRENADE", "NITRO_CELL"],
+				ability: ["KÓNA_STATION"],
+			},
+			biography: {
+				b: "“Air or ground, you find your balance or end up with a face full of dirt.” Born in the Nakoda Territories of Saskatchewan, Thunderbird’s first lesson from her mother was the importance of community. Her first introduction to engines was at her father’s knee, he taught her to understand helicopters before she learned to fly one. Always eager for new experiences she enrolled in the Bold Eagle Program at seventeen where she excelled in basic military training. While benefitting from the guidance of community elders and indigenous instructors, this program sparked an interest in preserving and protecting what she loved most, the Nakoda way of life. After joining the Canadian Armed Forces Thunderbird worked her way through flight school. Remembering her mother’s emphasis on the value of balance, Thunderbird felt since the CAF taught her to take lives, she should also learn how to save them. She completed her Basic Medical Training (CFHSTC) and continued to serve in the CAF as an Aerial Medic.",
+				p: "When Nomad first brought Specialist Mina “Thunderbird” Sky to our attention I wasn’t surprised by her recommendation. Sky is an accomplished medical officer, aviation mechanic and pilot. She seems to have the necessary drive, training and temperament to meld with Nomad’s team. I was, however, surprised that this was the first I have heard of her. Had it not been for Sky’s medical training Nomad may not have survived the incident in the North. I wonder if that encounter inspired Nomad to welcome the friendship of a hunter like Specialist Frost. Given her background I feel that Frost and Sky would have much to bond over. Family is clearly important to Sky, and that goes beyond immediate blood ties. The Nakoda community had as big an influence on and hand in raising Sky as her parents. The knowledge passed down is not solely a history but a heritage to be practiced and preserved as a way of life. Overall, Sky has an emotional awareness that’s born from understanding and acceptance. She seeks balance in everything she does. She describes the world and the human body as an engine. First you need to understand its purpose, and then how it functions. If a wire is shredded you can’t fix it with a screw, but a screw can hold a bone in place as it heals. I can appreciate the analogy, listen first then find a solution. That’s not to say she doesn’t lose her temper. What “gets under her skin” as Sky puts it is lack of respect. Respect for others, whether it’s their way of life or their right to life is essential to her principles. Sky’s evaluation of risks seems to be tempered by her confidence and experience. After discussing some of her more harrowing adventures, I was concerned about her daredevil tactics. I did ask her what it felt like when she was in the air and if it was the adrenaline rush that fueled her. Her response was a smile and a simple, “It felt like flying.” I guess I deserved that… -- Dr. Harishva 'Harry' Pandey, Director of Rainbow",
+			},
 		},
 		{
 			operator: "THORN",
@@ -1758,12 +2013,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-thorn-v.mp4",
 				info: "The Razorbloom Shell sticks to a surface after it's thrown by Thorn. Shortly after detecting a nearby opponent, it automatically propels a set of sharp blades in all directions, delivering lethal damage.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["UZK50GI", "M870"],
+				secondary: ["1911_TACOPS", "C75_AUTO"],
+				gadget: ["DEPLOYABLE_SHIELD", "BARBED_WIRE"],
+				ability: ["RAZORBLOOM_SHELL"],
+			},
+			biography: {
+				b: " <i> “Pick on someone your own size.” </i> <br> <br> Thorn grew up on a farm in a part of Ireland known for two things: horse racing and military training. For several generations her family was heavily involved with both. When she wasn’t outwrestling one of her five older brothers, she was helping her parents breed and raise thoroughbreds for the tracks as well as for the mounted division of Ireland’s national police force. It’s a Hawthorn family tradition to eventually abandon farm life for the military, as it’s considered to be “easier”. Thorn, however chose to follow the horses and joined the Garda Síochána. <br> <br> After four years of impeccable service she applied for the Garda’s elite tactical branch, the Emergency Response Unit. Only five percent of applicants pass the grueling two-week entrance exam. Thorn not only finished top of her class, but would routinely assist other applicants through the training gauntlet. <br> <br> She quickly rose through the ranks as a tactical weapons expert and helped re-design the unit’s obstacle course, referring to the former design as a “walk in the park.” Word of her course reached the ears of Caveira, who upon barely completing the training exclaimed with exhaustion “You want a job?”  ",
+				p: "",
+			},
 		},
 		{
 			operator: "AZAMI",
@@ -1785,12 +2044,16 @@ export async function getStaticPaths() {
 				video: "videos/r6-azami-v.mp4",
 				info: "The Kiba Barrier is a modified kunai that sticks to a surface after it's thrown and releases a material that first expands then solidifies, creating a bulletproof barrier to patch up those holes in your defenses.",
 			},
-			loadout: [
-				{
-					name: "R4C",
-					icon: "/weapon-icons/r4c.png",
-				},
-			],
+			loadout: {
+				primary: ["9X19SVN", "ACS12"],
+				secondary: ["D-50"],
+				gadget: ["IMPACT_GRENADE", "BARBED_WIRE"],
+				ability: ["KIBA BARRIER"],
+			},
+			biography: {
+				b: "<i> “Honor is not the only thing worth protecting…but sometimes it’s all you have left.” </i> <br> <br> Raised in Kyoto City, Azami blurs the lines between the ultra-modern and the traditional. Boxed in by the rigid rules of her household, she found outlets for self-expression through fashion and physical combat. Her focus and determination allowed Azami to progress quickly through the ranks of Aikido. This aptitude, as well as her dedicated study of languages, served her well when she moved to Tokyo to study at the Metropolitan Police Academy. <br> <br>  While working as a motorcycle officer Azami gained her 3rd Dan in Jujitsu and her 5th Dan in Aikido, earning her a spot in the Security Police division of the TMPD. She fell out with her sensei after failing to achieve the serenity necessary to progress. After facing suspension due to multiple violent outbursts in the line of duty, she subsequently chose to join the private sector as a bodyguard. Azami worked exclusively for Masayuki Yahata in Fukuoka before his death led her to re-establish contact with Yumiko “Hibana” Imagawa.",
+				p: "There is a mystery hidden behind Specialist Kana “Azami” Fujiwara’s mask. Her demure charm can be disarming, making her an unassuming companion for business and social meetings. However, when her employer is threatened, the “mask comes off,” which leads me to believe I should be cautious in my attempts to peer behind it. […] <br> <br> Fujiwara’s responses to my inquiry into her family history were polite, and I daresay… all too precise. I’m still trying to determine if her dedication to Bushido teachings was encouraged by, or in spite of, her relationship with her father. […] Fujiwara’s profile is characterised by a high level of self-control, independence, and extraversion. What I question is her emotional stability. Her performance as a bodyguard shows that she can keep a cool head amidst chaotic situations and is unarguably someone you can trust with your life. <br> <br> Her reaction to Yahata’s death is uncharacteristic with her professionalism and does concern me. Fujiwara refuses to answer to her given name until she uncovers the truth surrounding the death of Masayuki Yahata. She’s now claimed the name Azami, stating, “Until I reclaim my honor, I am only vengeance,” serving as a continuous reminder of the debt she owes. His passing has moved beyond a vocational failing and into personal mourning. I can see her struggling to define whether his last word was a blessing or an accusation […] <br> <br> […] Fujiwara’s face lit up when we talked fashion, but I fear I may have insulted her when I suggested we go shopping at the mall. “I don’t shop, I curate.” Her wardrobe is obsessively meticulous, each item chosen for its form as well as its function. I will say her bold fashion sense distracts the eye while hiding a myriad of weapons, the most dangerous of all being her wrath. I think next time I’ll inquire about her poetry. […] <br> <br> […] I’ve observed her in training. Though her movements are precise, her fluidity is disturbed by the unpredictability of her weaponized rage. Hibana vouches for Azami’s ability and trustworthiness, but while she has earned my confidence, Fujiwara’s methods require closer evaluation […] <br> <br> <i> -- Dr. Harishva 'Harry' Pandey, Director of Rainbow </i>",
+			},
 		},
 		{
 			operator: "SOLIS",
@@ -1812,26 +2075,27 @@ export async function getStaticPaths() {
 				video: "videos/r6-solis-v.mp4",
 				info: "The truth comes to light with Solis' SPEC-IO Electro-Sensor, a new gadget detection device for Defense operatives. With the ability to mark and ping opponents' electronic devices, there is nowhere to hide.",
 			},
-			loadout:
-				{
-					primary:["P90","ITA12L"],
-					secondary:["SMG-11"],
-					gadget:["IMPACT_GRENADE","BULLETPROOF_CAMERA"],
-					ability:["SPEC-IO_ELECTRO-SENSOR"],
-					
-				},
-
+			loadout: {
+				primary: ["P90", "ITA12L"],
+				secondary: ["SMG-11"],
+				gadget: ["IMPACT_GRENADE", "BULLETPROOF_CAMERA"],
+				ability: ["SPEC-IO_ELECTRO-SENSOR"],
+			},
+			biography: {
+				b: "<i>“People lie. Data does not.”</i> <br> <br> Díaz grew up comfortably in an otherwise dangerous time for Colombia, where her close-knit family unit taught her the value of truth. As the eldest of four she felt a duty to protect others, which prompted her to join the National Police. Balancing her passion for computers and literature with her unflinching drive, she excelled in investigative work. After receiving a commendation for uncovering corruption among her peers, she pushed through special operations training and earned herself a spot in the AFEAU. <br> <br> Díaz was surprisingly proficient in ballistics and close combat for someone with her cerebral profile, which made her a well-rounded specialist. She worked in counterintelligence with the National Intelligence Directorate and led an initiative to partner with developers of Augmented Reality technology to enhance her unit’s efficiency. She simultaneously led a secret life online, monitoring systemic corruption through the dark web and ultimately discovering transactions that tied several officials to trafficking rings in South America. The crackdown that followed got her on Specialist Santiago “Flores” Lucero’s radar, who recommended her to Specialist Taina “Caveira” Pereira for recruitment.",
+				p:"As a scholar of linguistics, Specialist Ana “Solis” Díaz speaks in precise terms, leaving nothing to the imagination. As she explained, “every moment of confusion is a risk, a danger, so clarity is always essential.” <br> <br> She brought up an Operation in Bogotá to illustrate this, where she was assigned to the protection of a VIP. Her charge’s refusal to explain who was pursuing him (and why) meant that Díaz’s unit was acting with limited information, and several of them were gravely injured as a result. This reminded Díaz of why she initially wanted to leave this career path. <br> <br> Díaz was shaken when she discovered her first commanding officer’s involvement with a local criminal element. Her community was endangered when the police force engaged in a shootout with the criminals they were supplying, and civilians were caught in the crossfire. Among the losses was Díaz’s aunt after whom she was named. The familial nickname of “Anita” never felt right to her afterwards, calling it a mark of shame, something she must make up for. <br> <br> “A corrupt system is one where trust is scarce, inequality is the norm, and the people we are meant to protect become expendable.” She refuses to make allowances for anyone who enables such environments. She chose to reach higher echelons to effect change not out of ambition, but because she feels like if she doesn’t do it, no one will. […] <br> <br> I noticed Díaz was quick to bond with Zero, and she confessed that she was already familiar with his career through her extracurricular research. She sees in him a legend from which she can learn, taking every opportunity to train with him and interrogate him over coffee. He doesn’t seem to mind a student who listens, and a mentor could do Díaz some good. […] <br> <br> As confident as she is in her abilities, Díaz displayed some agitation when discussing the upcoming Operation. She puts a lot of pressure on herself and hinges her self-worth on success, so I’m not surprised that she’s afraid of failure. I expect she’ll feel more at ease when she realizes she’s surrounded by competent specialists. <br> <br> <i> -- Dr. Harishva 'Harry' Pandey, Behavioral Analyst </i> ",
+			},
 		},
 	];
-	return pages.map(({ operator, title, text, video, loadout }) => {
+	return pages.map(({ operator, title, text, video, loadout, biography }) => {
 		return {
 			params: { operator: operator },
-			props: { title, text, video, loadout },
+			props: { title, text, video, loadout, biography },
 		};
 	});
 }
 
-const { title, text, video, loadout } = Astro.props;
+const { title, text, video, loadout, biography } = Astro.props;
 ---
 
 <script>
@@ -1886,49 +2150,87 @@ const { title, text, video, loadout } = Astro.props;
 			<p class="loadout-title">LOADOUT</p>
 			<div class="weapons">
 				<Column title="PRIMARY WEAPON">
-					{loadout.primary.map((item: string) => (
-						<Gadget gadget={item}/>
-				  	))}
+					{
+						loadout.primary.map((item: string) => (
+							<Gadget gadget={item} />
+						))
+					}
 				</Column>
 				<Column title="SECONDARY WEAPON">
-					{loadout.secondary.map((item: string) => (
-						<Gadget gadget={item}/>
-				  	))}
+					{
+						loadout.secondary.map((item: string) => (
+							<Gadget gadget={item} />
+						))
+					}
 				</Column>
 				<Column title="GADGET">
-					{loadout.gadget.map((item: string) => (
-						<Gadget gadget={item}/>
-				  	))}
+					{
+						loadout.gadget.map((item: string) => (
+							<Gadget gadget={item} />
+						))
+					}
 				</Column>
 				<Column title="UNIQUE ABILITY">
-					{loadout.ability.map((item: string) => (
-						<Gadget gadget={item} invert/>
-				  	))}
-				</Column>	
-
+					{
+						loadout.ability.map((item: string) => (
+							<Gadget gadget={item} width={300} invert />
+						))
+					}
+				</Column>
+			</div>
+			<div class="biography">
+				<p class="loadout-title">BIOGRAPHY</p>
+				<div class="tip">
+					<div class="biography-content">
+						<p class="biography-title">BIOGRAPHY</p>
+						<p class="biography-text" set:html={biography.b}></p>
+					</div>
+					<div class="biography-content">
+						<p class="biography-title">PSYCHOLOGICAL REPORT</p>
+						<p class="biography-text" set:html={biography.p}></p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</main>
 </Layout>
 
 <style>
-
-	.weapons{
-		display: flex;
-		flex-direction: row;
-		gap:100px;
+	.tip{
+		max-width: 55%;
 	}
-
-    .type{
-		color: #edf0f1;
-		font-size: 35px;
-		padding-bottom: 5px;
+	.biography-text {
+		padding: 20px;
+		font-size: 16px;
+		font-family: Roboto, sans-serif;
 		letter-spacing: 0.5px;
 	}
-
-    .loadout-title{
-		font-size: 75px;
-		padding-bottom: 5px;
+	.biography-title {
+		padding-left: 20px;
+		font-size: 56px;
+		max-width: 65%;
+		letter-spacing: 0.5px;
+	}
+	.biography {
+		color: #edf0f1;
+		font-size: 22px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		padding-bottom: 150px;
+		
+	}
+	.weapons {
+		padding-bottom: 170px;
+		display: flex;
+		flex-direction: row;
+		gap: 18px;
+	}
+	.loadout-title {
+		font-size: 85px;
+		padding-bottom: 40px;
 		letter-spacing: 0.5px;
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
@@ -1937,9 +2239,9 @@ const { title, text, video, loadout } = Astro.props;
 		background-position: 0%;
 		filter: drop-shadow(2px 2px 2px #151d30);
 	}
-    
-	.loadout{
-		display:flex;
+
+	.loadout {
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 	}
@@ -1967,13 +2269,14 @@ const { title, text, video, loadout } = Astro.props;
 	.title {
 		display: flex;
 		flex-direction: row;
+		justify-content: center;
 	}
 
 	.main-title {
 		display: flex;
 		flex-direction: column;
 		z-index: 4;
-		margin-right: 650px;
+		margin-right: 800px;
 		padding: 25px;
 	}
 	.band {
@@ -2029,9 +2332,9 @@ const { title, text, video, loadout } = Astro.props;
 
 	.big {
 		position: absolute;
-		width: 640px;
+		width: 740px;
 		margin-left: 700px;
-		margin-top: -120px;
+		margin-top: -208px;
 		z-index: 2;
 	}
 	main {
@@ -2046,7 +2349,7 @@ const { title, text, video, loadout } = Astro.props;
 
 	.content-title {
 		color: #edf0f1;
-		font-size: 55px;
+		font-size: 70px;
 		padding-bottom: 5px;
 		letter-spacing: 0.5px;
 
@@ -2080,7 +2383,7 @@ const { title, text, video, loadout } = Astro.props;
 
 	p {
 		color: #edf0f1;
-		font-size: 20px;
+		font-size: 25px;
 		padding-bottom: 5px;
 		letter-spacing: 0.5px;
 	}
@@ -2093,8 +2396,7 @@ const { title, text, video, loadout } = Astro.props;
 		filter: drop-shadow(2px 2px 2px #151d30);
 	}
 	.iconitza {
-		width: 75px;
+		width:25% ;
 		filter: drop-shadow(2px 2px 2px #151d30);
 	}
-	
 </style>
