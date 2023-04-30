@@ -2,15 +2,17 @@
 export interface Props {
 
 gap: number;
-width: number;
+width?: number;
 }
 
 const { gap, width } = Astro.props;
 ---
-<div class="iconitze" style={{gap: `${gap}px`, width:`${width}px`}}>
+<div class="iconitze" style={{gap: `${gap}px`, width:width ? `${width}px`:"initial"}}>
     <slot></slot>
 </div>
+
 <style>
+
 .iconitze {
 	display: flex;
 	gap: 200px;
