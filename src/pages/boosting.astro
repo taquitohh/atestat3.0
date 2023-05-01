@@ -9,119 +9,7 @@ import Layout from "../layouts/Layout.astro";
 />
 <Layout>
 	<body>
-		<div class="top-content">
-			<img src="img/logo.png" alt="" />
-			<h1>Atestat 2023</h1>
-			<h3>creat de Căldăraru Denisa</h3>
-			<p class="bonbon">My main operators:</p>
-		</div>
-		<div class="content">
-			<div class="heroes">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-4">
-							<div class="hero darius">
-								<div class="kda">
-									<h2>3.22:1</h2>
-									<span>kda</span>
-								</div>
-								<img src="img/erou1.png" alt="" />
-								<div class="info">
-									<h3>Darius</h3>
-									<span>The hand of noxus</span>
-								</div>
-								<div class="hero-hidden">
-									<div class="spell">
-										<img src="img/spell1.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell2.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell3.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell4.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell5.png" alt="spell" />
-									</div>
-									<div class="spell right">
-										<img src="img/spell6.png" alt="spell" />
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hero gnar">
-								<div class="kda">
-									<h2>3.22:1</h2>
-									<span>kda</span>
-								</div>
-								<img src="img/erou2.png" alt="" />
-								<div class="info">
-									<h3>Gnar</h3>
-									<span>The missing link</span>
-								</div>
-								<div class="hero-hidden">
-									<div class="spell">
-										<img src="img/spell1.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell2.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell3.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell4.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell5.png" alt="spell" />
-									</div>
-									<div class="spell right">
-										<img src="img/spell6.png" alt="spell" />
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4">
-							<div class="hero jhin">
-								<div class="kda">
-									<h2>3.22:1</h2>
-									<span>kda</span>
-								</div>
-								<img src="img/erou3.png" alt="" />
-								<div class="info">
-									<h3>Jhin</h3>
-									<span>The hand of noxus</span>
-								</div>
-								<div class="hero-hidden">
-									<div class="spell">
-										<img src="img/spell1.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell2.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell3.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell4.png" alt="spell" />
-									</div>
-									<div class="spell">
-										<img src="img/spell5.png" alt="spell" />
-									</div>
-									<div class="spell right">
-										<img src="img/spell6.png" alt="spell" />
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
 		<footer>
 			<div class="footer_bg" id="Boo">
 				<div class="col-md-7">
@@ -130,7 +18,7 @@ import Layout from "../layouts/Layout.astro";
 					</div>
 					<div class="trofee">
 						<img class="plat" src="siege logo/Platinum 2.png" />
-						<p>RANKED <br /> Platinum III</p>
+						<p>RANKED <br /> Platinum II</p>
 					</div>
 				</div>
 				<div class="col-md-5 contact">
@@ -185,25 +73,15 @@ import Layout from "../layouts/Layout.astro";
     }
 
 	.bonbon{
+		margin-top: 100px;
 		font-family: Scout;
 		font-size: 70px;
-	}
-	h1{
-		font-family: Scout;
-		font-size: 90px;
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
 		filter: drop-shadow(2px 2px 2px #151d30);
-	}
-	h3{
-	    font-family: Roboto;
-	}
-	.top-content{
-		filter: drop-shadow(2px 2px 2px #151d30);
-		color:aliceblue;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -242,7 +120,6 @@ import Layout from "../layouts/Layout.astro";
 
 	.hero > img {
 		width: 100%;
-		border-radius: 15px;
 		transition: 0.3s ease-in;
 	}
 
@@ -268,18 +145,6 @@ import Layout from "../layouts/Layout.astro";
 		transition: 0.2s ease-in;
 	}
 
-	.spell {
-		width: 30px;
-		height: 30px;
-		border-radius: 5px;
-		margin-right: 10px;
-		display: inline-block;
-		overflow: hidden;
-	}
-
-	.spell img {
-		width: 100%;
-	}
 
 	.hero:hover .hero-hidden {
 		bottom: -55px;
@@ -301,11 +166,11 @@ import Layout from "../layouts/Layout.astro";
 	}
 
 	.darius h3 {
-		color: #c0392b;
+		color: #34495e;
 	}
 
 	.gnar h3 {
-		color: #3498db;
+		color: #34495e;
 	}
 
 	.jhin h3 {
