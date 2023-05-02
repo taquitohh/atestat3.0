@@ -1,13 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Map from "../../components/Map.astro";
+import Blueprint from "../../components/Blueprint.astro";
 export async function getStaticPaths() {
 	const pages = [
 		{
 			map: "BANK",
 			title: {
 				text: "BANK",
-				background: "operator icon photo/r6-ash-icon.png",
+				background: "maps/r6-bank.png",
 			},
 			text: {
 
@@ -47,18 +47,16 @@ const { title, text, video, blueprints } = Astro.props;
 		<h1>
 			<div class="main-title">
 				<div class="title">
-					<img class="iconitza" src={"../" + title.icon} />
 					<div class="content-title">{title.text}</div>
 				</div>
-				<div class="properties">
-					<p>{text.side}</p>
-					<img class="icon" src={"../" + text.side_icon} />
-					<p>{text.side_a_d}</p>
-					<p>{text.squad}</p>
-					<img class="icon-squad" src={"../" + text.squad_icon} />
-					<p>{text.squad_name}</p>
-				</div>
 			</div>
+            <div class="blueprint">
+                 <Blueprint>
+                    loadout.primary.map((item: string) => (
+                    <Gadget gadget={item} />
+                ))
+                 </Blueprint>
+            </div>
 		</h1>
 	</main>
 </Layout>
