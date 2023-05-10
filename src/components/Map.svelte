@@ -1,21 +1,16 @@
----
-export interface Props {
-	title: string;
-	name: string;
-	href: string;
-}
+<script lang="ts">
 
-const { href, title, name } = Astro.props;
+export let map:string;
 
----
+</script>
 
 <li class="link-card">
-	<a href={href}>
-		<img class="op" src={"maps/r6-"+name+".png"}>
+	<a href={"maps/"+map}>
+		<!-- svelte-ignore a11y-missing-attribute -->
+		<img class="op" src={"maps/r6-"+map.toLowerCase()+".png"}>
 		<div class="bar">
-		<div class="title">{title}</div>
+		<div class="title">{map}</div>
 		</div>
-		
 	</a>
 </li>
 <style>
@@ -23,7 +18,6 @@ const { href, title, name } = Astro.props;
 		display: flex;
 		width: 320px;
 		height: calc(11.0rem + 48px);
-		/* background-image: var(--accent-gradient); */
 		background-size: 200%;
 		background-position: 100%;
 		background-color: rgba(100, 155, 177, 0.151);
