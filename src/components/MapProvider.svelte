@@ -15,12 +15,12 @@
 
 
 <div class="controls">
-    <button on:click={() => playlist = 0}><p>ALL</p></button>
-    <button on:click={() => playlist = 1}><p>NEW COMER</p></button>
-    <button on:click={() => playlist = 2}><p>QUICK MATCH</p></button>
-    <button on:click={() => playlist = 3}><p>TEAM DEATHMATCH</p></button>
-    <button on:click={() => playlist = 4}><p>RANKED</p></button>
-    <button on:click={() => playlist = 5}><p>UNRANKED</p></button>
+    <button class="button" on:click={() => playlist = 0}><p>ALL</p></button>
+    <button class="button" on:click={() => playlist = 1}><p>NEW COMER</p></button>
+    <button class="button" on:click={() => playlist = 2}><p>QUICK MATCH</p></button>
+    <button class="button" on:click={() => playlist = 3}><p>TEAM DEATHMATCH</p></button>
+    <button class="button" on:click={() => playlist = 4}><p>RANKED</p></button>
+    <button class="button" on:click={() => playlist = 5}><p>UNRANKED</p></button>
 </div>
 <div class="maps">
     {#each maps[playlist] as map }
@@ -30,6 +30,14 @@
 
 
 <style>
+    .button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(1.5px 1.5px 1.5px #151d30);
+}
+
 p{
     font-size:25px;
     width: 100%;
@@ -43,12 +51,13 @@ p{
     padding: 25px;
     gap: 25px;
 }
+
 .maps {
-        display: flex;
-        flex-wrap: wrap;
-     justify-content: center;
-        grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-        gap: 10px;
-        padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 10px;
+    padding: 0;
     }
 </style>

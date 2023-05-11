@@ -13,6 +13,7 @@ export let map:string;
 		</div>
 	</a>
 </li>
+
 <style>
 	.link-card {
 		display: flex;

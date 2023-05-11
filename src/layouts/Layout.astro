@@ -31,6 +31,9 @@
 		</nav>
         <slot>
         </slot>
+        <footer>
+            <p class="prop">Atestat 2023 creat de Căldăraru Denisa Elena</p>
+        </footer>
 	</body>
 </html>
 
@@ -40,7 +43,16 @@
     font-family: Scout;
     src: url(/fonts/ScoutCond-BoldItalic.otf);
     }
-
+    .prop {
+        font-family: Roboto, sans-serif;
+        padding:30px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: #24252A;
+        color: white;
+        text-align: center;
+}
 	:root {
 		--accent: 126, 129, 158;
 		--accent-gradient: linear-gradient(15deg, rgb(var(--accent)), #53d6d6b4 30%, #45697e69 60%);
@@ -112,13 +124,13 @@
       padding: 10px 25px;
       background-color: rgb(61, 66, 99);
       border: none;
-      border-radius: 50px;
+      border-radius: 10px;
       cursor: pointer;
-      transition: all 0.3s ease 0;
+      transition: all 0.3s ;
   }
   button:hover{ 
-      background-color:rgb(126, 129, 158);
-      transition: all 0.3s ease 0;
+      background-color:rgb(179, 179, 212);
+      color:#1f1e22;
   }
 
  

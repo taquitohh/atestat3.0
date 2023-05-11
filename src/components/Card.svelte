@@ -1,20 +1,18 @@
 
 <script lang="ts">
 
-    export let title: string,
-	           name: string,
-	           href: string;
+    export let title: string;
     
     </script>
 
 <li class="link-card">
-	<a href={href}>
-		<img class="op" src={"operator main photo/"+name+".png"}>
+	<a href={"operators/"+title}>
+		<img class="op" src={"operator main photo/r6-"+title.toLowerCase()+".png"}>
 		<div class="bar">
-			<img class="icon" src={"operator icon photo/"+name+"-icon.png"}>
+			<img class="icon" src={"operator icon photo/r6-"+title.toLowerCase()+"-icon.png"}>
 			<div class="title">{title}</div>
 			
-		</div>  
+		</div>
 		
 	</a>
 </li>

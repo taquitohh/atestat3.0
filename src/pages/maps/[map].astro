@@ -2,7 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 export async function getStaticPaths() {
 	const pages = [
-		{
+	    {
 			map: "BANK",
 			title: {
 				text: "BANK",
@@ -18,13 +18,540 @@ export async function getStaticPaths() {
                 video: "videos/r6-bank-v.mp4",
 				img: "video-img/r6-bank-v-img.png",
 			},
-            blueprints: {
-                b1: "maps_blueprints/r6-maps-bank-blueprint-1.jpg",
-				b2: "maps_blueprints/r6-maps-bank-blueprint-2.jpg",
-				b3: "maps_blueprints/r6-maps-bank-blueprint-3.jpg",
-				b4: "maps_blueprints/r6-maps-bank-blueprint-4.jpg",
-            },
+            blueprints: [
+                 "maps_blueprints/r6-maps-bank-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-bank-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-bank-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-bank-blueprint-4.jpg",
+		    ],
 		},
+		{
+			map: "BORDER",
+			title: {
+				text: "BORDER",
+				background: "maps/r6-border.png",
+			},
+			text: {
+				Location: "Location: MIDDLE EAST",
+				Released: "Released: Dust Line (May 2016)",
+				Playlists:"Playlists: Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-border-v.mp4",
+				img: "video-img/r6-border-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-border-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-border-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-border-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "CHALET",
+			title: {
+				text: "CHALET",
+				background: "maps/r6-chalet.png",
+			},
+			text: {
+				Location: "Location:  COURCHEVEL, France",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: New Comer, Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-chalet-v.mp4",
+				img: "video-img/r6-chalet-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-chalet-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-chalet-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-chalet-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-chalet-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "CLOSE QUARTERS",
+			title: {
+				text: "CLOSE QUARTERS",
+				background: "maps/r6-closequarter.png",
+			},
+			text: {
+				Location: "Location: Greece",
+				Released: "Released: Operation Vector Glare (June 2022)",
+				Playlists:"Playlists: Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-closequarter-v.mp4",
+				img: "video-img/r6-closequarter-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-closequarter-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-closequarter-blueprint-2.jpg",
+				],
+		},
+		{
+			map: "CLUBHOUSE",
+			title: {
+				text: "CLUBHOUSE",
+				background: "maps/r6-clubhouse.png",
+			},
+			text: {
+				Location: "Location: HANOVER, GERMANY",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: New Comer, Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-clubhouse-v.mp4",
+				img: "video-img/r6-clubhouse-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-clubhouse-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-clubhouse-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-clubhouse-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-clubhouse-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "COASTLINE",
+			title: {
+				text: "COASTLINE",
+				background: "maps/r6-coastline.png",
+			},
+			text: {
+				Location: "Location: IBIZA, SPAIN",
+				Released: "Released: Velvet Shell (February 2017)",
+				Playlists:"Playlists: Quick Match, Ranked, New Comer, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-coastline-v.mp4",
+				img: "video-img/r6-coastline-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-coastline-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-coastline-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-coastline-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "CONSULATE",
+			title: {
+				text: "CONSULATE",
+				background: "maps/r6-consulate.png",
+			},
+			text: {
+				Location: "Location: ABIDJAN, IVORY COAST",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-consulate-v.mp4",
+				img: "video-img/r6-consulate-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-consulate-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-consulate-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-consulate-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-consulate-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "EMERALD PLAINS",
+			title: {
+				text: "EMERALD PLAINS",
+				background: "maps/r6-emerald plains.png",
+			},
+			text: {
+				Location: "Location: Ireland",
+				Released: "Released: Demon Veil (April 2022)",
+				Playlists:"Playlists: Quick Match, Ranked, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-emeraldplains-v.mp4",
+				img: "video-img/r6-emerald	-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-emeraldplains-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-emeraldplains-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-emeraldplains-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "FAVELA",
+			title: {
+				text: "FAVELA",
+				background: "maps/r6-favela.png",
+			},
+			text: {
+				Location: "Location: BRAZIL",
+				Released: "Released: Skull Rain (August 2016)",
+				Playlists:"Playlists: Quick Match, Ranked, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-favela-v.mp4",
+				img: "video-img/r6-favela-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-favela-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-favela-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-favela-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-favela-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-favela-blueprint-5.jpg",
+		    ],
+		},
+		{
+			map: "FORTRESS",
+			title: {
+				text: "FORTRESS",
+				background: "maps/r6-fortress.png",
+			},
+			text: {
+				Location: "Location: MOROCCO",
+				Released: "Released: Wind bastion (December 2018)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-fortress-v.mp4",
+				img: "video-img/r6-fortress-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-fortress-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-fortress-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-fortress-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "HEREFORD",
+			title: {
+				text: "HEREFORD",
+				background: "maps/r6-hereford.png",
+			},
+			text: {
+				Location: "Location: UNITED KINGDOM",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-hereford-v.mp4",
+				img: "video-img/r6-hereford-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-hereford-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-hereford-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-hereford-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-hereford-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-hereford-blueprint-5.jpg",
+		    ],
+		},
+		{
+			map: "HOUSE",
+			title: {
+				text: "HOUSE",
+				background: "maps/r6-house.png",
+			},
+			text: {
+				Location: "Location: LOS ANGELES, CALIFORNIA",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-house-v.mp4",
+				img: "video-img/r6-house-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-house-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-house-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-house-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-house-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "KAFE",
+			title: {
+				text: "KAFE",
+				background: "maps/r6-kafe.png",
+			},
+			text: {
+				Location: "Location: MOSCOW, RUSSIA",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: New Comer, Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-kafe-v.mp4",
+				img: "video-img/r6-kafe-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-kafe-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-kafe-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-kafe-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-kafe-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "KANAL",
+			title: {
+				text: "KANAL",
+				background: "maps/r6-kanal.png",
+			},
+			text: {
+				Location: "Location: HAMBURG, GERMANY",
+				Released: "Released: Launch (December 2015)",
+				Playlists:"Playlists:  Ranked, Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-kanal-v.mp4",
+				img: "video-img/r6-kanal-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-kanal-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-kanal-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-kanal-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-kanal-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-kanal-blueprint-5.jpg",
+		    ],
+		},
+		{
+			map: "NIGHTHAVEN LABS",
+			title: {
+				text: "NIGHTHAVEN LABS",
+				background: "maps/r6-nighthavenlabs.png",
+			},
+			text: {
+				Location: "Location: Offshore",
+				Released: "Released: Operation Solar Raid (December 2022)",
+				Playlists:"Playlists: New Comer, Quick Match, Team Deathmatch, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-nighthavenlabs-v.mp4",
+				img: "video-img/r6-nighthavenlabs-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-nighthavenlabs-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-nighthavenlabs-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-nighthavenlabs-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-nighthavenlabs-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "OREGON",
+			title: {
+				text: "OREGON",
+				background: "maps/r6-oregon.png",
+			},
+			text: {
+				Location: "Location: REDMOND, OREGON",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: New Comer, Quick Match, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-oregon-v.mp4",
+				img: "video-img/r6-oregon-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-oregon-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-oregon-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-oregon-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-oregon-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-oregon-blueprint-5.jpg",
+		    ],
+		},
+		{
+			map: "OUTBACK",
+			title: {
+				text: "OUTBACK",
+				background: "maps/r6-outback.png",
+			},
+			text: {
+				Location: "Location: AUSTRALIA",
+				Released: "Released: Burnt Horizon (March 2019)",
+				Playlists:"Playlists:Quick Match, New Comer, Ranked",
+
+			},
+			video: {
+                video: "videos/r6-outback-v.mp4",
+				img: "video-img/r6-outback-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-outback-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-outback-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-outback-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "PLANE",
+			title: {
+				text: "PLANE",
+				background: "maps/r6-plane.png",
+			},
+			text: {
+				Location: "Location: LONDON, UNITED KINGDOM",
+				Released: "Released: Base game (December 2015)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-plane-v.mp4",
+				img: "video-img/r6-plane-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-plane-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-plane-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-plane-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-plane-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "SKYSCRAPER",
+			title: {
+				text: "SKYSCRAPER",
+				background: "maps/r6-skyscraper.png",
+			},
+			text: {
+				Location: "Location:  NAGOYA, JAPAN",
+				Released: "Released: Red Crow (November 2016)",
+				Playlists:"Playlists:Quick Match, Ranked, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-skyscraper-v.mp4",
+				img: "video-img/r6-skyscraper-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-skyscraper-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-skyscraper-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-skyscraper-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "STADIUM",
+			title: {
+				text: "STADIUM",
+				background: "maps/r6-stadium.png",
+			},
+			text: {
+				Location: "Location: Greece",
+				Released: "Released: Operation Brutal Swarm (September 2022)",
+				Playlists:"Playlists: New Comer, Quick Match, Ranked, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-stadium-v.mp4",
+				img: "video-img/r6-stadium-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-stadium-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-stadium-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-stadium-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-stadium-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "THEMEPARK",
+			title: {
+				text: "THEMEPARK",
+				background: "maps/r6-themepark.png",
+			},
+			text: {
+				Location: "Location: HONG KONG",
+				Released: "Released: Blood Orchid (August 2017)",
+				Playlists:"Playlists: Quick Match, Ranked, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-themepark-v.mp4",
+				img: "video-img/r6-themepark-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-themepark-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-themepark-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-themepark-blueprint-3.jpg",
+		    ],
+		},
+		{
+			map: "TOWER",
+			title: {
+				text: "TOWER",
+				background: "maps/r6-tower.png",
+			},
+			text: {
+				Location: "Location: SEOUL, SOUTH KOREA",
+				Released: "Released: White Noise (November 2017)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-tower-v.mp4",
+				img: "video-img/r6-tower-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-tower-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-tower-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-tower-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-tower-blueprint-4.jpg",
+		    ],
+		},
+		{
+			map: "VILLA",
+			title: {
+				text: "VILLA",
+				background: "maps/r6-villa.png",
+			},
+			text: {
+				Location: "Location: TUSCANY, ITALY",
+				Released: "Released: Para Bellum (June 2018)",
+				Playlists:"Playlists: Ranked, Quick Match, Team Deathmatch",
+
+			},
+			video: {
+                video: "videos/r6-villa-v.mp4",
+				img: "video-img/r6-villa-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-villa-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-villa-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-villa-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-villa-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-villa-blueprint-5.jpg",
+		    ],
+		},
+		{
+			map: "YACHT",
+			title: {
+				text: "YACHT",
+				background: "maps/r6-yacht.png",
+			},
+			text: {
+				Location: "Location: BAFFIN BAY",
+				Released: "Released: Black Ice (February 2016)",
+				Playlists:"Playlists: Quick Match",
+
+			},
+			video: {
+                video: "videos/r6-yacht-v.mp4",
+				img: "video-img/r6-yacht-v-img.png",
+			},
+            blueprints: [
+                 "maps_blueprints/r6-maps-yacht-blueprint-1.jpg",
+				 "maps_blueprints/r6-maps-yacht-blueprint-2.jpg",
+				 "maps_blueprints/r6-maps-yacht-blueprint-3.jpg",
+				 "maps_blueprints/r6-maps-yacht-blueprint-4.jpg",
+				 "maps_blueprints/r6-maps-yacht-blueprint-5.jpg",
+		    ],
+		},
+
 	
 	];
 	return pages.map(({ map, title ,text, video, blueprints }) => {
@@ -50,39 +577,37 @@ const { title, text, video, blueprints } = Astro.props;
 <Layout>
 	<main>
 		<h1>
-			<div class="band">
+		<div class="band">
 			<div class="main-title">
 				<div class="title">
 					<div class="content-title">{title.text}</div>
 				</div>
 			
-			<div class="properties">
-				<p class="text" set:html={text.Location}></p>
-				<p class="text" set:html={text.Released}></p>
-				<p class="text" set:html={text.Playlists}></p>
+			    <div class="properties">
+				    <p class="text" set:html={text.Location}></p>
+				    <p class="text" set:html={text.Released}></p>
+				    <p class="text" set:html={text.Playlists}></p>
+			    </div>
+		    </div>
+		    <div class="image">
+			    <img width="400" src={"../" + video.img} />
+				{ video.video&&   <img
+				    id="play-button"
+				    class="play-btn"
+				    src="../video-img/play.png"
+			    />}
+			    <video
+					id="video"
+					width="400"
+					controls
+					src={"../" + video.video}></video>
 			</div>
-		</div>
-		<div class="image">
-			<img width="400" src={"../" + video.img} />
-			<img
-				id="play-button"
-				class="play-btn"
-				src="../video-img/play.png"
-			/>
-			<video
-				id="video"
-				width="400"
-				controls
-				src={"../" + video.video}></video>
-		</div>
 	</div>
 		</h1>
-            <div class="blueprint">
-				<img class="1" src={"../" +blueprints.b1} />
-				<img class="2" src={"../" +blueprints.b2} />
-				<img class="3" src={"../" +blueprints.b3} />
-				<img class="4" src={"../" +blueprints.b4} />
-				<img class="5" src={"../" +blueprints.b5} />
+            <div class="blueprint"> 
+				{blueprints.map((blueprint: string)=>(
+					<img class="bp" src={"../" +blueprint} />
+				))}
             </div>
 		<button class="button">DOWNLOAD BLUEPRINTS (.ZIP)</button>
 	</main>
@@ -96,12 +621,18 @@ const { title, text, video, blueprints } = Astro.props;
 		letter-spacing: 1px;	
 		font-size:25px;
 		margin:50px;
+		border-radius: 40px;
 	}
+
+	.bp{
+        width: 400px;
+	}
+
 	.blueprint{
-		display:table-row;
-		flex-wrap: wrap;
+		display:flex;
+        flex-wrap: wrap;
 		justify-content: center;
-		align-self: center;
+		align-items: center;
 		padding:50px;
 		gap: 1em;
 	}
@@ -172,7 +703,7 @@ const { title, text, video, blueprints } = Astro.props;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
-		height: 800px;
+		height: 600px;
 		gap: 0.5em;
 	}
 
@@ -220,6 +751,7 @@ const { title, text, video, blueprints } = Astro.props;
 		justify-content: center;
 		box-shadow: 0px 6px #00ffe563;
 		backdrop-filter: blur(4px);
+		margin-top:200px;
 	}
 
 </style>
