@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import Blueprint from "../../components/Blueprint.astro";
 export async function getStaticPaths() {
 	const pages = [
 		{
@@ -16,11 +15,14 @@ export async function getStaticPaths() {
 
 			},
 			video: {
-				img: "video-img/r6-ash-v-img.png",
-				video: "videos/r6-ash-v.mp4",
+                video: "videos/r6-bank-v.mp4",
+				img: "video-img/r6-bank-v-img.png",
 			},
             blueprints: {
-                
+                b1: "maps_blueprints/r6-maps-bank-blueprint-1.jpg",
+				b2: "maps_blueprints/r6-maps-bank-blueprint-2.jpg",
+				b3: "maps_blueprints/r6-maps-bank-blueprint-3.jpg",
+				b4: "maps_blueprints/r6-maps-bank-blueprint-4.jpg",
             },
 		},
 	
@@ -48,23 +50,61 @@ const { title, text, video, blueprints } = Astro.props;
 <Layout>
 	<main>
 		<h1>
+			<div class="band">
 			<div class="main-title">
 				<div class="title">
 					<div class="content-title">{title.text}</div>
 				</div>
-			</div>
+			
 			<div class="properties">
 				<p class="text" set:html={text.Location}></p>
 				<p class="text" set:html={text.Released}></p>
 				<p class="text" set:html={text.Playlists}></p>
 			</div>
-            <div class="blueprint">
-            </div>
+		</div>
+		<div class="image">
+			<img width="400" src={"../" + video.img} />
+			<img
+				id="play-button"
+				class="play-btn"
+				src="../video-img/play.png"
+			/>
+			<video
+				id="video"
+				width="400"
+				controls
+				src={"../" + video.video}></video>
+		</div>
+	</div>
 		</h1>
+            <div class="blueprint">
+				<img class="1" src={"../" +blueprints.b1} />
+				<img class="2" src={"../" +blueprints.b2} />
+				<img class="3" src={"../" +blueprints.b3} />
+				<img class="4" src={"../" +blueprints.b4} />
+				<img class="5" src={"../" +blueprints.b5} />
+            </div>
+		<button class="button">DOWNLOAD BLUEPRINTS (.ZIP)</button>
 	</main>
 </Layout>
 
 <style>
+	.button{
+		width: 310px;
+		justify-content: center;
+		align-self: center;
+		letter-spacing: 1px;	
+		font-size:25px;
+		margin:50px;
+	}
+	.blueprint{
+		display:table-row;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-self: center;
+		padding:50px;
+		gap: 1em;
+	}
 	.tip {
 		max-width: 55%;
 	}
@@ -84,7 +124,7 @@ const { title, text, video, blueprints } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		z-index: 4;
-		margin-right: 800px;
+		margin-right: 0px;
 		padding: 25px;
 	}
 
@@ -92,6 +132,8 @@ const { title, text, video, blueprints } = Astro.props;
 		display: flex;
 		flex-direction: column;
 		align-items: left;
+		padding-bottom: 50px;
+		padding-right: 50px;
 	}
 
 	body {
@@ -107,7 +149,7 @@ const { title, text, video, blueprints } = Astro.props;
 		align-items: left;
 		max-width: auto;
 		width: 100%;
-		margin-top: 100px;
+	
 	}
 
 	.content-title {
@@ -126,7 +168,7 @@ const { title, text, video, blueprints } = Astro.props;
 
 	h1 {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 		width: 100%;
@@ -140,4 +182,44 @@ const { title, text, video, blueprints } = Astro.props;
 		padding-bottom: 5px;
 		letter-spacing: 0.5px;
 	}
+	.play-btn {
+		width: 60px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		cursor: pointer;
+		filter: invert(100%);
+	}
+	video {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: none;
+		margin-right: 650px;
+	}
+
+	.image {
+		position: relative;
+		width: 400px;
+		margin-right: 30px;
+	}
+
+	.play-btn:hover {
+		filter: invert(100%) sepia(82%) saturate(780%) hue-rotate(97deg)
+			brightness(104%) contrast(105%);
+	}
+
+	.band {
+		height: 254px;
+		width: 100%;
+		background-color: rgba(37, 37, 40, 0.537);
+		padding: 10px;
+		z-index: 5;
+		display: flex;
+		justify-content: center;
+		box-shadow: 0px 6px #00ffe563;
+		backdrop-filter: blur(4px);
+	}
+
 </style>
